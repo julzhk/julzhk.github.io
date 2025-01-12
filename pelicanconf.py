@@ -1,7 +1,9 @@
-THEME = "."
+THEME = "attila"
 AUTHOR = "julz"
 SITENAME = "Another GitHub Blog"
-SITEURL = "https://julzhk.github.io"
+SITEURL = ""
+RELATIVE_URLS = True
+HOME_COVER = 'https://geekyshacklebolt.github.io/blog/images/my-blog-header-bg.jpg'
 PATH = "content"
 DELETE_OUTPUT_DIRECTORY = True
 OUTPUT_SOURCES = True
