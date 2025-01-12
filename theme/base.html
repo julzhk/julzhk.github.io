@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock %}">
+  <head>
+    {% block head %}
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>{% block title %}{{ SITENAME|striptags }}{% endblock %}</title>
+      <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygments.css">
+      <link rel="stylesheet" href="https://www.seanh.cc/oatcake/oatcake.min.css">
+      <link rel="stylesheet" href="https://www.seanh.cc/oatcake/lines/lines.css">
+      <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/sidecar.css">
+      {% if STYLESHEET_URL %}<link rel="stylesheet" href="{{ STYLESHEET_URL }}" />{% endif %}
+      {% if FEED_ALL_ATOM %}
+      <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Atom (all languages)">
+      {% endif %}
+      {% if FEED_ALL_RSS %}
+      <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} RSS (all languages)">
+      {% endif %}
+      {% if FEED_ATOM %}
+      <link href="{{ FEED_DOMAIN }}/{%if FEED_ATOM_URL %}{{ FEED_ATOM_URL }}{% else %}{{ FEED_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Atom ({{ DEFAULT_LANG }})">
+      {% endif %}
+      {% if FEED_RSS %}
+      <link href="{{ FEED_DOMAIN }}/{% if FEED_RSS_URL %}{{ FEED_RSS_URL }}{% else %}{{ FEED_RSS }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} RSS ({{ DEFAULT_LANG }})">
+      {% endif %}
+      {% block extra_head %}{% endblock %}
+    {% endblock head %}
+  </head>
+  <body>
+
+    {% if GITHUB_URL %}
+    <div class="ribbon nomobile">
+      <a class="ribbon__link" href="{{ GITHUB_URL }}">
+        <img class="ribbon__image" width="149" height="149" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/forkme.webp" alt="Fork me on GitHub">
+      </a>
+    </div>
+    {% endif %}
+
+    <nav class="sidebar">
+      <ul>
+        {% if SIDECAR_MENU is not defined %}
+          {% set SIDECAR_MENU = ["HOME", "MENUITEMS"] %}
+          {% if DISPLAY_PAGES_ON_MENU %}
+            {{ SIDECAR_MENU.append("PAGES") or "" }}
+          {% endif %}
+          {{ SIDECAR_MENU.extend(["CATEGORIES", "TAGS", "AUTHORS", "ARCHIVES"]) or "" }}
+        {% endif %}
+        {% for item in SIDECAR_MENU %}
+          {% if item == "HOME" %}
+            <li><a href="{{ SITEURL }}">Home</a></li>
+          {% elif item == "MENUITEMS" %}
+            {% for title, url in MENUITEMS %}
+              <li><a href="{{ url }}">{{ title }}</a></li>
+            {% endfor %}
+          {% elif item == "PAGES" %}
+            {% for page_ in pages %}
+              <li><a href="{{ SITEURL }}/{{ page_.url }}">{{ page_.title }}</a></li>
+            {% endfor %}
+          {% elif item == "CATEGORIES" %}
+            {% if CATEGORIES_URL %}<li><a href="{{ SITEURL }}/{{ CATEGORIES_URL }}">Categories</a></li>{% endif %}
+          {% elif item == "TAGS" %}
+            {% if TAGS_URL %}<li><a href="{{ SITEURL }}/{{ TAGS_URL }}">Tags</a></li>{% endif %}
+          {% elif item == "AUTHORS" %}
+            {% if AUTHORS_URL %}<li><a href="{{ SITEURL }}/{{ AUTHORS_URL }}">Authors</a></li>{% endif %}
+          {% elif item == "ARCHIVES" %}
+            {% if ARCHIVES_URL %}<li><a href="{{ SITEURL }}/{{ ARCHIVES_URL }}">Archive</a></li>{% endif %}
+          {% else %}
+            <li>{{ item.format(SITEURL=SITEURL) }}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+
+      {% if DISPLAY_CATEGORIES_ON_MENU %}
+      <div class="nomobile">
+        <h4 class="noanchor">Categories</h4>
+        <ul>
+            {% for category, articles in categories %}
+            <li>
+            <a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a>
+            <span class="secondary">({{ articles|count }})</span>
+            </li>
+            {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {% if DISPLAY_TAGS_ON_MENU %}
+      <div class="nomobile">
+        <h4 class="noanchor">Tags</h4>
+        <ul>
+          {% for tag, articles in tags %}
+            <li>
+              <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+              <span class="secondary">({{ articles|count }})</span>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {% if DISPLAY_AUTHORS_ON_MENU %}
+      <div class="nomobile">
+        <h4 class="noanchor">Authors</h4>
+        <ul>
+          {% for author, articles in authors %}
+            <li>
+              <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+              <span class="secondary">({{ articles|count }})</span>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {% if LINKS %}
+      <div class="nomobile">
+        <h4 class="noanchor">{{ LINKS_WIDGET_NAME|default("Links") }}</h4>
+        <ul>
+          {% for title, url in LINKS %}
+            <li><a href="{{ url }}">{{ title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {% if SOCIAL %}
+      <div class="nomobile">
+        <h4 class="noanchor">{{ SOCIAL_WIDGET_NAME|default("Social") }}</h4>
+        <ul>
+          {% for title, url in SOCIAL %}
+            <li><a href="{{ url }}">{{ title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </nav>
+
+    <main class="content">
+      {% with %}
+        {% set content_title %}{% block content_title %}{% endblock %}{% endset %}
+        {% include "includes/content_title.html" %}
+      {% endwith %}
+
+      {% block content %}{% endblock %}
+    </main>
+
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/menu.js" defer></script>
+    {% if anchors %}
+    <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.27.4/tocbot.min.js"></script>
+    <script>
+      anchors.options.icon = '#';
+      anchors.add('h1:not(.noanchor), h2:not(.noanchor), h3:not(.noanchor), h4:not(.noanchor), h5:not(.noanchor), h6:not(.noanchor)');
+      tocbot.init({
+        tocSelector: '.toc',
+        contentSelector: 'body',
+        headingSelector: 'h1, h2, h3, h4, h5, h6',
+        ignoreSelector: '.notoc, .noanchor',
+        orderedList: false,
+        scrollSmooth: false,
+      });
+    </script>
+    {% endif %}
+    {% include 'analytics.html' %}
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}{{ super() }} - Archive{% endblock %}
+
+{% block content_title %}Archive{% endblock %}
+
+{% block content %}
+  {% for article in articles %}
+    {% include "includes/article/archives.html" %}
+  {% endfor %}
+{% endblock %}
