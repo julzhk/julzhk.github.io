@@ -5,7 +5,7 @@ Category: Misc
 Tags: Miscellaneous
 
 I've started a few attempts to blog over the years. Having to pay for a site or maintain a server for my humble thoughts got a bit tiresome eventually. But this is a free, static site, so I'm 
-giving it another go: Free, simple, Python, Jinja, Markdown, and Git - this might be sustainable.
+giving it another go: Free, simple, Python, Jinja, Markdown, and Git - this might be sustainable. And I can tweak to my heart's content.
 
 I get the attractions of blogging: notes to Self that will perhaps be useful to refer back to- and perhaps that someone somewhere might one day also find useful. Obviously this assumes the notes 
 are worth reading! Warning: probably not.
@@ -18,6 +18,8 @@ I imagine I'll be making :
 * technical writing: when rtfm doesn't work. Especially Python
 * recipes. Especially bread.
 * Miscellaneous. Especially Dinosaurs.
+
+Might turn out to just be me commenting on [hacker news posts](https://news.ycombinator.com/).
 
 ### About the Blog technology
 

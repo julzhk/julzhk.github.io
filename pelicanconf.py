@@ -54,7 +54,7 @@ SOCIAL = [
     ("Mastodon", "https://mastodon.social/@seanh"),
     ("Pinboard", "https://pinboard.in/u:seanh"),
 ]
-
+MENUITEMS = ['first', 'second', 'third',]
 SIDECAR_MENU = [
     "HOME",
     "MENUITEMS",
