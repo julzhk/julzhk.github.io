@@ -16,7 +16,7 @@ OUTPUT_SOURCES = True
 PATH = "content"
 RELATIVE_URLS = True
 SITENAME = "Blog/Random/Stuff/"
-SITEURL = "https://julzhk.github.io"
+SITEURL = ""
 FEED_DOMAIN = SITEURL
 TAGS_SAVE_AS = "tags/index.html"
 TAGS_URL = "tags/"
@@ -54,7 +54,7 @@ SOCIAL = [
     ("Mastodon", "https://mastodon.social/@seanh"),
     ("Pinboard", "https://pinboard.in/u:seanh"),
 ]
-MENUITEMS = ['first', 'second', 'third',]
+
 SIDECAR_MENU = [
     "HOME",
     "MENUITEMS",
