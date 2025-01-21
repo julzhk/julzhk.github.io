@@ -1,4 +1,4 @@
-Title: Investigation on Entity-Attribute-Value (EAV) and DuckDB
+Title: Investigation on Entity-Attribute-Value Stored Data and DuckDB
 Date: 2025-01-18
 Category: Developer
 Tags: Python, Data
@@ -72,9 +72,7 @@ complex_query = con.execute("SELECT * FROM sorted_df WHERE colour='blue' AND id 
 
 ```
 
-Of coure, usual caveats apply regarding performance, memory, speeed. 
+Of course, usual caveats apply regarding performance, memory, speeed. 
 
 But my tests show on my laptop we can load millions of records with dozens of custom fields from the EAV tables, and do complex queries on  
 them in a few seconds.
-
-```
