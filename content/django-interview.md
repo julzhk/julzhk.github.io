@@ -8,12 +8,14 @@ Author: Julz
 
 There was recently a question on Reddit that (to paraphrase) asked: 'I need to interview for a Django developer but I don't know anything about Django. What should I ask?'
 
-I've hired a few Django (& other) devs and the majority of the hires worked out great, so I thought I'd share some thoughts on an approach.
+I've hired a few Django (& other) devs and the majority of the hires worked out great so I thought I'd share some thoughts on an approach.
 
 ### Have an explicit goal to each round of interview
 
 The first things to do is to make the interview purposeful: Let's assume the attitude and personality testing stuff is covered elsewhere. Let's assume we have verified that their resume is 
-more-or-less accurate – these being steps covered in other stages.
+more-or-less accurate – these being steps covered in other stages. This should be obvious of course. Similarly, having an idea of what a 'good' or 'ideal' answer to each round is valuable too. For 
+a live-coding test, it's worth keeping in mind how little can be completed especially under observation and while explaining thought processes; this should be factored into the idea of the ideal 
+answer.
 
 ### Django Interview Purpose
 
@@ -95,4 +97,4 @@ ability to tackle the problem; and that's allows it to be a discerning factor.
 
 So that's one set of interesting questions to ask in a Django interview. It would be a single aspect of a more rounded process of course; but I do think it's necessary to have some 'hands-on' 
 coding-based enquiry for a developer job - that isn't just on a 'whiteboard'; or trivia / 'gotcha' questions; but is actually something of a practical exercise that's at least relevant to the job 
-of a Django developer. Needless to say, there's more to the job than just this; but in an hour - or two - we've got to gain some indications; and we have to start somewhere! 
+of a Django developer. Needless to say, there's more to the job than just this; but in an hour - or two - we've got to gain some indications; and we have to start somewhere.
