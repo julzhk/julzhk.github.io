@@ -6,6 +6,6 @@ class WebsiteUser(HttpUser):
 
     @task
     def click_link(self):
-        links = ["/", "/bundle-1/", "/destination", "/public-bundle"]
+        links = ["/", "/about/", "/destination", "/contact/"]
         link = random.choice(links)
         self.client.get(link)

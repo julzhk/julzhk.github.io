@@ -125,7 +125,8 @@ import os
 os.system('Quarto . --to pdf')
 ```
 
-## Conclusions
+Conclusions
+---
 
 So we can now run both a large number of performance tests and have the report generate from a single 'run all cells' execution of a notebook file.  This is (of course!) just the bare bones; but 
 I hope it's clear that this 
@@ -136,3 +137,4 @@ performance testing
 and report generation. 
 
 Lots more in the  [Quarto documentation](https://quarto.org), and there's an example of the above in the [github repo](https://github.com/julzhk/julzhk.github.io/tree/main/code_samples/quarto_and_locust_performance_tests) 
+
