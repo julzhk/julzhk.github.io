@@ -138,4 +138,4 @@ Lots more in the  [Quarto documentation](https://quarto.org), and there's an exa
 
 And here's the sample report:  
 
-<embed type="application/pdf" src="https://github.com/julzhk/julzhk.github.io/tree/main/code_samples/quarto_and_locust_performance_tests/blog_performance_report.pdf" width="250" height="200">
+<embed type="application/pdf" src="https://github.com/julzhk/julzhk.github.io/blob/main/code_samples/quarto_and_locust_performance_tests/blog_performance_report.pdf" width="250" height="200">
