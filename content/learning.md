@@ -40,7 +40,7 @@ Currently
     - Not started
   - [ ] [Mastering Kafka Streams](https://learning.oreilly.com/library/view/mastering-kafka-streams/9781492062486/ch02.html#idm46281564624232)
     - started; nice introduction, good pace; lots in it
-    - Going to want to dive into the famous 'data intensive applications' book by Klepperman again. New edition coming!
+    - Going to want to dive into the famous 'data intensive applications' book by Klepperman again. (New edition incoming!)
   
 
 Gawd, there's a lot on my mind.
