@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Blog/Random/Stuff/ - Personal</title><link href="/" rel="alternate"></link><link href="feeds/personal.atom.xml" rel="self"></link><id>/</id><updated>2025-01-31T00:00:00-04:00</updated><entry><title>My learning list</title><link href="2025/01/31/my-learning-list/" rel="alternate"></link><published>2025-01-31T00:00:00-04:00</published><updated>2025-01-31T00:00:00-04:00</updated><author><name>Julz</name></author><id>tag:None,2025-01-31:2025/01/31/my-learning-list/</id><summary type="html">&lt;p&gt;Inspired by seeing something similar in some other blogs and newsletters I thought I&amp;#8217;d add a live list of the stuff I&amp;#8217;m learning about currently: eg: clever websites, tools and&amp;nbsp;books!&lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s updated as I&amp;nbsp;go. &lt;/p&gt;
+&lt;h2&gt;Currently&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[ ] &lt;a href="https://youtu.be/_MPUoiG6w_U"&gt;Residuality Theory&lt;/a&gt;&amp;nbsp;: &lt;/li&gt;
+&lt;li&gt;how to architect; why is architecture so ad …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Inspired by seeing something similar in some other blogs and newsletters I thought I&amp;#8217;d add a live list of the stuff I&amp;#8217;m learning about currently: eg: clever websites, tools and&amp;nbsp;books!&lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s updated as I&amp;nbsp;go. &lt;/p&gt;
+&lt;h2&gt;Currently&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[ ] &lt;a href="https://youtu.be/_MPUoiG6w_U"&gt;Residuality Theory&lt;/a&gt;&amp;nbsp;: &lt;/li&gt;
+&lt;li&gt;how to architect; why is architecture so ad&amp;nbsp;hoc?&lt;/li&gt;
+&lt;li&gt;Complexity&amp;nbsp;theory&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href="https://leanpub.com/residuality"&gt;the book: Residues: Time, Change, and Uncertainty in Software&amp;nbsp;Architecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href="https://learning.oreilly.com/library/view/speed-up-your/9781801811446/"&gt;Speed Up Your Python with Rust&lt;/a&gt;&amp;nbsp;: &lt;/li&gt;
+&lt;li&gt;Really enjoying the brisk&amp;nbsp;pace&lt;/li&gt;
+&lt;li&gt;Love the step-by-step hands-on grounding in making pip packages and how installing&amp;nbsp;works&lt;/li&gt;
+&lt;li&gt;Need a diagram to track the entry points and exits of the Rust code to Python; all a bit confused&amp;nbsp;rn!&lt;/li&gt;
+&lt;li&gt;Have to learn Rust properly&amp;nbsp;however&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href="https://docs.wasmer.io"&gt;deploy onto raspberry pi&lt;/a&gt;: The project I have in mind (music stuff!) will run on a Pi; this gets it there. I&amp;nbsp;hope!&lt;/li&gt;
+&lt;li&gt;[ ] Making&amp;nbsp;Sounds&lt;/li&gt;
+&lt;li&gt;There&amp;#8217;s a whole world of music processing tech! One of those niche&amp;#8217;s that progress along on their own slightly obscured from outsiders: with their own leaders, vocab, 
+    common knowledge&amp;#8230; Unless 
+    you 
+    dive in and make sense of it&amp;nbsp;all!&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href="https://puredata.info"&gt;Pure data&lt;/a&gt; : impressive and Fun. but so&amp;nbsp;quirky!&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href="https://learning.oreilly.com/library/view/programming-sound-with/9781941222492/"&gt;Pure data book&lt;/a&gt; : Step-by-step; bit slow, but it&amp;#8217;s&amp;nbsp;thorough&lt;/li&gt;
+&lt;li&gt;[x] The Theory and Technique of Electronic Music Book pdf - Miller Puckette: &lt;span class="caps"&gt;PD&lt;/span&gt; creator; starts simple, dives deep. Abandoned for&amp;nbsp;now. &lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href="https://supercollider.github.io"&gt;SuperCollider&lt;/a&gt; : &lt;span class="caps"&gt;PD&lt;/span&gt;&amp;nbsp;alternative&lt;/li&gt;
+&lt;li&gt;Rust. Low latency / triggers / Midi even? Not sure, but it&amp;#8217;s building&amp;nbsp;blocks&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;[ ] &lt;a href="https://rust-audio.github.io"&gt;Rust Audio&lt;/a&gt;&amp;nbsp;: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;[ ] &lt;a href="https://learning.oreilly.com/library/view/rust-audio/9781801072444/"&gt;Rust Audio book&lt;/a&gt; : Not&amp;nbsp;started&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;[ ] Simpy : Python simulation framework; fun. Want to make a game, with the engine built around a sim.py simulation. Need a&amp;nbsp;topic!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Kafka&amp;nbsp;Streams&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href="https://learning.oreilly.com/library/view/kafka-streams-in/9781617294471/"&gt;Kafka Streams in Action&lt;/a&gt; : &lt;ul&gt;
+&lt;li&gt;Not&amp;nbsp;started&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href="https://learning.oreilly.com/library/view/mastering-kafka-streams/9781492062486/ch02.html#idm46281564624232"&gt;Mastering Kafka Streams&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;started; nice introduction, good pace; lots in&amp;nbsp;it&lt;/li&gt;
+&lt;li&gt;Going to want to dive into the famous &amp;#8216;data intensive applications&amp;#8217; book by Klepperman again. (New edition&amp;nbsp;incoming!)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Gawd, there&amp;#8217;s a lot on my&amp;nbsp;mind.&lt;/p&gt;</content><category term="Personal"></category><category term="Learning"></category></entry></feed>
