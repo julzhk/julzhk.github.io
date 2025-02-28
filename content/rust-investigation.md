@@ -16,7 +16,7 @@ Notes
   * https://rust-exercises.com/100-exercises-to-learn-rust.pdf
 * Rust to pip : https://medium.com/towards-data-science/how-to-make-your-python-packages-really-fast-with-rust-91a9bebacbc2 with [maturin](https://www.maturin.rs) : smooth out rust to python 
   integration! OMG!
-* I have a project in mind: eg something like: [DSP sound synth with rust](https://www.youtube.com/watch?v=R6v96c-ahAM)
+* I have a project in mind: eg something like: [DSP sound synth with rust](https://www.youtube.com/watch?v=R6v96c-ahAM); or [this synth](https://github.com/vitobasso/rust-synth) 
 
 Rust Primer
 ---
