@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Blog/Random/Stuff/ - Developer</title><link href="/" rel="alternate"></link><link href="feeds/developer.atom.xml" rel="self"></link><id>/</id><updated>2025-01-18T00:00:00-04:00</updated><entry><title>Investigation on Entity-Attribute-Value Stored Data and DuckDB</title><link href="2025/01/18/investigation-on-entity-attribute-value-stored-data-and-duckdb/" rel="alternate"></link><published>2025-01-18T00:00:00-04:00</published><updated>2025-01-18T00:00:00-04:00</updated><author><name>Julz</name></author><id>tag:None,2025-01-18:2025/01/18/investigation-on-entity-attribute-value-stored-data-and-duckdb/</id><summary type="html">&lt;p&gt;I have a project I&amp;#8217;m contributing to that uses &lt;span class="caps"&gt;EAV&lt;/span&gt; to store &lt;em&gt;some&lt;/em&gt; of it&amp;#8217;s data, eg: there&amp;#8217;s a fixed set of fields that are stored in a &amp;#8216;core&amp;#8217; table, and then there&amp;#8217;s an &lt;span class="caps"&gt;EAV&lt;/span&gt; table that stores
+attributes added conveniently by the user (which we …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I have a project I&amp;#8217;m contributing to that uses &lt;span class="caps"&gt;EAV&lt;/span&gt; to store &lt;em&gt;some&lt;/em&gt; of it&amp;#8217;s data, eg: there&amp;#8217;s a fixed set of fields that are stored in a &amp;#8216;core&amp;#8217; table, and then there&amp;#8217;s an &lt;span class="caps"&gt;EAV&lt;/span&gt; table that stores
+attributes added conveniently by the user (which we&amp;#8217;ll call &lt;span class="caps"&gt;EAV&lt;/span&gt; or &amp;#8216;custom&amp;nbsp;attributes&amp;#8217;)&lt;/p&gt;
+&lt;p&gt;This works nicely for saving; but the trouble with this pattern is that making queries is a bit more tricky - If the data was entirely &lt;span class="caps"&gt;EAV&lt;/span&gt; or entirely &amp;#8216;core&amp;#8217;, there&amp;#8217;d be a clear path to querying.&lt;br&gt;
+However when it&amp;#8217;s mixed like this we can&amp;#8217;t do simple&amp;nbsp;queries.&lt;/p&gt;
+&lt;p&gt;For instance: Say we want to: &amp;#8216;Sort all records by data stored in an &lt;span class="caps"&gt;EAV&lt;/span&gt; field&amp;#8217;; or &amp;#8216;sort by a &amp;#8216;core&amp;#8217; field with a filter on a
+&amp;#8216;custom attribute&amp;#8217; one. Can be done, but all just a bit more complex.
+It makes me think of the pitfalls of not respecting polymorphic consistency in &lt;span class="caps"&gt;OOP&lt;/span&gt;.&lt;/p&gt;
+&lt;h2&gt;DuckDB, Postgres, Dataframes and &lt;span class="caps"&gt;SQL&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;DuckDB allows us to pull data into a dataframe, join the disparate &lt;span class="caps"&gt;EAV&lt;/span&gt; fields together into a consistent representation and then do sql manipulations on that dataframe. Pretty simple turns out! so we
+can
+assemble
+the data
+into a consistent
+representation and
+then do
+manipulations on it - eg
+sorting and
+filtering, searching, aggregation etc - in
+DuckDB &lt;span class="caps"&gt;SQL&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;All the
+data is in
+memory so it&amp;#8217;s fast;
+all of the data is represented in a consistent way, so we can query on &amp;#8216;core&amp;#8217; or &amp;#8216;&lt;span class="caps"&gt;EAV&lt;/span&gt;&amp;#8217; data&amp;nbsp;equally.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/julzhk/duckdb-investigate/blob/main/duckdb-investigate.ipynb"&gt;Here&amp;#8217;s a repo of an investigation on this topic
+&lt;/a&gt; - it has other fragments too - eg: Doing &lt;span class="caps"&gt;SQL&lt;/span&gt; on both a &lt;span class="caps"&gt;CSV&lt;/span&gt; and Postgres data source. So&amp;nbsp;convenient!&lt;/p&gt;
+&lt;h2&gt;The&amp;nbsp;code&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;duckdb&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Connect to the DuckDB database&lt;/span&gt;
+&lt;span class="n"&gt;con&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;duckdb&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Now attach the PostgreSQL database&lt;/span&gt;
+&lt;span class="n"&gt;con&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="s2"&gt;ATTACH &amp;#39;dbname=testdb user=postgres port=5433 host=127.0.0.1&amp;#39; AS test_db (TYPE POSTGRES);&lt;/span&gt;
+&lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Load the core items table into a DataFrame&lt;/span&gt;
+&lt;span class="n"&gt;items_df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;con&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;SELECT * FROM test_db.items&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch_df&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Load the EAV table into another DataFrame&lt;/span&gt;
+&lt;span class="n"&gt;eav_df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;con&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;SELECT * FROM test_db.eav&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch_df&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Pivot the eav table to transform attributes into columns&lt;/span&gt;
+&lt;span class="n"&gt;pivoted_eav_df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;eav_df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pivot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;columns&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;attribute&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;values&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;attribute_value&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reset_index&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Merge the items DataFrame with the pivoted other DataFrame, using the &amp;#39;id&amp;#39; column as key&lt;/span&gt;
+&lt;span class="n"&gt;merged_df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;merge&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;items_df&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pivoted_eav_df&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;how&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;left&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;# Remove NANs&lt;/span&gt;
+&lt;span class="n"&gt;merged_df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;merged_df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;notnull&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;merged_df&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Now we can do SQL queries on the merged DataFrame&lt;/span&gt;
+&lt;span class="n"&gt;sorted_df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;merged_df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sort_values&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;by&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;colour&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;complex_query&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;con&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;SELECT * FROM sorted_df WHERE colour=&amp;#39;blue&amp;#39; AND id &amp;gt; 100&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch_df&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Of course, usual caveats apply regarding performance, memory,&amp;nbsp;speeed. &lt;/p&gt;
+&lt;p&gt;But my tests show on my laptop we can load millions of records with dozens of custom fields from the &lt;span class="caps"&gt;EAV&lt;/span&gt; tables, and do complex queries on&lt;br&gt;
+them in a few&amp;nbsp;seconds.&lt;/p&gt;</content><category term="Developer"></category><category term="Python"></category><category term="Data"></category></entry><entry><title>Django Interview</title><link href="2024/12/01/django-interview/" rel="alternate"></link><published>2024-12-01T00:00:00-04:00</published><updated>2024-12-01T00:00:00-04:00</updated><author><name>Julz</name></author><id>tag:None,2024-12-01:2024/12/01/django-interview/</id><summary type="html">&lt;h2&gt;Django Interview&amp;nbsp;Question&lt;/h2&gt;
+&lt;p&gt;There was recently a question on Reddit that (to paraphrase) asked: &amp;#8216;I need to interview for a Django developer but I don&amp;#8217;t know anything about Django. What should I&amp;nbsp;ask?&amp;#8217;&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve hired a few Django (&amp;amp; other) devs and the majority of the hires worked out …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Django Interview&amp;nbsp;Question&lt;/h2&gt;
+&lt;p&gt;There was recently a question on Reddit that (to paraphrase) asked: &amp;#8216;I need to interview for a Django developer but I don&amp;#8217;t know anything about Django. What should I&amp;nbsp;ask?&amp;#8217;&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve hired a few Django (&amp;amp; other) devs and the majority of the hires worked out great so I thought I&amp;#8217;d share some thoughts on an&amp;nbsp;approach.&lt;/p&gt;
+&lt;h3&gt;Have an explicit goal to each round of&amp;nbsp;interview&lt;/h3&gt;
+&lt;p&gt;The first things to do is to make the interview purposeful: Let&amp;#8217;s assume the attitude and personality testing stuff is covered elsewhere. Let&amp;#8217;s assume we have verified that their resume is 
+more-or-less accurate – these being steps covered in other stages. This should be obvious of course. Similarly, having an idea of what a &amp;#8216;good&amp;#8217; or &amp;#8216;ideal&amp;#8217; answer to each round is valuable too. For 
+a live-coding test, it&amp;#8217;s worth keeping in mind how little can be completed especially under observation and while explaining thought processes; this should be factored into the idea of the ideal&amp;nbsp;answer.&lt;/p&gt;
+&lt;h3&gt;Django Interview&amp;nbsp;Purpose&lt;/h3&gt;
+&lt;p&gt;So this round should be to tell if what the candidate says they can do is actually true; and is that at a skill at a level&amp;nbsp;required?&lt;/p&gt;
+&lt;p&gt;It&amp;#8217;d be an obvious to ask about concepts or define terms - but this can be a bit easy to game: I&amp;#8217;ve thought some candidates were &amp;#8216;talk the talk, but not walk the walk&amp;#8217; types. All it takes is a good 
+memory;
+or 
+luck. So I&amp;#8217;d 
+avoid this line of 
+enquiry. Besides it takes too long for an interview; it&amp;#8217;s very stressful and just doesn&amp;#8217;t provide much &amp;#8216;signal&amp;#8217;,&amp;nbsp;imho.&lt;/p&gt;
+&lt;p&gt;Instead, I focus in on practical exercise: what is their approach to making a data model? This is a nice way to see if they actually have the experience they claim; they can think through a problem; 
+and 
+see if 
+they can 
+communicate 
+clearly. &lt;span class="caps"&gt;BTW&lt;/span&gt; I thinks it&amp;#8217;s important to share the rubric up-front: eg: this isn&amp;#8217;t about getting the &amp;#8216;right&amp;#8217; answer; it&amp;#8217;s about the process. That it&amp;#8217;s be a conversation about design and developer 
+approach; it&amp;#8217;s not a test and so&amp;nbsp;on.&lt;/p&gt;
+&lt;p&gt;This approach (and type of question) happily 
+works 
+for a variety of skill 
+levels: A junior developer might convey the basic idea (and show themselves to have an open to learning attitude); while a more senior developer should identify the traps and the&amp;nbsp;pitfalls!&lt;/p&gt;
+&lt;h3&gt;Model a nested to-do&amp;nbsp;list?&lt;/h3&gt;
+&lt;p&gt;It can be any simple data modelling question but I like: &amp;#8216;Design a data model for a nested to-do list&amp;#8217;. There&amp;#8217;s plenty of other similar scenarios: &amp;#8216;a forum with nested comments&amp;#8217;; &amp;#8216;a friends&amp;nbsp;list&amp;#8217;;&lt;/p&gt;
+&lt;p&gt;We&amp;#8217;ll go with the &amp;#8216;nested to-do list&amp;#8217; for this example - and it&amp;#8217;s a good balance of &amp;#8216;simple enough to discuss in a sitting&amp;#8217; and &amp;#8216;trickier than it seems!&amp;#8217; to get some juice out of the&amp;nbsp;interview!&lt;/p&gt;
+&lt;p&gt;A candidate should ask (or be prompted, if they&amp;#8217;re junior) questions around: how many levels of nesting there will be?; are there any restrictions on number of items at each level?; how 
+many users?, 
+how 
+many 
+to-do lists per user? and so on&amp;#8230; This can lead to a somewhat typical open-ended discussion on trade-offs and efficiency and some insight on system design priorities. This question is pretty good 
+for all languages and frameworks; but I think Django&amp;#8217;s &lt;span class="caps"&gt;ORM&lt;/span&gt; makes it particularly approachable. It&amp;#8217;s useful for front-end developers too: Modelling a data structure properly in the &lt;span class="caps"&gt;FE&lt;/span&gt; is just as 
+necessary as in&amp;nbsp;backend. &lt;/p&gt;
+&lt;h3&gt;Why is it&amp;nbsp;tricky?&lt;/h3&gt;
+&lt;p&gt;Well, the nested business means the data model can&amp;#8217;t be a simple structure: it&amp;#8217;s going to have a self-referential component. Of course, this is Django so we&amp;#8217;ll use the &lt;span class="caps"&gt;ORM&lt;/span&gt;: so do we have&amp;nbsp;a &lt;code&gt;list&lt;/code&gt; 
+with many children foreign-key&amp;nbsp;related &lt;code&gt;to-do items&lt;/code&gt;? This would be a good start, but we have to consider the nesting. It all starts to get a bit&amp;nbsp;tangled.&lt;/p&gt;
+&lt;p&gt;Better - and simpler - is to&amp;nbsp;give &lt;code&gt;to-do items&lt;/code&gt; a foreign key to themselves. This&amp;nbsp;means &lt;code&gt;to-do item&lt;/code&gt;s have as a parent&amp;nbsp;another &lt;code&gt;to-do item&lt;/code&gt;. A to-do list is just&amp;nbsp;a &lt;code&gt;to-do item&lt;/code&gt; with a null 
+parent. We can track &amp;#8216;depth&amp;#8217; of the item by counting the number of parents; it may be convenient to store this in the model&amp;nbsp;too.&lt;/p&gt;
+&lt;h3&gt;And how would you make a &lt;span class="caps"&gt;REST&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; for this data&amp;nbsp;model?&lt;/h3&gt;
+&lt;p&gt;The question can lead to implementation thoughts on what a &lt;span class="caps"&gt;REST&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; for this data model would look like. Again, this should lead to an open-ended discussion. If they bring up &lt;span class="caps"&gt;HTMX&lt;/span&gt; or GraphQL, 
+that&amp;#8217;s an interesting (and permitted) solution too of&amp;nbsp;course.&lt;/p&gt;
+&lt;p&gt;Experienced developers will have the experience to discuss security; &lt;span class="caps"&gt;HTTP&lt;/span&gt; methods; statefulness; versioning the &lt;span class="caps"&gt;API&lt;/span&gt; future-proofing; and more. Do they consider getting the whole data for a nested 
+to-do in one go - or just the top level?; how would they handle pagination; authentication; permissions; versioning. So lots of quite interesting topics to&amp;nbsp;discuss.&lt;/p&gt;
+&lt;p&gt;A more junior developer might be stumped by many of 
+these 
+concerns; 
+but they should be able to immediately grasp the reason why these things are important as soon as they&amp;#8217;re&amp;nbsp;raised.&lt;/p&gt;
+&lt;h3&gt;Maintainable&amp;nbsp;code&lt;/h3&gt;
+&lt;p&gt;If there&amp;#8217;s time (and there can be if the interview&amp;#8217;s long enough), it&amp;#8217;s possible to actually get the candidate to build some of this in Django; it can allow insights into maintainability and 
+bring up a 
+discussion on test-driven development; &lt;span class="caps"&gt;SOLID&lt;/span&gt; principles and so&amp;nbsp;on. &lt;/p&gt;
+&lt;h3&gt;Summary&lt;/h3&gt;
+&lt;p&gt;Obviously a coding interview is stressful to the candidate but at least it&amp;#8217;s more of a &amp;#8216;guided conversation&amp;#8217; rather than a grilling - which I think is a lot less&amp;nbsp;intimidating.&lt;/p&gt;
+&lt;p&gt;If the candidate&amp;#8217;s made 
+these kind of things before (and they 
+should have if they&amp;#8217;re a genuine Django candidate) then it should really be a breeze to come up with something workable. They might be time-pressured (stress and being interviewed makes candidates 
+forget things) but that&amp;#8217;s okay; the 
+goal 
+isn&amp;#8217;t to finish the project. They might not get the finer details; but this gives some context to judge one candidate against another: My experience is that candidates diverge quite a lot in their 
+ability to tackle the problem; and that&amp;#8217;s allows it to be a discerning&amp;nbsp;factor.&lt;/p&gt;
+&lt;h3&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;So that&amp;#8217;s one set of interesting questions to ask in a Django interview. It would be a single aspect of a more rounded process of course; but I do think it&amp;#8217;s necessary to have some &amp;#8216;hands-on&amp;#8217; 
+coding-based enquiry for a developer job - that isn&amp;#8217;t just on a &amp;#8216;whiteboard&amp;#8217;; or trivia / &amp;#8216;gotcha&amp;#8217; questions; but is actually something of a practical exercise that&amp;#8217;s at least relevant to the job 
+of a Django developer. Needless to say, there&amp;#8217;s more to the job than just this; but in an hour - or two - we&amp;#8217;ve got to gain some indications; and we have to start&amp;nbsp;somewhere.&lt;/p&gt;</content><category term="Developer"></category><category term="Python"></category><category term="Data"></category><category term="Django"></category></entry><entry><title>Using Quarto in a Performance Test</title><link href="2023/10/02/using-quarto-in-a-performance-test/" rel="alternate"></link><published>2023-10-02T00:00:00-03:00</published><updated>2023-10-02T00:00:00-03:00</updated><author><name>Julz</name></author><id>tag:None,2023-10-02:2023/10/02/using-quarto-in-a-performance-test/</id><summary type="html">&lt;p&gt;I find the data exploration ecosystem to be extremely useful and interesting. And it&amp;#8217;s bubbling up with new tools all the time.: eg: Jupyter Notebooks, Streamlit, Voila and all the&amp;nbsp;rest. &lt;/p&gt;
+&lt;p&gt;Here&amp;#8217;s a use case for one perhaps less well know :&lt;a href="https://quarto.org"&gt;Quarto&lt;/a&gt; : it&amp;#8217;s got that great mix …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I find the data exploration ecosystem to be extremely useful and interesting. And it&amp;#8217;s bubbling up with new tools all the time.: eg: Jupyter Notebooks, Streamlit, Voila and all the&amp;nbsp;rest. &lt;/p&gt;
+&lt;p&gt;Here&amp;#8217;s a use case for one perhaps less well know :&lt;a href="https://quarto.org"&gt;Quarto&lt;/a&gt; : it&amp;#8217;s got that great mix of  markdown text plus code in a Jupyter Notebook with nice output options. We can use it 
+to output our Notebook results into a professional report&amp;nbsp;document.&lt;/p&gt;
+&lt;h2&gt;Quarto and Locust and performance&amp;nbsp;testing&lt;/h2&gt;
+&lt;p&gt;Recently I had to perform some performance testing on a web application under simulated (but realistic) loads,  so I used &lt;a href="https://locust.io"&gt;Locust&lt;/a&gt; to automatically generate realistic load 
+profiles 
+of a cohort of&amp;nbsp;users.&lt;/p&gt;
+&lt;p&gt;Writing and running Locust tests is easy (and quite fun) but the tricky thing was automating the running of the tests and generating a report: it was tiresome to manually run each 
+test and compile the results - but what I wanted was to kick off the performance test and the collation of the data all from a single command. 
+Each performance test took at least ten minutes. Annoying to have to baby-sit, waiting for the run to finish to start the next&amp;nbsp;one.&lt;/p&gt;
+&lt;p&gt;Here&amp;#8217;s how I went about it. It&amp;#8217;s not that technically challenging really – just wiring up os.system calls from the notebook. But this way makes the running multiple test runs and generation of a 
+report all
+self-contained and&amp;nbsp;repeatable.&lt;/p&gt;
+&lt;p&gt;There&amp;#8217;s quite a lot of subtle details in getting load tests right. You have to be careful that you&amp;#8217;re testing what you think you&amp;#8217;re testing! More on that another time perhaps, but let&amp;#8217;s keep it 
+simple: 
+imagine you 
+want to single test of a system under test with the following load:  a cohort of simulated users randomly clicking a link every 
+few seconds. The number of these users increases linearly rapidly, then plateaus, then decreases back to&amp;nbsp;zero.&lt;/p&gt;
+&lt;p&gt;Locust makes this type of test extremely convenient and can simulate thousands of simultaneous users nicely, as it defines the user behaviour in a Python class. This can be executed from the 
+command line and 
+generate 
+wonderfully 
+detailed 
+reports. Use it in non-headless mode to run from the browser and to debug the tests are working as&amp;nbsp;expected.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# locustfile.py&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;locust&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;HttpUser&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;task&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;between&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;random&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;WebsiteUser&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;HttpUser&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;wait_time&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;between&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# Wait between 1 and 5 seconds&lt;/span&gt;
+
+    &lt;span class="nd"&gt;@task&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;click_link&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;links&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/link1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;/link2&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;/link3&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;/link4&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;choice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;links&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;link&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;A test with a cohort of users made up of&amp;nbsp;our &lt;code&gt;WebsiteUser&lt;/code&gt; can be executed from the browser and is extremely convenient for a manual test. We can make this behaviour much more complex and we can 
+have a variety of user classes each modelling different behaviours. For my situation, I had the user class read the OpenAPI &lt;span class="caps"&gt;API&lt;/span&gt; specifications and extract all the viable endpoints, and then&lt;br&gt;
+going on a&amp;nbsp;click-frenzy.&lt;/p&gt;
+&lt;p&gt;We could run tests manually from the browser and download a spreadsheet of the results (or take screenshots). But I wanted to automate this process entirely – and have the results in a nice&amp;nbsp;report.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Sample Locust report" src="images/locust_report_sample.png"&gt;&lt;/p&gt;
+&lt;p&gt;But now lets make the test more sophisticated and repeatable? We can &lt;a href="https://docs.locust.io/en/stable/configuration.html#id4"&gt;configure the locust test&lt;/a&gt; from&amp;nbsp;a &lt;code&gt;locust.conf&lt;/code&gt; file.&amp;nbsp;eg: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;headless = true
+host = https://example.com
+users = 100
+spawn-rate = 10
+run-time = 10m
+csv = data/blog_data.csv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;So now we have Locust set up to run from the command line with a configuration file instead of passing in&amp;nbsp;arguments.  &lt;/p&gt;
+&lt;h2&gt;Run locust from the command&amp;nbsp;line&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;  &lt;/span&gt;locust&lt;span class="w"&gt; &lt;/span&gt;-f&lt;span class="w"&gt; &lt;/span&gt;locustfile.py&lt;span class="w"&gt; &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now we don&amp;#8217;t need to pass in args such&amp;nbsp;as: &lt;code&gt;--headless --csv=my_results&lt;/code&gt;. And Locust will now automatically save results to a &lt;span class="caps"&gt;CSV&lt;/span&gt; file. This is going to be a bit&lt;br&gt;
+more standardized and more repeatable 
+when we 
+kick-off many performance&amp;nbsp;tests. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;locust&lt;span class="w"&gt; &lt;/span&gt;-f&lt;span class="w"&gt; &lt;/span&gt;my_locust_file.py&lt;span class="w"&gt; &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ok so now Locust is easy to run and generates a &lt;span class="caps"&gt;CSV&lt;/span&gt; file of the results, let&amp;#8217;s get Quarto to generate a report from the &lt;span class="caps"&gt;CSV&lt;/span&gt; file as a&amp;nbsp;table:&lt;/p&gt;
+&lt;h2&gt;Quarto and&amp;nbsp;Pandas&lt;/h2&gt;
+&lt;p&gt;By writing conclusions and analysis in a Quarto document, we can initiate and display results of the performance test in a nice&amp;nbsp;report.&lt;/p&gt;
+&lt;p&gt;In an early cell, we can run the Locust bash command to generate the &lt;span class="caps"&gt;CSV&lt;/span&gt; file. We can add a comment to the cell to hide the&amp;nbsp;output. &lt;/p&gt;
+&lt;p&gt;In a subsequent cell we can read the &lt;span class="caps"&gt;CSV&lt;/span&gt; file into a Pandas DataFrame and display the results - also with the comments to hide the&amp;nbsp;code.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;locust -f locustfile.py&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;That generates the performance test results into a &lt;span class="caps"&gt;CSV&lt;/span&gt;&amp;nbsp;file.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Discussion of the results. (in markdown)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;data/blog_data.csv_stats_history.csv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;# some analysis and then show the dataframe as a table&lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;describe&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;Conclusions and charts based on the dataframe&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Now, final step to make the run fully automated. (similarly hidden) this add a command to output the Quarto file as a pdf, and not display the&amp;nbsp;output.:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;import&lt;span class="w"&gt; &lt;/span&gt;os
+os.system&lt;span class="o"&gt;(&lt;/span&gt;f&lt;span class="s1"&gt;&amp;#39;quarto render blog_performance_report.ipynb --to pdf &amp;gt;/dev/null 2&amp;gt;&amp;amp;1&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Conclusions&lt;/h2&gt;
+&lt;p&gt;So we can now run both a large number of performance tests and have the report generate from a single &amp;#8216;run all cells&amp;#8217; execution of a notebook file.  This is (of course!) just the bare bones; but 
+I hope it&amp;#8217;s clear that this 
+automates out 
+the manual 
+steps in 
+performance testing 
+and report&amp;nbsp;generation. &lt;/p&gt;
+&lt;p&gt;Lots more in the  &lt;a href="https://quarto.org"&gt;Quarto documentation&lt;/a&gt;, and there&amp;#8217;s an example of the above in the &lt;a href="https://github.com/julzhk/julzhk.github.io/tree/main/code_samples/quarto_and_locust_performance_tests"&gt;github&amp;nbsp;repo&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;And here&amp;#8217;s the sample&amp;nbsp;report:  &lt;/p&gt;
+&lt;p&gt;&lt;embed type="application/pdf" src="https://github.com/julzhk/julzhk.github.io/blob/main/code_samples/quarto_and_locust_performance_tests/blog_performance_report.pdf" width="250" height="200"&gt;&lt;/p&gt;</content><category term="Developer"></category><category term="Python"></category><category term="Data"></category><category term="Testing"></category><category term="Tools"></category></entry></feed>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  <title>Using Quarto in a Performance&nbsp;Test</title>
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="../../../.." rel="canonical" />
+
+  <!-- Feed -->
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Blog/Random/Stuff/ Full Atom Feed" />
+          <link href="/feeds/developer.atom.xml" type="application/atom+xml" rel="alternate" title="Blog/Random/Stuff/ Categories Atom Feed" />
+
+  <link href="../../../../theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="../../../../theme/css/code_blocks/github.css" rel="stylesheet">
+
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+    <link href="../../../../2023/10/02/using-quarto-in-a-performance-test/" rel="canonical" />
+
+        <meta name="description" content="I find the data exploration ecosystem to be extremely useful and interesting. And it’s bubbling up with new tools all the time.: eg:...">
+
+        <meta name="author" content="Julz">
+
+        <meta name="tags" content="Python">
+        <meta name="tags" content="Data">
+        <meta name="tags" content="Testing">
+        <meta name="tags" content="Tools">
+
+        <meta property="og:locale" content="" />
+    <meta property="og:site_name" content="Blog/Random/Stuff/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Blog/Random/Stuff/" />
+    <meta property="og:description" content="View the blog." />
+    <meta property="og:url" content="../../../.." />
+      <meta name="og:image" content="../../../../theme/images/post-bg.jpg">
+
+  <meta property="og:type" content="article">
+            <meta property="article:author" content="../../../../author/julz.html">
+  <meta property="og:url" content="../../../../2023/10/02/using-quarto-in-a-performance-test/">
+  <meta property="og:title" content="Using Quarto in a Performance&nbsp;Test">
+  <meta property="article:published_time" content="2023-10-02 00:00:00-03:00">
+            <meta property="og:description" content="I find the data exploration ecosystem to be extremely useful and interesting. And it’s bubbling up with new tools all the time.: eg:...">
+
+            <meta property="og:image" content="../../../../theme/images/post-bg.jpg">
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="../../../.." title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">Using Quarto in a Performance&nbsp;Test</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="../../../../author/julz.html">Julz</a>
+            | <time datetime="Mon 02 October 2023">Mon 02 October 2023</time>
+        </span>
+        <!-- TODO : Modified check -->
+        
+            <div class="post-cover cover" style="background-image: url('../../../../theme/images/post-bg.jpg')">
+        
+      </div>
+    </header>    
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <p>I find the data exploration ecosystem to be extremely useful and interesting. And it&#8217;s bubbling up with new tools all the time.: eg: Jupyter Notebooks, Streamlit, Voila and all the&nbsp;rest. </p>
+<p>Here&#8217;s a use case for one perhaps less well know :<a href="https://quarto.org">Quarto</a> : it&#8217;s got that great mix of  markdown text plus code in a Jupyter Notebook with nice output options. We can use it 
+to output our Notebook results into a professional report&nbsp;document.</p>
+<h2>Quarto and Locust and performance&nbsp;testing</h2>
+<p>Recently I had to perform some performance testing on a web application under simulated (but realistic) loads,  so I used <a href="https://locust.io">Locust</a> to automatically generate realistic load 
+profiles 
+of a cohort of&nbsp;users.</p>
+<p>Writing and running Locust tests is easy (and quite fun) but the tricky thing was automating the running of the tests and generating a report: it was tiresome to manually run each 
+test and compile the results - but what I wanted was to kick off the performance test and the collation of the data all from a single command. 
+Each performance test took at least ten minutes. Annoying to have to baby-sit, waiting for the run to finish to start the next&nbsp;one.</p>
+<p>Here&#8217;s how I went about it. It&#8217;s not that technically challenging really – just wiring up os.system calls from the notebook. But this way makes the running multiple test runs and generation of a 
+report all
+self-contained and&nbsp;repeatable.</p>
+<p>There&#8217;s quite a lot of subtle details in getting load tests right. You have to be careful that you&#8217;re testing what you think you&#8217;re testing! More on that another time perhaps, but let&#8217;s keep it 
+simple: 
+imagine you 
+want to single test of a system under test with the following load:  a cohort of simulated users randomly clicking a link every 
+few seconds. The number of these users increases linearly rapidly, then plateaus, then decreases back to&nbsp;zero.</p>
+<p>Locust makes this type of test extremely convenient and can simulate thousands of simultaneous users nicely, as it defines the user behaviour in a Python class. This can be executed from the 
+command line and 
+generate 
+wonderfully 
+detailed 
+reports. Use it in non-headless mode to run from the browser and to debug the tests are working as&nbsp;expected.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># locustfile.py</span>
+<span class="kn">from</span> <span class="nn">locust</span> <span class="kn">import</span> <span class="n">HttpUser</span><span class="p">,</span> <span class="n">task</span><span class="p">,</span> <span class="n">between</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="k">class</span> <span class="nc">WebsiteUser</span><span class="p">(</span><span class="n">HttpUser</span><span class="p">):</span>
+    <span class="n">wait_time</span> <span class="o">=</span> <span class="n">between</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>  <span class="c1"># Wait between 1 and 5 seconds</span>
+
+    <span class="nd">@task</span>
+    <span class="k">def</span> <span class="nf">click_link</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">links</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;/link1&quot;</span><span class="p">,</span> <span class="s2">&quot;/link2&quot;</span><span class="p">,</span> <span class="s2">&quot;/link3&quot;</span><span class="p">,</span> <span class="s2">&quot;/link4&quot;</span><span class="p">]</span>
+        <span class="n">link</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">links</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
+</code></pre></div>
+
+<p>A test with a cohort of users made up of&nbsp;our <code>WebsiteUser</code> can be executed from the browser and is extremely convenient for a manual test. We can make this behaviour much more complex and we can 
+have a variety of user classes each modelling different behaviours. For my situation, I had the user class read the OpenAPI <span class="caps">API</span> specifications and extract all the viable endpoints, and then<br>
+going on a&nbsp;click-frenzy.</p>
+<p>We could run tests manually from the browser and download a spreadsheet of the results (or take screenshots). But I wanted to automate this process entirely – and have the results in a nice&nbsp;report.</p>
+<p><img alt="Sample Locust report" src="../../../../images/locust_report_sample.png"></p>
+<p>But now lets make the test more sophisticated and repeatable? We can <a href="https://docs.locust.io/en/stable/configuration.html#id4">configure the locust test</a> from&nbsp;a <code>locust.conf</code> file.&nbsp;eg: </p>
+<div class="highlight"><pre><span></span><code>headless = true
+host = https://example.com
+users = 100
+spawn-rate = 10
+run-time = 10m
+csv = data/blog_data.csv
+</code></pre></div>
+
+<p>So now we have Locust set up to run from the command line with a configuration file instead of passing in&nbsp;arguments.  </p>
+<h2>Run locust from the command&nbsp;line</h2>
+<div class="highlight"><pre><span></span><code><span class="w">  </span>locust<span class="w"> </span>-f<span class="w"> </span>locustfile.py<span class="w"> </span>
+</code></pre></div>
+
+<p>Now we don&#8217;t need to pass in args such&nbsp;as: <code>--headless --csv=my_results</code>. And Locust will now automatically save results to a <span class="caps">CSV</span> file. This is going to be a bit<br>
+more standardized and more repeatable 
+when we 
+kick-off many performance&nbsp;tests. </p>
+<div class="highlight"><pre><span></span><code>locust<span class="w"> </span>-f<span class="w"> </span>my_locust_file.py<span class="w"> </span>
+</code></pre></div>
+
+<p>Ok so now Locust is easy to run and generates a <span class="caps">CSV</span> file of the results, let&#8217;s get Quarto to generate a report from the <span class="caps">CSV</span> file as a&nbsp;table:</p>
+<h2>Quarto and&nbsp;Pandas</h2>
+<p>By writing conclusions and analysis in a Quarto document, we can initiate and display results of the performance test in a nice&nbsp;report.</p>
+<p>In an early cell, we can run the Locust bash command to generate the <span class="caps">CSV</span> file. We can add a comment to the cell to hide the&nbsp;output. </p>
+<p>In a subsequent cell we can read the <span class="caps">CSV</span> file into a Pandas DataFrame and display the results - also with the comments to hide the&nbsp;code.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;locust -f locustfile.py&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>That generates the performance test results into a <span class="caps">CSV</span>&nbsp;file.</p>
+<div class="highlight"><pre><span></span><code>Discussion of the results. (in markdown)
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/blog_data.csv_stats_history.csv&#39;</span><span class="p">)</span>
+<span class="c1"># some analysis and then show the dataframe as a table</span>
+<span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</code></pre></div>
+
+<p><code>Conclusions and charts based on the dataframe</code></p>
+<p>Now, final step to make the run fully automated. (similarly hidden) this add a command to output the Quarto file as a pdf, and not display the&nbsp;output.:</p>
+<div class="highlight"><pre><span></span><code>import<span class="w"> </span>os
+os.system<span class="o">(</span>f<span class="s1">&#39;quarto render blog_performance_report.ipynb --to pdf &gt;/dev/null 2&gt;&amp;1&#39;</span><span class="o">)</span>
+</code></pre></div>
+
+<h2>Conclusions</h2>
+<p>So we can now run both a large number of performance tests and have the report generate from a single &#8216;run all cells&#8217; execution of a notebook file.  This is (of course!) just the bare bones; but 
+I hope it&#8217;s clear that this 
+automates out 
+the manual 
+steps in 
+performance testing 
+and report&nbsp;generation. </p>
+<p>Lots more in the  <a href="https://quarto.org">Quarto documentation</a>, and there&#8217;s an example of the above in the <a href="https://github.com/julzhk/julzhk.github.io/tree/main/code_samples/quarto_and_locust_performance_tests">github&nbsp;repo</a> </p>
+<p>And here&#8217;s the sample&nbsp;report:  </p>
+<p><embed type="application/pdf" src="https://github.com/julzhk/julzhk.github.io/blob/main/code_samples/quarto_and_locust_performance_tests/blog_performance_report.pdf" width="250" height="200"></p>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=Using Quarto in a Performance&nbsp;Test&amp;url=../../../../2023/10/02/using-quarto-in-a-performance-test/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=../../../../2023/10/02/using-quarto-in-a-performance-test/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=../../../../2023/10/02/using-quarto-in-a-performance-test/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="../../../../tag/python.html">Python</a><a href="../../../../tag/data.html">Data</a><a href="../../../../tag/testing.html">Testing</a><a href="../../../../tag/tools.html">Tools</a>                </aside>
+
+                <div class="clear"></div>
+
+ 
+
+                </section>
+
+
+                <aside class="post-nav">
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+  
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
+
+  <script type="text/javascript" src="../../../../theme/js/script.js"></script>
+  
+</body>
+</html>
