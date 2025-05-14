@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Blog/Random/Stuff/ - Learning, rust, programming</title><link href="/" rel="alternate"></link><link href="feeds/learning-rust-programming.atom.xml" rel="self"></link><id>/</id><updated>2025-01-17T00:00:00-04:00</updated><entry><title>Blogging - Intro</title><link href="2025/01/17/blogging-intro/" rel="alternate"></link><published>2025-01-17T00:00:00-04:00</published><updated>2025-01-17T00:00:00-04:00</updated><author><name>Julz</name></author><id>tag:None,2025-01-17:2025/01/17/blogging-intro/</id><summary type="html">&lt;p&gt;Learning&amp;nbsp;Rust. &lt;/p&gt;
+&lt;h2&gt;Rust&lt;/h2&gt;
+&lt;p&gt;Notes&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://learning.oreilly.com/videos/learn-rust-in/9781633438231VE/"&gt;lunch and learn - rust&amp;nbsp;book/video&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="quo"&gt;&amp;#8216;&lt;/span&gt;the hangover before the&amp;nbsp;party&amp;#8217;&lt;/li&gt;
+&lt;li&gt;https://www.reddit.com/r/rust/comments/1ift6e5/python_developer_getting_started_with_rust/&lt;/li&gt;
+&lt;li&gt;https://rust-exercises.com/100-exercises-to-learn-rust.pdf&lt;/li&gt;
+&lt;li&gt;Rust to pip : https://medium.com/towards-data-science/how-to-make-your-python-packages-really-fast-with-rust-91a9bebacbc2 with &lt;a href="https://www.maturin.rs"&gt;maturin&lt;/a&gt; : smooth out rust to python 
+  integration! &lt;span class="caps"&gt;OMG&lt;/span&gt;!&lt;/li&gt;
+&lt;li&gt;I have a project …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Learning&amp;nbsp;Rust. &lt;/p&gt;
+&lt;h2&gt;Rust&lt;/h2&gt;
+&lt;p&gt;Notes&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://learning.oreilly.com/videos/learn-rust-in/9781633438231VE/"&gt;lunch and learn - rust&amp;nbsp;book/video&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="quo"&gt;&amp;#8216;&lt;/span&gt;the hangover before the&amp;nbsp;party&amp;#8217;&lt;/li&gt;
+&lt;li&gt;https://www.reddit.com/r/rust/comments/1ift6e5/python_developer_getting_started_with_rust/&lt;/li&gt;
+&lt;li&gt;https://rust-exercises.com/100-exercises-to-learn-rust.pdf&lt;/li&gt;
+&lt;li&gt;Rust to pip : https://medium.com/towards-data-science/how-to-make-your-python-packages-really-fast-with-rust-91a9bebacbc2 with &lt;a href="https://www.maturin.rs"&gt;maturin&lt;/a&gt; : smooth out rust to python 
+  integration! &lt;span class="caps"&gt;OMG&lt;/span&gt;!&lt;/li&gt;
+&lt;li&gt;I have a project in mind: eg something like: &lt;a href="https://www.youtube.com/watch?v=R6v96c-ahAM"&gt;&lt;span class="caps"&gt;DSP&lt;/span&gt; sound synth with rust&lt;/a&gt;; or &lt;a href="https://github.com/vitobasso/rust-synth"&gt;this&amp;nbsp;synth&lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Rust&amp;nbsp;Primer&lt;/h2&gt;
+&lt;p&gt;New to rust? here&amp;#8217;s a cheat&amp;nbsp;sheet.&lt;/p&gt;
+&lt;h2&gt;Start with the basics: Comments &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt;&amp;nbsp;docs&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// hello world - comment line&lt;/span&gt;
+&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="cm"&gt;/* hello world ! */&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;
+&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="sd"&gt;/// doc comments like this /// &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cargo doc --open&lt;/code&gt; : to make the documentation site&amp;nbsp;(awesome!)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now we can write a comment or two, let&amp;#8217;s make&amp;nbsp;variables! &lt;/p&gt;
+&lt;h2&gt;Variables&lt;/h2&gt;
+&lt;h3&gt;Primitives&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;signed integers i8 i16 i32 i64 i128&amp;nbsp;isize&lt;/li&gt;
+&lt;li&gt;unsigned integers u8 u16 u32 u64 u128&amp;nbsp;usize&lt;/li&gt;
+&lt;li&gt;i8 up to 255; u16 up to 16000 (and a&amp;nbsp;bit!&lt;/li&gt;
+&lt;li&gt;chars&amp;nbsp;: &lt;code&gt;println!("len {}  ", "ç".len())&lt;/code&gt; returns &amp;#8216;2&amp;#8217; not &amp;#8216;1&amp;#8217; : number of bytes, not&amp;nbsp;characters)&lt;/li&gt;
+&lt;li&gt;println!(&amp;#8220;chars {:?}  &amp;#8220;, &amp;#8220;a&amp;#8221;.as_bytes()); gives the bytes of the&amp;nbsp;string&lt;/li&gt;
+&lt;li&gt;println!(&amp;#8220;chars count {}  &amp;#8220;, &amp;#8220;aaaà&amp;#8221;.chars().count()); gives the number of characters in the&amp;nbsp;string&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Type&amp;nbsp;inference&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;let my_number = 10:u8;&lt;/code&gt; // type after the&amp;nbsp;value
+ &lt;code&gt;let my_number:u8 = 10;&lt;/code&gt; // type with the&amp;nbsp;variable
+ &lt;code&gt;let my_number = 10_000_000_i32;&lt;/code&gt; // type with&amp;nbsp;formatting&lt;/p&gt;
+&lt;h3&gt;Mutability&lt;/h3&gt;
+&lt;p&gt;By default&amp;nbsp;immutable:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;let const = 1;&lt;/code&gt; //&amp;nbsp;immutable&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;let mut var = 1;&lt;/code&gt; //&amp;nbsp;mutable&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;var= "one";&lt;/code&gt; // error: expected integer,&amp;nbsp;found &lt;code&gt;&amp;amp;str&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Shadowing&lt;/h3&gt;
+&lt;p&gt;Scope, re-declaring variables, and&amp;nbsp;shadowing:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In the same&amp;nbsp;block:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;5.1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// shadowing&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="fm"&gt;println!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;The value of x is: {}&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 5.1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In separate&amp;nbsp;blocks:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;6.1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="fm"&gt;println!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;The value of x is: {}&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 6.1&lt;/span&gt;
+&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="fm"&gt;println!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;The value of x is: {}&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 5&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Constants&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;const MAX_POINTS: u32 = 100_000;&lt;/code&gt; // must be&amp;nbsp;annotated&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Data&amp;nbsp;types&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;let x = 2.0;&lt;/code&gt; // assumes&amp;nbsp;f64&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;let y: f32 = 3.0;&lt;/code&gt; // explicitly&amp;nbsp;f32&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Learning, rust, programming"></category><category term="Programming"></category><category term="Rust"></category><category term="Learning"></category></entry></feed>

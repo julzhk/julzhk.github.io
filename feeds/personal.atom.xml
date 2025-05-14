@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Blog/Random/Stuff/ - Personal</title><link href="/" rel="alternate"></link><link href="feeds/personal.atom.xml" rel="self"></link><id>/</id><updated>2025-05-14T00:00:00-03:00</updated><entry><title>LLM hot takes</title><link href="2025/05/14/llm-hot-takes/" rel="alternate"></link><published>2025-05-14T00:00:00-03:00</published><updated>2025-05-14T00:00:00-03:00</updated><author><name>Julz</name></author><id>tag:None,2025-05-14:2025/05/14/llm-hot-takes/</id><summary type="html">&lt;p&gt;To us developers, LLMs are that quintessential &amp;#8216;threat and opportunity&amp;#8217; that we&amp;#8217;ve all heard about. Sometimes I wonder if 
+two commentators are sharing the same baseline experience. Some bloggers say &amp;#8216;vibe coding is the goat&amp;#8217;; others say: &amp;#8216;bah, it barely works&amp;#8217;. What&amp;#8217;s going&amp;nbsp;on?&lt;/p&gt;
+&lt;p&gt;Needless to say the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;To us developers, LLMs are that quintessential &amp;#8216;threat and opportunity&amp;#8217; that we&amp;#8217;ve all heard about. Sometimes I wonder if 
+two commentators are sharing the same baseline experience. Some bloggers say &amp;#8216;vibe coding is the goat&amp;#8217;; others say: &amp;#8216;bah, it barely works&amp;#8217;. What&amp;#8217;s going&amp;nbsp;on?&lt;/p&gt;
+&lt;p&gt;Needless to say the truth is probably somewhere in between and nuanced. Hopefully this is some&amp;nbsp;nuance.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I&amp;#8217;ve found &lt;em&gt;&amp;#8216;&lt;span class="caps"&gt;LLM&lt;/span&gt; as super-autocomplete&amp;#8217;&lt;/em&gt; really useful for learning new frameworks and languages. With a bit of foundational knowledge I can just make vague gestures towards
+the direction I want and the &amp;#8216;&lt;span class="caps"&gt;LLM&lt;/span&gt; as super-autocomplete&amp;#8217; kicks in. Does it help me learn, be productive and get results? Not sure. Feels like a win, but maintainability and best practices are 
+  still my responsibility and (as a beginner to that new language) still an unknown - as a novice with the&amp;nbsp;skill.&lt;/li&gt;
+&lt;li&gt;Skill atrophy: so &lt;span class="caps"&gt;LLM&lt;/span&gt; feel like a huge skills buff - but what about skill atrophy? I think it&amp;#8217;s too early to tell but I can imagine development reflexes and muscle-memory 
+  dissapating. 
+  It could mean that we defer most coding tasks to the &lt;span class="caps"&gt;LLM&lt;/span&gt; and work on a higher level - leaving us to do all architecture and design, &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; almost no&amp;nbsp;implementation.&lt;/li&gt;
+&lt;li&gt;I worry about what this means to the industry in general: Junior devs won&amp;#8217;t need to learn fundamentals. &amp;#8216;You get what you reward&amp;#8217; and if we reward relying on LLMs then juniors will preferentially defer to LLMs and not on their own&amp;nbsp;knowledge.&lt;/li&gt;
+&lt;li&gt;Junior&amp;#8217;s won&amp;#8217;t be reading code so frequently either: a vital learning stage; just vibe coding new&amp;nbsp;slop.  &lt;/li&gt;
+&lt;li&gt;I do think it&amp;#8217;s likely to hollow out the mid-tier of the developer workforce. Given the rate of change in the industry there&amp;#8217;s a surprising number of devs that are not very adaptable to change: 
+  &amp;#8220;Just give me a Jira ticket; crank out code; rinse, repeat&amp;#8221;. Not comfortable with ambiguity. &amp;#8216;My end of the boat isn&amp;#8217;t sinking&amp;#8217; mentality. This approach is very vulnerable to being replaced by an &lt;span class="caps"&gt;LLM&lt;/span&gt;,&amp;nbsp;sadly.&lt;/li&gt;
+&lt;li&gt;How are &lt;span class="caps"&gt;LLM&lt;/span&gt; on the &amp;#8216;day-to-day&amp;#8217;? It&amp;#8217;s quite a peculiar change in a &amp;#8216;think-do-check&amp;#8217; work cycle and takes some getting used to. There&amp;#8217;s definitely a process of acclimatization and change of&amp;nbsp;habits. &lt;/li&gt;
+&lt;li&gt;I find the interruptions mean getting into a &amp;#8216;flow state&amp;#8217; of work has changed; bit harder. Still pondering this one&amp;nbsp;tbh.&lt;/li&gt;
+&lt;li&gt;And 
+  what&amp;#8217;s a good metaphor for 
+  working with 
+  them? Something&amp;nbsp;like:&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;span class="quo"&gt;&amp;#8216;&lt;/span&gt;An excitable indefatigable junior&amp;#8217;&lt;/strong&gt;: They have lots of energy and have crammed a lot of knowledge but don&amp;#8217;t know how to apply it. We&amp;#8217;re pair programming partners but I have to keep it as 
+    unequal 
+  as&amp;nbsp;possible.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;span class="quo"&gt;&amp;#8216;&lt;/span&gt;A Genie&amp;#8217;&lt;/strong&gt;: You give them commands and magically they do what you ask. With unintended consequences (that are often extremely unfortunate), so keep them on a short&amp;nbsp;leash!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;span class="quo"&gt;&amp;#8216;&lt;/span&gt;As excitable intern&amp;#8217;&lt;/strong&gt;: Different to being a &amp;#8216;junior&amp;#8217; as they just don&amp;#8217;t care about any consequences. They fulfil the task and they&amp;#8217;re on to the next&amp;nbsp;thing.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A &lt;strong&gt;&amp;#8216;sycophantic fabulist&amp;#8217;&lt;/strong&gt;: they&amp;#8217;ll flatter you and tell you pleasant lies. And cheat if they have to. Tests don&amp;#8217;t pass? No problem, they&amp;#8217;ll just delete&amp;nbsp;them.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Change in habits will apply to non-developer roles and behaviours too: obviously senior execs seem to be very excited at the opportunity to down-size and de-skill the workforce. Offshore and 
+  using 
+  LLMs? - irresistable. By the time the terrible quality impacts delivery and maintainability they&amp;#8217;re likely to be long gone with their golden parachutes. Nice work if you can get&amp;nbsp;it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;But it is true: Product Managers, Engineering Managers and entrepreneurs: can all be programmers now - they all can escape the tyranny of syntax. For society, this might be a good thing. 
+  However security, privacy, &lt;span class="caps"&gt;AI&lt;/span&gt;-slop and an-even-more-dead-internet - these might all get much&amp;nbsp;worse.&lt;/li&gt;
+&lt;li&gt;Obviously, being a professional has always been more than just knowing syntax or a framework. Decades ago, Djikstra discussed programming being all about mental models and abstractions. Writing 
+  the 
+  code and mastering syntax is even less essential than ever. Plausible to think a product manager could have a good go at a prototype,&amp;nbsp;say.&lt;/li&gt;
+&lt;li&gt;One topic that&amp;#8217;s interesting is the application to &lt;strong&gt;&lt;span class="caps"&gt;QA&lt;/span&gt; and tests&lt;/strong&gt;: it&amp;#8217;s tempting to just get LLMs to write tests and move on but this misses the point of acceptance testing and the importance of 
+  &lt;span class="caps"&gt;QA&lt;/span&gt; (&amp;amp; &lt;span class="caps"&gt;TDD&lt;/span&gt; obviously) as tools of design and clarity rather than as an &amp;#8216;after the fact&amp;#8217; pro forma step. Good tests come out of a sophisticated and accurate model of the system and the problem 
+  domain: that&amp;#8217;s how you know where the edges of the edge cases&amp;nbsp;are.&lt;/li&gt;
+&lt;li&gt;This highlights one huge failing of LLMs for code: they can&amp;#8217;t form that overall mental model of a system. This type of understanding is most important in maintanance 
+  legacy and novel code-bases and problems. I think this limitation is easily overlooked when dazzled by shiny &amp;#8216;hello world&amp;#8217; demos: greenfield development is so refreshing and&amp;nbsp;rapid.&lt;/li&gt;
+&lt;li&gt;So given their tendancy to rush, fabulate and lie; How will the trade-off between &amp;#8216;quick&amp;#8217; and &amp;#8216;done properly&amp;#8217; play out? In a couple of years, will we look back at tons of &lt;span class="caps"&gt;LLM&lt;/span&gt; productivity and 
+  shudder? A rat&amp;#8217;s nest of vibe-coded slapdash work? Will there be a backlash; new techniques and methodologies to leverage the tech or just an ugly accomodation and we&amp;#8217;ll just cope? Interesting to&amp;nbsp;speculate.&lt;/li&gt;
+&lt;li&gt;Elegance - and intuition: these are somewhat aesthetic judgements but it&amp;#8217;s a measure of a good design: simplicity, clarity, maintainability; an elegant solution addresses all of these criteria. 
+  LLMs aren&amp;#8217;t tuned to this&amp;nbsp;sentiment.&lt;/li&gt;
+&lt;li&gt;Maybe we&amp;#8217;ll see &lt;span class="caps"&gt;LLM&lt;/span&gt; thrive in prototyping. Maybe developers will take over after that initial market- and product- testing phase is successful? Maybe this will mean projects that employ 
+  professional developers will be more 
+  focussed and more about increase the value of the product rather than just &amp;#8216;get it out the door&amp;#8217;. Maybe developers will collaborate with stakeholders to rapidly use LLMs to get to that product 
+  market fit stage&amp;nbsp;rapidly.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ok that&amp;#8217;s enough for now. Likely to add to this and come back to it as this exciting topic develops. Comments and feedback&amp;nbsp;welcome.&lt;/p&gt;</content><category term="Personal"></category><category term="LLM"></category></entry><entry><title>My learning list</title><link href="2025/01/31/my-learning-list/" rel="alternate"></link><published>2025-01-31T00:00:00-04:00</published><updated>2025-01-31T00:00:00-04:00</updated><author><name>Julz</name></author><id>tag:None,2025-01-31:2025/01/31/my-learning-list/</id><summary type="html">&lt;p&gt;Inspired by seeing something similar in some other blogs and newsletters I thought I&amp;#8217;d add a live list of the stuff I&amp;#8217;m learning about currently: eg: clever websites, tools and&amp;nbsp;books!&lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s updated as I&amp;nbsp;go. &lt;/p&gt;
+&lt;h2&gt;Currently&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[ ] &lt;a href="https://youtu.be/_MPUoiG6w_U"&gt;Residuality Theory&lt;/a&gt;&amp;nbsp;: &lt;/li&gt;
+&lt;li&gt;how to architect; why is architecture so ad …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Inspired by seeing something similar in some other blogs and newsletters I thought I&amp;#8217;d add a live list of the stuff I&amp;#8217;m learning about currently: eg: clever websites, tools and&amp;nbsp;books!&lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s updated as I&amp;nbsp;go. &lt;/p&gt;
+&lt;h2&gt;Currently&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[ ] &lt;a href="https://youtu.be/_MPUoiG6w_U"&gt;Residuality Theory&lt;/a&gt;&amp;nbsp;: &lt;/li&gt;
+&lt;li&gt;how to architect; why is architecture so ad&amp;nbsp;hoc?&lt;/li&gt;
+&lt;li&gt;Complexity&amp;nbsp;theory&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href="https://leanpub.com/residuality"&gt;the book: Residues: Time, Change, and Uncertainty in Software&amp;nbsp;Architecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href="https://learning.oreilly.com/library/view/speed-up-your/9781801811446/"&gt;Speed Up Your Python with Rust&lt;/a&gt;&amp;nbsp;: &lt;/li&gt;
+&lt;li&gt;Really enjoying the brisk&amp;nbsp;pace&lt;/li&gt;
+&lt;li&gt;Love the step-by-step hands-on grounding in making pip packages and how installing&amp;nbsp;works&lt;/li&gt;
+&lt;li&gt;Need a diagram to track the entry points and exits of the Rust code to Python; all a bit confused&amp;nbsp;rn!&lt;/li&gt;
+&lt;li&gt;Have to learn Rust properly&amp;nbsp;however&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href="https://docs.wasmer.io"&gt;deploy onto raspberry pi&lt;/a&gt;: The project I have in mind (music stuff!) will run on a Pi; this gets it there. I&amp;nbsp;hope!&lt;/li&gt;
+&lt;li&gt;[ ] Making&amp;nbsp;Sounds&lt;/li&gt;
+&lt;li&gt;There&amp;#8217;s a whole world of music processing tech! One of those niche&amp;#8217;s that progress along on their own slightly obscured from outsiders: with their own leaders, vocab, 
+    common knowledge&amp;#8230; Unless 
+    you 
+    dive in and make sense of it&amp;nbsp;all!&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href="https://puredata.info"&gt;Pure data&lt;/a&gt; : impressive and Fun. but so&amp;nbsp;quirky!&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href="https://learning.oreilly.com/library/view/programming-sound-with/9781941222492/"&gt;Pure data book&lt;/a&gt; : Step-by-step; bit slow, but it&amp;#8217;s&amp;nbsp;thorough&lt;/li&gt;
+&lt;li&gt;[x] The Theory and Technique of Electronic Music Book pdf - Miller Puckette: &lt;span class="caps"&gt;PD&lt;/span&gt; creator; starts simple, dives deep. Abandoned for&amp;nbsp;now. &lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href="https://supercollider.github.io"&gt;SuperCollider&lt;/a&gt; : &lt;span class="caps"&gt;PD&lt;/span&gt;&amp;nbsp;alternative&lt;/li&gt;
+&lt;li&gt;Rust. Low latency / triggers / Midi even? Not sure, but it&amp;#8217;s building&amp;nbsp;blocks&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;[ ] &lt;a href="https://rust-audio.github.io"&gt;Rust Audio&lt;/a&gt;&amp;nbsp;: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;[ ] &lt;a href="https://learning.oreilly.com/library/view/rust-audio/9781801072444/"&gt;Rust Audio book&lt;/a&gt; : Not&amp;nbsp;started&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;[ ] Simpy : Python simulation framework; fun. Want to make a game, with the engine built around a sim.py simulation. Need a&amp;nbsp;topic!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Kafka&amp;nbsp;Streams&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href="https://learning.oreilly.com/library/view/kafka-streams-in/9781617294471/"&gt;Kafka Streams in Action&lt;/a&gt; : &lt;ul&gt;
+&lt;li&gt;Not&amp;nbsp;started&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href="https://learning.oreilly.com/library/view/mastering-kafka-streams/9781492062486/ch02.html#idm46281564624232"&gt;Mastering Kafka Streams&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;started; nice introduction, good pace; lots in&amp;nbsp;it&lt;/li&gt;
+&lt;li&gt;Going to want to dive into the famous &amp;#8216;data intensive applications&amp;#8217; book by Klepperman again. (New edition&amp;nbsp;incoming!)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Gawd, there&amp;#8217;s a lot on my&amp;nbsp;mind.&lt;/p&gt;</content><category term="Personal"></category><category term="Learning"></category></entry></feed>

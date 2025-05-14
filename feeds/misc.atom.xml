@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Blog/Random/Stuff/ - Misc</title><link href="/" rel="alternate"></link><link href="feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2025-01-18T00:00:00-04:00</updated><entry><title>Blogging - Intro</title><link href="2025/01/18/blogging-intro/" rel="alternate"></link><published>2025-01-18T00:00:00-04:00</published><updated>2025-01-18T00:00:00-04:00</updated><author><name>Julz</name></author><id>tag:None,2025-01-18:2025/01/18/blogging-intro/</id><summary type="html">&lt;p&gt;I&amp;#8217;ve started a few attempts to blog over the years. Having to pay for a site or maintain a server for my humble thoughts got a bit tiresome eventually. But this is a free, static site, so I&amp;#8217;m 
+giving it another go: Free, simple, Python, Jinja, Markdown, and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I&amp;#8217;ve started a few attempts to blog over the years. Having to pay for a site or maintain a server for my humble thoughts got a bit tiresome eventually. But this is a free, static site, so I&amp;#8217;m 
+giving it another go: Free, simple, Python, Jinja, Markdown, and Git - this might be sustainable. And I can tweak to my heart&amp;#8217;s&amp;nbsp;content.&lt;/p&gt;
+&lt;p&gt;I get the attractions of blogging: notes to Self that will perhaps be useful to refer back to- and perhaps that someone somewhere might one day also find useful. Obviously this assumes the notes 
+are worth reading! Warning: probably&amp;nbsp;not.&lt;/p&gt;
+&lt;p&gt;One purpose of keeping notes is the process of note-taking itself. The act of writing helps to clarify thoughts and retain them, so I&amp;#8217;m doing this for me, not you. I&amp;#8217;m interested to see the value in 
+the &lt;a href="https://thinkingforest.org/2023/01/05/The-Secret-to-Cory-Doctorow-Memex"&gt;Memex&amp;nbsp;method&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I imagine I&amp;#8217;ll be making : 
+* book reviews - especially tech book summaries
+* technical writing: when rtfm doesn&amp;#8217;t work. Especially Python
+* recipes. Especially bread.
+* Miscellaneous. Especially&amp;nbsp;Dinosaurs.&lt;/p&gt;
+&lt;p&gt;Might turn out to just be me commenting on &lt;a href="https://news.ycombinator.com/"&gt;hacker news posts&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;About the Blog&amp;nbsp;technology&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;This blog is built using the Pelican static site generator. I do like a static site: low maintenance, low cost, and handle high traffic -&amp;nbsp;nice! &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The blogging platform is &lt;a href="https://getpelican.com"&gt;Pelican&lt;/a&gt; - simple is clever. Thanks&amp;nbsp;pelican!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;The theme is called &lt;a href="https://github.com/arulrajnet/attila"&gt;&amp;#8216;Attila&amp;#8217; &lt;/a&gt; : looks nice to me -&amp;nbsp;thanks!&lt;/li&gt;
+&lt;li&gt;The blog is hosted on Github Pages. Free is nice, thanks&amp;nbsp;github!&lt;/li&gt;
+&lt;li&gt;It&amp;#8217;s deployed using a Github Actions: &lt;a href="https://github.com/nelsonjchen/gh-pages-pelican-action"&gt;gh-pages-pelican-action&lt;/a&gt; in particular -&amp;nbsp;thanks!&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Misc"></category><category term="Miscellaneous"></category></entry></feed>

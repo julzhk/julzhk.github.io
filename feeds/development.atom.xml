@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Blog/Random/Stuff/ - Development</title><link href="/" rel="alternate"></link><link href="feeds/development.atom.xml" rel="self"></link><id>/</id><updated>2025-02-28T00:00:00-04:00</updated><entry><title>What I’d change in the Agile Manifesto</title><link href="2025/02/28/what-id-change-in-the-agile-manifesto/" rel="alternate"></link><published>2025-02-28T00:00:00-04:00</published><updated>2025-02-28T00:00:00-04:00</updated><author><name>Julz</name></author><id>tag:None,2025-02-28:2025/02/28/what-id-change-in-the-agile-manifesto/</id><summary type="html">&lt;p&gt;I just finished an Agile &lt;span class="caps"&gt;PM&lt;/span&gt; course. Quite intensive really : 20hrs over a week. Covered a lot of ground, all of it relevant and useful. 
+And I now have a certification which is&amp;nbsp;nice. &lt;/p&gt;
+&lt;p&gt;One thing that came up the other day: &lt;em&gt;If you could change one thing in the …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;I just finished an Agile &lt;span class="caps"&gt;PM&lt;/span&gt; course. Quite intensive really : 20hrs over a week. Covered a lot of ground, all of it relevant and useful. 
+And I now have a certification which is&amp;nbsp;nice. &lt;/p&gt;
+&lt;p&gt;One thing that came up the other day: &lt;em&gt;If you could change one thing in the Agile Manifesto, what would it&amp;nbsp;be?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve been referring to the Agile Manifesto for years now. I like the fact it&amp;#8217;s a statement of intent rather than an prescriptive set of rules. Compare this with &lt;span class="caps"&gt;XP&lt;/span&gt;, Scrum or (to a degree) Kanban, 
+which all have more concrete implementation suggestions. This leaves the implementation of Agile open to interpretation by the individual and team. Which can be daunting but a good&amp;nbsp;thing.&lt;/p&gt;
+&lt;p&gt;So it&amp;#8217;s &lt;em&gt;all&lt;/em&gt; open to interpretation all the time, by all&amp;nbsp;stakeholders.&lt;/p&gt;
+&lt;p&gt;Anyhoo: that&amp;#8217;s enough&amp;nbsp;preamble!&lt;/p&gt;
+&lt;p&gt;So let&amp;#8217;s repeat the manifesto in full here (it&amp;#8217;s so&amp;nbsp;short)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Individuals and interactions over processes and&amp;nbsp;tools&lt;/li&gt;
+&lt;li&gt;Working software over comprehensive&amp;nbsp;documentation&lt;/li&gt;
+&lt;li&gt;Customer collaboration over contract&amp;nbsp;negotiation&lt;/li&gt;
+&lt;li&gt;Responding to change over following a&amp;nbsp;plan&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Wow; so much discussion and interpretation over so few&amp;nbsp;words!&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s look a little into the intentions of each of these four bold statements:
+Internal Dynamics; sytems thinking; customer focus; and&amp;nbsp;flexibility.&lt;/p&gt;
+&lt;p&gt;One thing missing is external stateholders - especially business concerns - how to reassure that this process is on track to deliver value? I guess the working software is the measure of that; but 
+this isn&amp;#8217;t enough for some&amp;nbsp;stakeholders!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;In the spirit of the question: I think I&amp;#8217;d change the &lt;a href="https://agilemanifesto.org/principles.html"&gt;principles&lt;/a&gt;: &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Deliver working software frequently, from a
+couple of weeks to a couple of months, with a
+preference to the shorter timescale.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;I think the intention is still correct however,the trend on this principle is deliver much more frequently than monthly; especially on the web, even for massive&amp;nbsp;companies.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m likely to come back to this post; I&amp;#8217;ve more to say&amp;#8230;&amp;nbsp;&amp;#8220;`&lt;/p&gt;</content><category term="Development"></category><category term="Agile"></category><category term="PM"></category><category term="Development"></category></entry></feed>

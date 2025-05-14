@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  <title>Investigation on Entity-Attribute-Value Stored Data and&nbsp;DuckDB</title>
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="../../../.." rel="canonical" />
+
+  <!-- Feed -->
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Blog/Random/Stuff/ Full Atom Feed" />
+          <link href="/feeds/developer.atom.xml" type="application/atom+xml" rel="alternate" title="Blog/Random/Stuff/ Categories Atom Feed" />
+
+  <link href="../../../../theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="../../../../theme/css/code_blocks/github.css" rel="stylesheet">
+
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+    <link href="../../../../2025/01/18/investigation-on-entity-attribute-value-stored-data-and-duckdb/" rel="canonical" />
+
+        <meta name="description" content="I have a project I’m contributing to that uses EAV to store some of it’s data, eg: there’s a fixed set of fields that are stored in a...">
+
+        <meta name="author" content="Julz">
+
+        <meta name="tags" content="Python">
+        <meta name="tags" content="Data">
+
+        <meta property="og:locale" content="" />
+    <meta property="og:site_name" content="Blog/Random/Stuff/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Blog/Random/Stuff/" />
+    <meta property="og:description" content="View the blog." />
+    <meta property="og:url" content="../../../.." />
+      <meta name="og:image" content="../../../../theme/images/post-bg.jpg">
+
+  <meta property="og:type" content="article">
+            <meta property="article:author" content="../../../../author/julz.html">
+  <meta property="og:url" content="../../../../2025/01/18/investigation-on-entity-attribute-value-stored-data-and-duckdb/">
+  <meta property="og:title" content="Investigation on Entity-Attribute-Value Stored Data and&nbsp;DuckDB">
+  <meta property="article:published_time" content="2025-01-18 00:00:00-04:00">
+            <meta property="og:description" content="I have a project I’m contributing to that uses EAV to store some of it’s data, eg: there’s a fixed set of fields that are stored in a...">
+
+            <meta property="og:image" content="../../../../theme/images/post-bg.jpg">
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="../../../.." title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">Investigation on Entity-Attribute-Value Stored Data and&nbsp;DuckDB</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="../../../../author/julz.html">Julz</a>
+            | <time datetime="Sat 18 January 2025">Sat 18 January 2025</time>
+        </span>
+        <!-- TODO : Modified check -->
+        
+            <div class="post-cover cover" style="background-image: url('../../../../theme/images/post-bg.jpg')">
+        
+      </div>
+    </header>    
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <p>I have a project I&#8217;m contributing to that uses <span class="caps">EAV</span> to store <em>some</em> of it&#8217;s data, eg: there&#8217;s a fixed set of fields that are stored in a &#8216;core&#8217; table, and then there&#8217;s an <span class="caps">EAV</span> table that stores
+attributes added conveniently by the user (which we&#8217;ll call <span class="caps">EAV</span> or &#8216;custom&nbsp;attributes&#8217;)</p>
+<p>This works nicely for saving; but the trouble with this pattern is that making queries is a bit more tricky - If the data was entirely <span class="caps">EAV</span> or entirely &#8216;core&#8217;, there&#8217;d be a clear path to querying.<br>
+However when it&#8217;s mixed like this we can&#8217;t do simple&nbsp;queries.</p>
+<p>For instance: Say we want to: &#8216;Sort all records by data stored in an <span class="caps">EAV</span> field&#8217;; or &#8216;sort by a &#8216;core&#8217; field with a filter on a
+&#8216;custom attribute&#8217; one. Can be done, but all just a bit more complex.
+It makes me think of the pitfalls of not respecting polymorphic consistency in <span class="caps">OOP</span>.</p>
+<h2>DuckDB, Postgres, Dataframes and <span class="caps">SQL</span></h2>
+<p>DuckDB allows us to pull data into a dataframe, join the disparate <span class="caps">EAV</span> fields together into a consistent representation and then do sql manipulations on that dataframe. Pretty simple turns out! so we
+can
+assemble
+the data
+into a consistent
+representation and
+then do
+manipulations on it - eg
+sorting and
+filtering, searching, aggregation etc - in
+DuckDB <span class="caps">SQL</span>.</p>
+<p>All the
+data is in
+memory so it&#8217;s fast;
+all of the data is represented in a consistent way, so we can query on &#8216;core&#8217; or &#8216;<span class="caps">EAV</span>&#8217; data&nbsp;equally.</p>
+<p><a href="https://github.com/julzhk/duckdb-investigate/blob/main/duckdb-investigate.ipynb">Here&#8217;s a repo of an investigation on this topic
+</a> - it has other fragments too - eg: Doing <span class="caps">SQL</span> on both a <span class="caps">CSV</span> and Postgres data source. So&nbsp;convenient!</p>
+<h2>The&nbsp;code</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">duckdb</span>
+
+<span class="c1"># Connect to the DuckDB database</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+
+<span class="c1"># Now attach the PostgreSQL database</span>
+<span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">ATTACH &#39;dbname=testdb user=postgres port=5433 host=127.0.0.1&#39; AS test_db (TYPE POSTGRES);</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+
+<span class="c1"># Load the core items table into a DataFrame</span>
+<span class="n">items_df</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM test_db.items&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetch_df</span><span class="p">()</span>
+
+<span class="c1"># Load the EAV table into another DataFrame</span>
+<span class="n">eav_df</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;SELECT * FROM test_db.eav&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetch_df</span><span class="p">()</span>
+
+<span class="c1"># Pivot the eav table to transform attributes into columns</span>
+<span class="n">pivoted_eav_df</span> <span class="o">=</span> <span class="n">eav_df</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;attribute&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;attribute_value&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># Merge the items DataFrame with the pivoted other DataFrame, using the &#39;id&#39; column as key</span>
+<span class="n">merged_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">items_df</span><span class="p">,</span> <span class="n">pivoted_eav_df</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+<span class="c1"># Remove NANs</span>
+<span class="n">merged_df</span> <span class="o">=</span> <span class="n">merged_df</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">notnull</span><span class="p">(</span><span class="n">merged_df</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="c1"># Now we can do SQL queries on the merged DataFrame</span>
+<span class="n">sorted_df</span> <span class="o">=</span> <span class="n">merged_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;colour&#39;</span><span class="p">)</span>
+
+<span class="n">complex_query</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM sorted_df WHERE colour=&#39;blue&#39; AND id &gt; 100&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetch_df</span><span class="p">()</span>
+</code></pre></div>
+
+<p>Of course, usual caveats apply regarding performance, memory,&nbsp;speeed. </p>
+<p>But my tests show on my laptop we can load millions of records with dozens of custom fields from the <span class="caps">EAV</span> tables, and do complex queries on<br>
+them in a few&nbsp;seconds.</p>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=Investigation on Entity-Attribute-Value Stored Data and&nbsp;DuckDB&amp;url=../../../../2025/01/18/investigation-on-entity-attribute-value-stored-data-and-duckdb/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=../../../../2025/01/18/investigation-on-entity-attribute-value-stored-data-and-duckdb/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=../../../../2025/01/18/investigation-on-entity-attribute-value-stored-data-and-duckdb/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="../../../../tag/python.html">Python</a><a href="../../../../tag/data.html">Data</a>                </aside>
+
+                <div class="clear"></div>
+
+ 
+
+                </section>
+
+
+                <aside class="post-nav">
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+  
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
+
+  <script type="text/javascript" src="../../../../theme/js/script.js"></script>
+  
+</body>
+</html>

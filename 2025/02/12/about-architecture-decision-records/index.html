@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  <title>About Architecture Decision&nbsp;Records</title>
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="../../../.." rel="canonical" />
+
+  <!-- Feed -->
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Blog/Random/Stuff/ Full Atom Feed" />
+          <link href="/feeds/process.atom.xml" type="application/atom+xml" rel="alternate" title="Blog/Random/Stuff/ Categories Atom Feed" />
+
+  <link href="../../../../theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="../../../../theme/css/code_blocks/github.css" rel="stylesheet">
+
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+    <link href="../../../../2025/02/12/about-architecture-decision-records/" rel="canonical" />
+
+        <meta name="description" content="Architecture Decision Records I hold a weekly mentoring session and this week the topic of ‘ADR’ came up. I’ve had experience with them...">
+
+        <meta name="author" content="Julz">
+
+        <meta name="tags" content="Learning">
+        <meta name="tags" content="development">
+        <meta name="tags" content="process">
+
+        <meta property="og:locale" content="" />
+    <meta property="og:site_name" content="Blog/Random/Stuff/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Blog/Random/Stuff/" />
+    <meta property="og:description" content="View the blog." />
+    <meta property="og:url" content="../../../.." />
+      <meta name="og:image" content="../../../../theme/images/post-bg.jpg">
+
+  <meta property="og:type" content="article">
+            <meta property="article:author" content="../../../../author/julz.html">
+  <meta property="og:url" content="../../../../2025/02/12/about-architecture-decision-records/">
+  <meta property="og:title" content="About Architecture Decision&nbsp;Records">
+  <meta property="article:published_time" content="2025-02-12 00:00:00-04:00">
+            <meta property="og:description" content="Architecture Decision Records I hold a weekly mentoring session and this week the topic of ‘ADR’ came up. I’ve had experience with them...">
+
+            <meta property="og:image" content="../../../../theme/images/post-bg.jpg">
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="../../../.." title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">About Architecture Decision&nbsp;Records</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="../../../../author/julz.html">Julz</a>
+            | <time datetime="Wed 12 February 2025">Wed 12 February 2025</time>
+        </span>
+        <!-- TODO : Modified check -->
+        
+            <div class="post-cover cover" style="background-image: url('../../../../theme/images/post-bg.jpg')">
+        
+      </div>
+    </header>    
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <h1>Architecture Decision&nbsp;Records</h1>
+<p>I hold a weekly mentoring session and this week the topic of &#8216;<span class="caps">ADR</span>&#8217; came up. I&#8217;ve had experience with them of course but this gave me the opportunity to dive into them a bit more deeply; this is 
+why I like mentoring: it&#8217;s a two-way&nbsp;street.</p>
+<h2>What are&nbsp;ADRs?</h2>
+<p>When I want to learn something new my first stop is <a href="https://www.oreilly.com">O&#8217;Reilly</a>. I like to 
+go back to the original sources or at least a measured and thoughtful introduction to the&nbsp;topic.</p>
+<p>So here&#8217;s my references: <a href="https://learning.oreilly.com/library/view/facilitating-software-architecture/9781098151850/ch06.html#ch06_introducing_architecture_decision_records_1728364283183110">Facilitating software architecture</a> has a good chapter on ADRs.
+  In this case the <a href="https://personal.utdallas.edu/~chung/SA/zz-Impreso-architecture_decisions-tyree-05.pdf">source</a> is brief and&nbsp;sensible: </p>
+<blockquote>
+<p>[Previous Developers]&#8230; mostly had good intentions and did what
+seemed right in the moment. The decisions
+made sense under the circumstances, which
+cost and schedule&nbsp;constrained. </p>
+<p>However, looking back, after the dust has settled and the original system designers are long gone, we have
+no context around these decisions; we have no
+history. All we can do is shake our heads in disbelief. In the end, as Gustave Flaubert reportedly wrote in 1871, “Our ignorance of history
+causes us to slander our own&nbsp;times.”</p>
+</blockquote>
+<p>Nice to see a pithy literary quote in a technical&nbsp;article!</p>
+<h2>Observations</h2>
+<p>As usual when looking back at source materials, there&#8217;s insights that are not obvious. In this case: 
+* <span class="caps">ADR</span> are immutable
+* ADRs conclusions need to be shared
+* They should be short - a couple of pages&nbsp;max</p>
+<blockquote>
+<p>Once the team reaches a final architectural
+decision, they’ll need to “socialize” the result — that is, convince the rest of the organization that they’ve chosen appropriately. 
+* todo: More to&nbsp;follow. </p>
+</blockquote>
+<h2>What deserves an <span class="caps">ADR</span>?</h2>
+<p>It&#8217;s tempting to make everything worthy of an <span class="caps">ADR</span> - then (apparently) it&#8217;s called an &#8216;All Decision Record&#8217; - which is <em>possibly</em> useful but probably onerous and for <span class="caps">CYA</span> rather than sharing <span class="amp">&amp;</span>&nbsp;learning.</p>
+<p>However: there is a standard answer to architectural questions : &#8216;It depends&#8217;. Using this it gives a suggestion on when an <span class="caps">ADR</span> should be created: eg: whenever there&#8217;s a choice. If there&#8217;s no 
+trade-offs 
+it&#8217;s 
+not an 
+architectural decision; thus no documentation. If it&#8217;s a decision that posterity might want insight on, then make it an <span class="caps">ADR</span>!</p>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=About Architecture Decision&nbsp;Records&amp;url=../../../../2025/02/12/about-architecture-decision-records/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=../../../../2025/02/12/about-architecture-decision-records/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=../../../../2025/02/12/about-architecture-decision-records/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="../../../../tag/learning.html">Learning</a><a href="../../../../tag/development.html">development</a><a href="../../../../tag/process.html">process</a>                </aside>
+
+                <div class="clear"></div>
+
+ 
+
+                </section>
+
+
+                <aside class="post-nav">
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+  
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
+
+  <script type="text/javascript" src="../../../../theme/js/script.js"></script>
+  
+</body>
+</html>

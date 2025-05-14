@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Blog/Random/Stuff/ - Julz</title><link href="/" rel="alternate"></link><link href="feeds/julz.atom.xml" rel="self"></link><id>/</id><updated>2025-05-14T00:00:00-03:00</updated><entry><title>LLM hot takes</title><link href="2025/05/14/llm-hot-takes/" rel="alternate"></link><published>2025-05-14T00:00:00-03:00</published><updated>2025-05-14T00:00:00-03:00</updated><author><name>Julz</name></author><id>tag:None,2025-05-14:2025/05/14/llm-hot-takes/</id><summary type="html">&lt;p&gt;To us developers, LLMs are that quintessential &amp;#8216;threat and opportunity&amp;#8217; that we&amp;#8217;ve all heard about. Sometimes I wonder if 
+two commentators are sharing the same baseline experience. Some bloggers say &amp;#8216;vibe coding is the goat&amp;#8217;; others say: &amp;#8216;bah, it barely works&amp;#8217;. What&amp;#8217;s going&amp;nbsp;on?&lt;/p&gt;
+&lt;p&gt;Needless to say the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;To us developers, LLMs are that quintessential &amp;#8216;threat and opportunity&amp;#8217; that we&amp;#8217;ve all heard about. Sometimes I wonder if 
+two commentators are sharing the same baseline experience. Some bloggers say &amp;#8216;vibe coding is the goat&amp;#8217;; others say: &amp;#8216;bah, it barely works&amp;#8217;. What&amp;#8217;s going&amp;nbsp;on?&lt;/p&gt;
+&lt;p&gt;Needless to say the truth is probably somewhere in between and nuanced. Hopefully this is some&amp;nbsp;nuance.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I&amp;#8217;ve found &lt;em&gt;&amp;#8216;&lt;span class="caps"&gt;LLM&lt;/span&gt; as super-autocomplete&amp;#8217;&lt;/em&gt; really useful for learning new frameworks and languages. With a bit of foundational knowledge I can just make vague gestures towards
+the direction I want and the &amp;#8216;&lt;span class="caps"&gt;LLM&lt;/span&gt; as super-autocomplete&amp;#8217; kicks in. Does it help me learn, be productive and get results? Not sure. Feels like a win, but maintainability and best practices are 
+  still my responsibility and (as a beginner to that new language) still an unknown - as a novice with the&amp;nbsp;skill.&lt;/li&gt;
+&lt;li&gt;Skill atrophy: so &lt;span class="caps"&gt;LLM&lt;/span&gt; feel like a huge skills buff - but what about skill atrophy? I think it&amp;#8217;s too early to tell but I can imagine development reflexes and muscle-memory 
+  dissapating. 
+  It could mean that we defer most coding tasks to the &lt;span class="caps"&gt;LLM&lt;/span&gt; and work on a higher level - leaving us to do all architecture and design, &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; almost no&amp;nbsp;implementation.&lt;/li&gt;
+&lt;li&gt;I worry about what this means to the industry in general: Junior devs won&amp;#8217;t need to learn fundamentals. &amp;#8216;You get what you reward&amp;#8217; and if we reward relying on LLMs then juniors will preferentially defer to LLMs and not on their own&amp;nbsp;knowledge.&lt;/li&gt;
+&lt;li&gt;Junior&amp;#8217;s won&amp;#8217;t be reading code so frequently either: a vital learning stage; just vibe coding new&amp;nbsp;slop.  &lt;/li&gt;
+&lt;li&gt;I do think it&amp;#8217;s likely to hollow out the mid-tier of the developer workforce. Given the rate of change in the industry there&amp;#8217;s a surprising number of devs that are not very adaptable to change: 
+  &amp;#8220;Just give me a Jira ticket; crank out code; rinse, repeat&amp;#8221;. Not comfortable with ambiguity. &amp;#8216;My end of the boat isn&amp;#8217;t sinking&amp;#8217; mentality. This approach is very vulnerable to being replaced by an &lt;span class="caps"&gt;LLM&lt;/span&gt;,&amp;nbsp;sadly.&lt;/li&gt;
+&lt;li&gt;How are &lt;span class="caps"&gt;LLM&lt;/span&gt; on the &amp;#8216;day-to-day&amp;#8217;? It&amp;#8217;s quite a peculiar change in a &amp;#8216;think-do-check&amp;#8217; work cycle and takes some getting used to. There&amp;#8217;s definitely a process of acclimatization and change of&amp;nbsp;habits. &lt;/li&gt;
+&lt;li&gt;I find the interruptions mean getting into a &amp;#8216;flow state&amp;#8217; of work has changed; bit harder. Still pondering this one&amp;nbsp;tbh.&lt;/li&gt;
+&lt;li&gt;And 
+  what&amp;#8217;s a good metaphor for 
+  working with 
+  them? Something&amp;nbsp;like:&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;span class="quo"&gt;&amp;#8216;&lt;/span&gt;An excitable indefatigable junior&amp;#8217;&lt;/strong&gt;: They have lots of energy and have crammed a lot of knowledge but don&amp;#8217;t know how to apply it. We&amp;#8217;re pair programming partners but I have to keep it as 
+    unequal 
+  as&amp;nbsp;possible.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;span class="quo"&gt;&amp;#8216;&lt;/span&gt;A Genie&amp;#8217;&lt;/strong&gt;: You give them commands and magically they do what you ask. With unintended consequences (that are often extremely unfortunate), so keep them on a short&amp;nbsp;leash!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;span class="quo"&gt;&amp;#8216;&lt;/span&gt;As excitable intern&amp;#8217;&lt;/strong&gt;: Different to being a &amp;#8216;junior&amp;#8217; as they just don&amp;#8217;t care about any consequences. They fulfil the task and they&amp;#8217;re on to the next&amp;nbsp;thing.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A &lt;strong&gt;&amp;#8216;sycophantic fabulist&amp;#8217;&lt;/strong&gt;: they&amp;#8217;ll flatter you and tell you pleasant lies. And cheat if they have to. Tests don&amp;#8217;t pass? No problem, they&amp;#8217;ll just delete&amp;nbsp;them.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Change in habits will apply to non-developer roles and behaviours too: obviously senior execs seem to be very excited at the opportunity to down-size and de-skill the workforce. Offshore and 
+  using 
+  LLMs? - irresistable. By the time the terrible quality impacts delivery and maintainability they&amp;#8217;re likely to be long gone with their golden parachutes. Nice work if you can get&amp;nbsp;it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;But it is true: Product Managers, Engineering Managers and entrepreneurs: can all be programmers now - they all can escape the tyranny of syntax. For society, this might be a good thing. 
+  However security, privacy, &lt;span class="caps"&gt;AI&lt;/span&gt;-slop and an-even-more-dead-internet - these might all get much&amp;nbsp;worse.&lt;/li&gt;
+&lt;li&gt;Obviously, being a professional has always been more than just knowing syntax or a framework. Decades ago, Djikstra discussed programming being all about mental models and abstractions. Writing 
+  the 
+  code and mastering syntax is even less essential than ever. Plausible to think a product manager could have a good go at a prototype,&amp;nbsp;say.&lt;/li&gt;
+&lt;li&gt;One topic that&amp;#8217;s interesting is the application to &lt;strong&gt;&lt;span class="caps"&gt;QA&lt;/span&gt; and tests&lt;/strong&gt;: it&amp;#8217;s tempting to just get LLMs to write tests and move on but this misses the point of acceptance testing and the importance of 
+  &lt;span class="caps"&gt;QA&lt;/span&gt; (&amp;amp; &lt;span class="caps"&gt;TDD&lt;/span&gt; obviously) as tools of design and clarity rather than as an &amp;#8216;after the fact&amp;#8217; pro forma step. Good tests come out of a sophisticated and accurate model of the system and the problem 
+  domain: that&amp;#8217;s how you know where the edges of the edge cases&amp;nbsp;are.&lt;/li&gt;
+&lt;li&gt;This highlights one huge failing of LLMs for code: they can&amp;#8217;t form that overall mental model of a system. This type of understanding is most important in maintanance 
+  legacy and novel code-bases and problems. I think this limitation is easily overlooked when dazzled by shiny &amp;#8216;hello world&amp;#8217; demos: greenfield development is so refreshing and&amp;nbsp;rapid.&lt;/li&gt;
+&lt;li&gt;So given their tendancy to rush, fabulate and lie; How will the trade-off between &amp;#8216;quick&amp;#8217; and &amp;#8216;done properly&amp;#8217; play out? In a couple of years, will we look back at tons of &lt;span class="caps"&gt;LLM&lt;/span&gt; productivity and 
+  shudder? A rat&amp;#8217;s nest of vibe-coded slapdash work? Will there be a backlash; new techniques and methodologies to leverage the tech or just an ugly accomodation and we&amp;#8217;ll just cope? Interesting to&amp;nbsp;speculate.&lt;/li&gt;
+&lt;li&gt;Elegance - and intuition: these are somewhat aesthetic judgements but it&amp;#8217;s a measure of a good design: simplicity, clarity, maintainability; an elegant solution addresses all of these criteria. 
+  LLMs aren&amp;#8217;t tuned to this&amp;nbsp;sentiment.&lt;/li&gt;
+&lt;li&gt;Maybe we&amp;#8217;ll see &lt;span class="caps"&gt;LLM&lt;/span&gt; thrive in prototyping. Maybe developers will take over after that initial market- and product- testing phase is successful? Maybe this will mean projects that employ 
+  professional developers will be more 
+  focussed and more about increase the value of the product rather than just &amp;#8216;get it out the door&amp;#8217;. Maybe developers will collaborate with stakeholders to rapidly use LLMs to get to that product 
+  market fit stage&amp;nbsp;rapidly.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ok that&amp;#8217;s enough for now. Likely to add to this and come back to it as this exciting topic develops. Comments and feedback&amp;nbsp;welcome.&lt;/p&gt;</content><category term="Personal"></category><category term="LLM"></category></entry><entry><title>What I’d change in the Agile Manifesto</title><link href="2025/02/28/what-id-change-in-the-agile-manifesto/" rel="alternate"></link><published>2025-02-28T00:00:00-04:00</published><updated>2025-02-28T00:00:00-04:00</updated><author><name>Julz</name></author><id>tag:None,2025-02-28:2025/02/28/what-id-change-in-the-agile-manifesto/</id><summary type="html">&lt;p&gt;I just finished an Agile &lt;span class="caps"&gt;PM&lt;/span&gt; course. Quite intensive really : 20hrs over a week. Covered a lot of ground, all of it relevant and useful. 
+And I now have a certification which is&amp;nbsp;nice. &lt;/p&gt;
+&lt;p&gt;One thing that came up the other day: &lt;em&gt;If you could change one thing in the …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;I just finished an Agile &lt;span class="caps"&gt;PM&lt;/span&gt; course. Quite intensive really : 20hrs over a week. Covered a lot of ground, all of it relevant and useful. 
+And I now have a certification which is&amp;nbsp;nice. &lt;/p&gt;
+&lt;p&gt;One thing that came up the other day: &lt;em&gt;If you could change one thing in the Agile Manifesto, what would it&amp;nbsp;be?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve been referring to the Agile Manifesto for years now. I like the fact it&amp;#8217;s a statement of intent rather than an prescriptive set of rules. Compare this with &lt;span class="caps"&gt;XP&lt;/span&gt;, Scrum or (to a degree) Kanban, 
+which all have more concrete implementation suggestions. This leaves the implementation of Agile open to interpretation by the individual and team. Which can be daunting but a good&amp;nbsp;thing.&lt;/p&gt;
+&lt;p&gt;So it&amp;#8217;s &lt;em&gt;all&lt;/em&gt; open to interpretation all the time, by all&amp;nbsp;stakeholders.&lt;/p&gt;
+&lt;p&gt;Anyhoo: that&amp;#8217;s enough&amp;nbsp;preamble!&lt;/p&gt;
+&lt;p&gt;So let&amp;#8217;s repeat the manifesto in full here (it&amp;#8217;s so&amp;nbsp;short)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Individuals and interactions over processes and&amp;nbsp;tools&lt;/li&gt;
+&lt;li&gt;Working software over comprehensive&amp;nbsp;documentation&lt;/li&gt;
+&lt;li&gt;Customer collaboration over contract&amp;nbsp;negotiation&lt;/li&gt;
+&lt;li&gt;Responding to change over following a&amp;nbsp;plan&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Wow; so much discussion and interpretation over so few&amp;nbsp;words!&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s look a little into the intentions of each of these four bold statements:
+Internal Dynamics; sytems thinking; customer focus; and&amp;nbsp;flexibility.&lt;/p&gt;
+&lt;p&gt;One thing missing is external stateholders - especially business concerns - how to reassure that this process is on track to deliver value? I guess the working software is the measure of that; but 
+this isn&amp;#8217;t enough for some&amp;nbsp;stakeholders!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;In the spirit of the question: I think I&amp;#8217;d change the &lt;a href="https://agilemanifesto.org/principles.html"&gt;principles&lt;/a&gt;: &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Deliver working software frequently, from a
+couple of weeks to a couple of months, with a
+preference to the shorter timescale.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;I think the intention is still correct however,the trend on this principle is deliver much more frequently than monthly; especially on the web, even for massive&amp;nbsp;companies.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m likely to come back to this post; I&amp;#8217;ve more to say&amp;#8230;&amp;nbsp;&amp;#8220;`&lt;/p&gt;</content><category term="Development"></category><category term="Agile"></category><category term="PM"></category><category term="Development"></category></entry><entry><title>About Architecture Decision Records</title><link href="2025/02/12/about-architecture-decision-records/" rel="alternate"></link><published>2025-02-12T00:00:00-04:00</published><updated>2025-02-12T00:00:00-04:00</updated><author><name>Julz</name></author><id>tag:None,2025-02-12:2025/02/12/about-architecture-decision-records/</id><summary type="html">&lt;h1&gt;Architecture Decision&amp;nbsp;Records&lt;/h1&gt;
+&lt;p&gt;I hold a weekly mentoring session and this week the topic of &amp;#8216;&lt;span class="caps"&gt;ADR&lt;/span&gt;&amp;#8217; came up. I&amp;#8217;ve had experience with them of course but this gave me the opportunity to dive into them a bit more deeply; this is 
+why I like mentoring: it&amp;#8217;s a two-way …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Architecture Decision&amp;nbsp;Records&lt;/h1&gt;
+&lt;p&gt;I hold a weekly mentoring session and this week the topic of &amp;#8216;&lt;span class="caps"&gt;ADR&lt;/span&gt;&amp;#8217; came up. I&amp;#8217;ve had experience with them of course but this gave me the opportunity to dive into them a bit more deeply; this is 
+why I like mentoring: it&amp;#8217;s a two-way&amp;nbsp;street.&lt;/p&gt;
+&lt;h2&gt;What are&amp;nbsp;ADRs?&lt;/h2&gt;
+&lt;p&gt;When I want to learn something new my first stop is &lt;a href="https://www.oreilly.com"&gt;O&amp;#8217;Reilly&lt;/a&gt;. I like to 
+go back to the original sources or at least a measured and thoughtful introduction to the&amp;nbsp;topic.&lt;/p&gt;
+&lt;p&gt;So here&amp;#8217;s my references: &lt;a href="https://learning.oreilly.com/library/view/facilitating-software-architecture/9781098151850/ch06.html#ch06_introducing_architecture_decision_records_1728364283183110"&gt;Facilitating software architecture&lt;/a&gt; has a good chapter on ADRs.
+  In this case the &lt;a href="https://personal.utdallas.edu/~chung/SA/zz-Impreso-architecture_decisions-tyree-05.pdf"&gt;source&lt;/a&gt; is brief and&amp;nbsp;sensible: &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[Previous Developers]&amp;#8230; mostly had good intentions and did what
+seemed right in the moment. The decisions
+made sense under the circumstances, which
+cost and schedule&amp;nbsp;constrained. &lt;/p&gt;
+&lt;p&gt;However, looking back, after the dust has settled and the original system designers are long gone, we have
+no context around these decisions; we have no
+history. All we can do is shake our heads in disbelief. In the end, as Gustave Flaubert reportedly wrote in 1871, “Our ignorance of history
+causes us to slander our own&amp;nbsp;times.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Nice to see a pithy literary quote in a technical&amp;nbsp;article!&lt;/p&gt;
+&lt;h2&gt;Observations&lt;/h2&gt;
+&lt;p&gt;As usual when looking back at source materials, there&amp;#8217;s insights that are not obvious. In this case: 
+* &lt;span class="caps"&gt;ADR&lt;/span&gt; are immutable
+* ADRs conclusions need to be shared
+* They should be short - a couple of pages&amp;nbsp;max&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Once the team reaches a final architectural
+decision, they’ll need to “socialize” the result — that is, convince the rest of the organization that they’ve chosen appropriately. 
+* todo: More to&amp;nbsp;follow. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;What deserves an &lt;span class="caps"&gt;ADR&lt;/span&gt;?&lt;/h2&gt;
+&lt;p&gt;It&amp;#8217;s tempting to make everything worthy of an &lt;span class="caps"&gt;ADR&lt;/span&gt; - then (apparently) it&amp;#8217;s called an &amp;#8216;All Decision Record&amp;#8217; - which is &lt;em&gt;possibly&lt;/em&gt; useful but probably onerous and for &lt;span class="caps"&gt;CYA&lt;/span&gt; rather than sharing &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt;&amp;nbsp;learning.&lt;/p&gt;
+&lt;p&gt;However: there is a standard answer to architectural questions : &amp;#8216;It depends&amp;#8217;. Using this it gives a suggestion on when an &lt;span class="caps"&gt;ADR&lt;/span&gt; should be created: eg: whenever there&amp;#8217;s a choice. If there&amp;#8217;s no 
+trade-offs 
+it&amp;#8217;s 
+not an 
+architectural decision; thus no documentation. If it&amp;#8217;s a decision that posterity might want insight on, then make it an &lt;span class="caps"&gt;ADR&lt;/span&gt;!&lt;/p&gt;</content><category term="Process"></category><category term="Learning"></category><category term="development"></category><category term="process"></category></entry><entry><title>My learning list</title><link href="2025/01/31/my-learning-list/" rel="alternate"></link><published>2025-01-31T00:00:00-04:00</published><updated>2025-01-31T00:00:00-04:00</updated><author><name>Julz</name></author><id>tag:None,2025-01-31:2025/01/31/my-learning-list/</id><summary type="html">&lt;p&gt;Inspired by seeing something similar in some other blogs and newsletters I thought I&amp;#8217;d add a live list of the stuff I&amp;#8217;m learning about currently: eg: clever websites, tools and&amp;nbsp;books!&lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s updated as I&amp;nbsp;go. &lt;/p&gt;
+&lt;h2&gt;Currently&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[ ] &lt;a href="https://youtu.be/_MPUoiG6w_U"&gt;Residuality Theory&lt;/a&gt;&amp;nbsp;: &lt;/li&gt;
+&lt;li&gt;how to architect; why is architecture so ad …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Inspired by seeing something similar in some other blogs and newsletters I thought I&amp;#8217;d add a live list of the stuff I&amp;#8217;m learning about currently: eg: clever websites, tools and&amp;nbsp;books!&lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s updated as I&amp;nbsp;go. &lt;/p&gt;
+&lt;h2&gt;Currently&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[ ] &lt;a href="https://youtu.be/_MPUoiG6w_U"&gt;Residuality Theory&lt;/a&gt;&amp;nbsp;: &lt;/li&gt;
+&lt;li&gt;how to architect; why is architecture so ad&amp;nbsp;hoc?&lt;/li&gt;
+&lt;li&gt;Complexity&amp;nbsp;theory&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href="https://leanpub.com/residuality"&gt;the book: Residues: Time, Change, and Uncertainty in Software&amp;nbsp;Architecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href="https://learning.oreilly.com/library/view/speed-up-your/9781801811446/"&gt;Speed Up Your Python with Rust&lt;/a&gt;&amp;nbsp;: &lt;/li&gt;
+&lt;li&gt;Really enjoying the brisk&amp;nbsp;pace&lt;/li&gt;
+&lt;li&gt;Love the step-by-step hands-on grounding in making pip packages and how installing&amp;nbsp;works&lt;/li&gt;
+&lt;li&gt;Need a diagram to track the entry points and exits of the Rust code to Python; all a bit confused&amp;nbsp;rn!&lt;/li&gt;
+&lt;li&gt;Have to learn Rust properly&amp;nbsp;however&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href="https://docs.wasmer.io"&gt;deploy onto raspberry pi&lt;/a&gt;: The project I have in mind (music stuff!) will run on a Pi; this gets it there. I&amp;nbsp;hope!&lt;/li&gt;
+&lt;li&gt;[ ] Making&amp;nbsp;Sounds&lt;/li&gt;
+&lt;li&gt;There&amp;#8217;s a whole world of music processing tech! One of those niche&amp;#8217;s that progress along on their own slightly obscured from outsiders: with their own leaders, vocab, 
+    common knowledge&amp;#8230; Unless 
+    you 
+    dive in and make sense of it&amp;nbsp;all!&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href="https://puredata.info"&gt;Pure data&lt;/a&gt; : impressive and Fun. but so&amp;nbsp;quirky!&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href="https://learning.oreilly.com/library/view/programming-sound-with/9781941222492/"&gt;Pure data book&lt;/a&gt; : Step-by-step; bit slow, but it&amp;#8217;s&amp;nbsp;thorough&lt;/li&gt;
+&lt;li&gt;[x] The Theory and Technique of Electronic Music Book pdf - Miller Puckette: &lt;span class="caps"&gt;PD&lt;/span&gt; creator; starts simple, dives deep. Abandoned for&amp;nbsp;now. &lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href="https://supercollider.github.io"&gt;SuperCollider&lt;/a&gt; : &lt;span class="caps"&gt;PD&lt;/span&gt;&amp;nbsp;alternative&lt;/li&gt;
+&lt;li&gt;Rust. Low latency / triggers / Midi even? Not sure, but it&amp;#8217;s building&amp;nbsp;blocks&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;[ ] &lt;a href="https://rust-audio.github.io"&gt;Rust Audio&lt;/a&gt;&amp;nbsp;: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;[ ] &lt;a href="https://learning.oreilly.com/library/view/rust-audio/9781801072444/"&gt;Rust Audio book&lt;/a&gt; : Not&amp;nbsp;started&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;[ ] Simpy : Python simulation framework; fun. Want to make a game, with the engine built around a sim.py simulation. Need a&amp;nbsp;topic!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Kafka&amp;nbsp;Streams&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href="https://learning.oreilly.com/library/view/kafka-streams-in/9781617294471/"&gt;Kafka Streams in Action&lt;/a&gt; : &lt;ul&gt;
+&lt;li&gt;Not&amp;nbsp;started&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href="https://learning.oreilly.com/library/view/mastering-kafka-streams/9781492062486/ch02.html#idm46281564624232"&gt;Mastering Kafka Streams&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;started; nice introduction, good pace; lots in&amp;nbsp;it&lt;/li&gt;
+&lt;li&gt;Going to want to dive into the famous &amp;#8216;data intensive applications&amp;#8217; book by Klepperman again. (New edition&amp;nbsp;incoming!)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Gawd, there&amp;#8217;s a lot on my&amp;nbsp;mind.&lt;/p&gt;</content><category term="Personal"></category><category term="Learning"></category></entry><entry><title>Blogging - Intro</title><link href="2025/01/18/blogging-intro/" rel="alternate"></link><published>2025-01-18T00:00:00-04:00</published><updated>2025-01-18T00:00:00-04:00</updated><author><name>Julz</name></author><id>tag:None,2025-01-18:2025/01/18/blogging-intro/</id><summary type="html">&lt;p&gt;I&amp;#8217;ve started a few attempts to blog over the years. Having to pay for a site or maintain a server for my humble thoughts got a bit tiresome eventually. But this is a free, static site, so I&amp;#8217;m 
+giving it another go: Free, simple, Python, Jinja, Markdown, and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I&amp;#8217;ve started a few attempts to blog over the years. Having to pay for a site or maintain a server for my humble thoughts got a bit tiresome eventually. But this is a free, static site, so I&amp;#8217;m 
+giving it another go: Free, simple, Python, Jinja, Markdown, and Git - this might be sustainable. And I can tweak to my heart&amp;#8217;s&amp;nbsp;content.&lt;/p&gt;
+&lt;p&gt;I get the attractions of blogging: notes to Self that will perhaps be useful to refer back to- and perhaps that someone somewhere might one day also find useful. Obviously this assumes the notes 
+are worth reading! Warning: probably&amp;nbsp;not.&lt;/p&gt;
+&lt;p&gt;One purpose of keeping notes is the process of note-taking itself. The act of writing helps to clarify thoughts and retain them, so I&amp;#8217;m doing this for me, not you. I&amp;#8217;m interested to see the value in 
+the &lt;a href="https://thinkingforest.org/2023/01/05/The-Secret-to-Cory-Doctorow-Memex"&gt;Memex&amp;nbsp;method&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I imagine I&amp;#8217;ll be making : 
+* book reviews - especially tech book summaries
+* technical writing: when rtfm doesn&amp;#8217;t work. Especially Python
+* recipes. Especially bread.
+* Miscellaneous. Especially&amp;nbsp;Dinosaurs.&lt;/p&gt;
+&lt;p&gt;Might turn out to just be me commenting on &lt;a href="https://news.ycombinator.com/"&gt;hacker news posts&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;About the Blog&amp;nbsp;technology&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;This blog is built using the Pelican static site generator. I do like a static site: low maintenance, low cost, and handle high traffic -&amp;nbsp;nice! &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The blogging platform is &lt;a href="https://getpelican.com"&gt;Pelican&lt;/a&gt; - simple is clever. Thanks&amp;nbsp;pelican!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;The theme is called &lt;a href="https://github.com/arulrajnet/attila"&gt;&amp;#8216;Attila&amp;#8217; &lt;/a&gt; : looks nice to me -&amp;nbsp;thanks!&lt;/li&gt;
+&lt;li&gt;The blog is hosted on Github Pages. Free is nice, thanks&amp;nbsp;github!&lt;/li&gt;
+&lt;li&gt;It&amp;#8217;s deployed using a Github Actions: &lt;a href="https://github.com/nelsonjchen/gh-pages-pelican-action"&gt;gh-pages-pelican-action&lt;/a&gt; in particular -&amp;nbsp;thanks!&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Misc"></category><category term="Miscellaneous"></category></entry><entry><title>Investigation on Entity-Attribute-Value Stored Data and DuckDB</title><link href="2025/01/18/investigation-on-entity-attribute-value-stored-data-and-duckdb/" rel="alternate"></link><published>2025-01-18T00:00:00-04:00</published><updated>2025-01-18T00:00:00-04:00</updated><author><name>Julz</name></author><id>tag:None,2025-01-18:2025/01/18/investigation-on-entity-attribute-value-stored-data-and-duckdb/</id><summary type="html">&lt;p&gt;I have a project I&amp;#8217;m contributing to that uses &lt;span class="caps"&gt;EAV&lt;/span&gt; to store &lt;em&gt;some&lt;/em&gt; of it&amp;#8217;s data, eg: there&amp;#8217;s a fixed set of fields that are stored in a &amp;#8216;core&amp;#8217; table, and then there&amp;#8217;s an &lt;span class="caps"&gt;EAV&lt;/span&gt; table that stores
+attributes added conveniently by the user (which we …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I have a project I&amp;#8217;m contributing to that uses &lt;span class="caps"&gt;EAV&lt;/span&gt; to store &lt;em&gt;some&lt;/em&gt; of it&amp;#8217;s data, eg: there&amp;#8217;s a fixed set of fields that are stored in a &amp;#8216;core&amp;#8217; table, and then there&amp;#8217;s an &lt;span class="caps"&gt;EAV&lt;/span&gt; table that stores
+attributes added conveniently by the user (which we&amp;#8217;ll call &lt;span class="caps"&gt;EAV&lt;/span&gt; or &amp;#8216;custom&amp;nbsp;attributes&amp;#8217;)&lt;/p&gt;
+&lt;p&gt;This works nicely for saving; but the trouble with this pattern is that making queries is a bit more tricky - If the data was entirely &lt;span class="caps"&gt;EAV&lt;/span&gt; or entirely &amp;#8216;core&amp;#8217;, there&amp;#8217;d be a clear path to querying.&lt;br&gt;
+However when it&amp;#8217;s mixed like this we can&amp;#8217;t do simple&amp;nbsp;queries.&lt;/p&gt;
+&lt;p&gt;For instance: Say we want to: &amp;#8216;Sort all records by data stored in an &lt;span class="caps"&gt;EAV&lt;/span&gt; field&amp;#8217;; or &amp;#8216;sort by a &amp;#8216;core&amp;#8217; field with a filter on a
+&amp;#8216;custom attribute&amp;#8217; one. Can be done, but all just a bit more complex.
+It makes me think of the pitfalls of not respecting polymorphic consistency in &lt;span class="caps"&gt;OOP&lt;/span&gt;.&lt;/p&gt;
+&lt;h2&gt;DuckDB, Postgres, Dataframes and &lt;span class="caps"&gt;SQL&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;DuckDB allows us to pull data into a dataframe, join the disparate &lt;span class="caps"&gt;EAV&lt;/span&gt; fields together into a consistent representation and then do sql manipulations on that dataframe. Pretty simple turns out! so we
+can
+assemble
+the data
+into a consistent
+representation and
+then do
+manipulations on it - eg
+sorting and
+filtering, searching, aggregation etc - in
+DuckDB &lt;span class="caps"&gt;SQL&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;All the
+data is in
+memory so it&amp;#8217;s fast;
+all of the data is represented in a consistent way, so we can query on &amp;#8216;core&amp;#8217; or &amp;#8216;&lt;span class="caps"&gt;EAV&lt;/span&gt;&amp;#8217; data&amp;nbsp;equally.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/julzhk/duckdb-investigate/blob/main/duckdb-investigate.ipynb"&gt;Here&amp;#8217;s a repo of an investigation on this topic
+&lt;/a&gt; - it has other fragments too - eg: Doing &lt;span class="caps"&gt;SQL&lt;/span&gt; on both a &lt;span class="caps"&gt;CSV&lt;/span&gt; and Postgres data source. So&amp;nbsp;convenient!&lt;/p&gt;
+&lt;h2&gt;The&amp;nbsp;code&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;duckdb&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Connect to the DuckDB database&lt;/span&gt;
+&lt;span class="n"&gt;con&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;duckdb&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Now attach the PostgreSQL database&lt;/span&gt;
+&lt;span class="n"&gt;con&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="s2"&gt;ATTACH &amp;#39;dbname=testdb user=postgres port=5433 host=127.0.0.1&amp;#39; AS test_db (TYPE POSTGRES);&lt;/span&gt;
+&lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Load the core items table into a DataFrame&lt;/span&gt;
+&lt;span class="n"&gt;items_df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;con&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;SELECT * FROM test_db.items&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch_df&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Load the EAV table into another DataFrame&lt;/span&gt;
+&lt;span class="n"&gt;eav_df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;con&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;SELECT * FROM test_db.eav&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch_df&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Pivot the eav table to transform attributes into columns&lt;/span&gt;
+&lt;span class="n"&gt;pivoted_eav_df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;eav_df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pivot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;columns&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;attribute&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;values&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;attribute_value&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reset_index&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Merge the items DataFrame with the pivoted other DataFrame, using the &amp;#39;id&amp;#39; column as key&lt;/span&gt;
+&lt;span class="n"&gt;merged_df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;merge&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;items_df&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pivoted_eav_df&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;how&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;left&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;# Remove NANs&lt;/span&gt;
+&lt;span class="n"&gt;merged_df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;merged_df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;notnull&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;merged_df&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Now we can do SQL queries on the merged DataFrame&lt;/span&gt;
+&lt;span class="n"&gt;sorted_df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;merged_df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sort_values&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;by&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;colour&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;complex_query&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;con&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;SELECT * FROM sorted_df WHERE colour=&amp;#39;blue&amp;#39; AND id &amp;gt; 100&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch_df&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Of course, usual caveats apply regarding performance, memory,&amp;nbsp;speeed. &lt;/p&gt;
+&lt;p&gt;But my tests show on my laptop we can load millions of records with dozens of custom fields from the &lt;span class="caps"&gt;EAV&lt;/span&gt; tables, and do complex queries on&lt;br&gt;
+them in a few&amp;nbsp;seconds.&lt;/p&gt;</content><category term="Developer"></category><category term="Python"></category><category term="Data"></category></entry><entry><title>Blogging - Intro</title><link href="2025/01/17/blogging-intro/" rel="alternate"></link><published>2025-01-17T00:00:00-04:00</published><updated>2025-01-17T00:00:00-04:00</updated><author><name>Julz</name></author><id>tag:None,2025-01-17:2025/01/17/blogging-intro/</id><summary type="html">&lt;p&gt;Learning&amp;nbsp;Rust. &lt;/p&gt;
+&lt;h2&gt;Rust&lt;/h2&gt;
+&lt;p&gt;Notes&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://learning.oreilly.com/videos/learn-rust-in/9781633438231VE/"&gt;lunch and learn - rust&amp;nbsp;book/video&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="quo"&gt;&amp;#8216;&lt;/span&gt;the hangover before the&amp;nbsp;party&amp;#8217;&lt;/li&gt;
+&lt;li&gt;https://www.reddit.com/r/rust/comments/1ift6e5/python_developer_getting_started_with_rust/&lt;/li&gt;
+&lt;li&gt;https://rust-exercises.com/100-exercises-to-learn-rust.pdf&lt;/li&gt;
+&lt;li&gt;Rust to pip : https://medium.com/towards-data-science/how-to-make-your-python-packages-really-fast-with-rust-91a9bebacbc2 with &lt;a href="https://www.maturin.rs"&gt;maturin&lt;/a&gt; : smooth out rust to python 
+  integration! &lt;span class="caps"&gt;OMG&lt;/span&gt;!&lt;/li&gt;
+&lt;li&gt;I have a project …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Learning&amp;nbsp;Rust. &lt;/p&gt;
+&lt;h2&gt;Rust&lt;/h2&gt;
+&lt;p&gt;Notes&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://learning.oreilly.com/videos/learn-rust-in/9781633438231VE/"&gt;lunch and learn - rust&amp;nbsp;book/video&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="quo"&gt;&amp;#8216;&lt;/span&gt;the hangover before the&amp;nbsp;party&amp;#8217;&lt;/li&gt;
+&lt;li&gt;https://www.reddit.com/r/rust/comments/1ift6e5/python_developer_getting_started_with_rust/&lt;/li&gt;
+&lt;li&gt;https://rust-exercises.com/100-exercises-to-learn-rust.pdf&lt;/li&gt;
+&lt;li&gt;Rust to pip : https://medium.com/towards-data-science/how-to-make-your-python-packages-really-fast-with-rust-91a9bebacbc2 with &lt;a href="https://www.maturin.rs"&gt;maturin&lt;/a&gt; : smooth out rust to python 
+  integration! &lt;span class="caps"&gt;OMG&lt;/span&gt;!&lt;/li&gt;
+&lt;li&gt;I have a project in mind: eg something like: &lt;a href="https://www.youtube.com/watch?v=R6v96c-ahAM"&gt;&lt;span class="caps"&gt;DSP&lt;/span&gt; sound synth with rust&lt;/a&gt;; or &lt;a href="https://github.com/vitobasso/rust-synth"&gt;this&amp;nbsp;synth&lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Rust&amp;nbsp;Primer&lt;/h2&gt;
+&lt;p&gt;New to rust? here&amp;#8217;s a cheat&amp;nbsp;sheet.&lt;/p&gt;
+&lt;h2&gt;Start with the basics: Comments &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt;&amp;nbsp;docs&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// hello world - comment line&lt;/span&gt;
+&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="cm"&gt;/* hello world ! */&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;
+&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="sd"&gt;/// doc comments like this /// &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cargo doc --open&lt;/code&gt; : to make the documentation site&amp;nbsp;(awesome!)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now we can write a comment or two, let&amp;#8217;s make&amp;nbsp;variables! &lt;/p&gt;
+&lt;h2&gt;Variables&lt;/h2&gt;
+&lt;h3&gt;Primitives&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;signed integers i8 i16 i32 i64 i128&amp;nbsp;isize&lt;/li&gt;
+&lt;li&gt;unsigned integers u8 u16 u32 u64 u128&amp;nbsp;usize&lt;/li&gt;
+&lt;li&gt;i8 up to 255; u16 up to 16000 (and a&amp;nbsp;bit!&lt;/li&gt;
+&lt;li&gt;chars&amp;nbsp;: &lt;code&gt;println!("len {}  ", "ç".len())&lt;/code&gt; returns &amp;#8216;2&amp;#8217; not &amp;#8216;1&amp;#8217; : number of bytes, not&amp;nbsp;characters)&lt;/li&gt;
+&lt;li&gt;println!(&amp;#8220;chars {:?}  &amp;#8220;, &amp;#8220;a&amp;#8221;.as_bytes()); gives the bytes of the&amp;nbsp;string&lt;/li&gt;
+&lt;li&gt;println!(&amp;#8220;chars count {}  &amp;#8220;, &amp;#8220;aaaà&amp;#8221;.chars().count()); gives the number of characters in the&amp;nbsp;string&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Type&amp;nbsp;inference&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;let my_number = 10:u8;&lt;/code&gt; // type after the&amp;nbsp;value
+ &lt;code&gt;let my_number:u8 = 10;&lt;/code&gt; // type with the&amp;nbsp;variable
+ &lt;code&gt;let my_number = 10_000_000_i32;&lt;/code&gt; // type with&amp;nbsp;formatting&lt;/p&gt;
+&lt;h3&gt;Mutability&lt;/h3&gt;
+&lt;p&gt;By default&amp;nbsp;immutable:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;let const = 1;&lt;/code&gt; //&amp;nbsp;immutable&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;let mut var = 1;&lt;/code&gt; //&amp;nbsp;mutable&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;var= "one";&lt;/code&gt; // error: expected integer,&amp;nbsp;found &lt;code&gt;&amp;amp;str&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Shadowing&lt;/h3&gt;
+&lt;p&gt;Scope, re-declaring variables, and&amp;nbsp;shadowing:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In the same&amp;nbsp;block:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;5.1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// shadowing&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="fm"&gt;println!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;The value of x is: {}&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 5.1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In separate&amp;nbsp;blocks:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;6.1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="fm"&gt;println!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;The value of x is: {}&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 6.1&lt;/span&gt;
+&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="fm"&gt;println!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;The value of x is: {}&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 5&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Constants&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;const MAX_POINTS: u32 = 100_000;&lt;/code&gt; // must be&amp;nbsp;annotated&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Data&amp;nbsp;types&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;let x = 2.0;&lt;/code&gt; // assumes&amp;nbsp;f64&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;let y: f32 = 3.0;&lt;/code&gt; // explicitly&amp;nbsp;f32&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Learning, rust, programming"></category><category term="Programming"></category><category term="Rust"></category><category term="Learning"></category></entry><entry><title>Django Interview</title><link href="2024/12/01/django-interview/" rel="alternate"></link><published>2024-12-01T00:00:00-04:00</published><updated>2024-12-01T00:00:00-04:00</updated><author><name>Julz</name></author><id>tag:None,2024-12-01:2024/12/01/django-interview/</id><summary type="html">&lt;h2&gt;Django Interview&amp;nbsp;Question&lt;/h2&gt;
+&lt;p&gt;There was recently a question on Reddit that (to paraphrase) asked: &amp;#8216;I need to interview for a Django developer but I don&amp;#8217;t know anything about Django. What should I&amp;nbsp;ask?&amp;#8217;&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve hired a few Django (&amp;amp; other) devs and the majority of the hires worked out …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Django Interview&amp;nbsp;Question&lt;/h2&gt;
+&lt;p&gt;There was recently a question on Reddit that (to paraphrase) asked: &amp;#8216;I need to interview for a Django developer but I don&amp;#8217;t know anything about Django. What should I&amp;nbsp;ask?&amp;#8217;&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve hired a few Django (&amp;amp; other) devs and the majority of the hires worked out great so I thought I&amp;#8217;d share some thoughts on an&amp;nbsp;approach.&lt;/p&gt;
+&lt;h3&gt;Have an explicit goal to each round of&amp;nbsp;interview&lt;/h3&gt;
+&lt;p&gt;The first things to do is to make the interview purposeful: Let&amp;#8217;s assume the attitude and personality testing stuff is covered elsewhere. Let&amp;#8217;s assume we have verified that their resume is 
+more-or-less accurate – these being steps covered in other stages. This should be obvious of course. Similarly, having an idea of what a &amp;#8216;good&amp;#8217; or &amp;#8216;ideal&amp;#8217; answer to each round is valuable too. For 
+a live-coding test, it&amp;#8217;s worth keeping in mind how little can be completed especially under observation and while explaining thought processes; this should be factored into the idea of the ideal&amp;nbsp;answer.&lt;/p&gt;
+&lt;h3&gt;Django Interview&amp;nbsp;Purpose&lt;/h3&gt;
+&lt;p&gt;So this round should be to tell if what the candidate says they can do is actually true; and is that at a skill at a level&amp;nbsp;required?&lt;/p&gt;
+&lt;p&gt;It&amp;#8217;d be an obvious to ask about concepts or define terms - but this can be a bit easy to game: I&amp;#8217;ve thought some candidates were &amp;#8216;talk the talk, but not walk the walk&amp;#8217; types. All it takes is a good 
+memory;
+or 
+luck. So I&amp;#8217;d 
+avoid this line of 
+enquiry. Besides it takes too long for an interview; it&amp;#8217;s very stressful and just doesn&amp;#8217;t provide much &amp;#8216;signal&amp;#8217;,&amp;nbsp;imho.&lt;/p&gt;
+&lt;p&gt;Instead, I focus in on practical exercise: what is their approach to making a data model? This is a nice way to see if they actually have the experience they claim; they can think through a problem; 
+and 
+see if 
+they can 
+communicate 
+clearly. &lt;span class="caps"&gt;BTW&lt;/span&gt; I thinks it&amp;#8217;s important to share the rubric up-front: eg: this isn&amp;#8217;t about getting the &amp;#8216;right&amp;#8217; answer; it&amp;#8217;s about the process. That it&amp;#8217;s be a conversation about design and developer 
+approach; it&amp;#8217;s not a test and so&amp;nbsp;on.&lt;/p&gt;
+&lt;p&gt;This approach (and type of question) happily 
+works 
+for a variety of skill 
+levels: A junior developer might convey the basic idea (and show themselves to have an open to learning attitude); while a more senior developer should identify the traps and the&amp;nbsp;pitfalls!&lt;/p&gt;
+&lt;h3&gt;Model a nested to-do&amp;nbsp;list?&lt;/h3&gt;
+&lt;p&gt;It can be any simple data modelling question but I like: &amp;#8216;Design a data model for a nested to-do list&amp;#8217;. There&amp;#8217;s plenty of other similar scenarios: &amp;#8216;a forum with nested comments&amp;#8217;; &amp;#8216;a friends&amp;nbsp;list&amp;#8217;;&lt;/p&gt;
+&lt;p&gt;We&amp;#8217;ll go with the &amp;#8216;nested to-do list&amp;#8217; for this example - and it&amp;#8217;s a good balance of &amp;#8216;simple enough to discuss in a sitting&amp;#8217; and &amp;#8216;trickier than it seems!&amp;#8217; to get some juice out of the&amp;nbsp;interview!&lt;/p&gt;
+&lt;p&gt;A candidate should ask (or be prompted, if they&amp;#8217;re junior) questions around: how many levels of nesting there will be?; are there any restrictions on number of items at each level?; how 
+many users?, 
+how 
+many 
+to-do lists per user? and so on&amp;#8230; This can lead to a somewhat typical open-ended discussion on trade-offs and efficiency and some insight on system design priorities. This question is pretty good 
+for all languages and frameworks; but I think Django&amp;#8217;s &lt;span class="caps"&gt;ORM&lt;/span&gt; makes it particularly approachable. It&amp;#8217;s useful for front-end developers too: Modelling a data structure properly in the &lt;span class="caps"&gt;FE&lt;/span&gt; is just as 
+necessary as in&amp;nbsp;backend. &lt;/p&gt;
+&lt;h3&gt;Why is it&amp;nbsp;tricky?&lt;/h3&gt;
+&lt;p&gt;Well, the nested business means the data model can&amp;#8217;t be a simple structure: it&amp;#8217;s going to have a self-referential component. Of course, this is Django so we&amp;#8217;ll use the &lt;span class="caps"&gt;ORM&lt;/span&gt;: so do we have&amp;nbsp;a &lt;code&gt;list&lt;/code&gt; 
+with many children foreign-key&amp;nbsp;related &lt;code&gt;to-do items&lt;/code&gt;? This would be a good start, but we have to consider the nesting. It all starts to get a bit&amp;nbsp;tangled.&lt;/p&gt;
+&lt;p&gt;Better - and simpler - is to&amp;nbsp;give &lt;code&gt;to-do items&lt;/code&gt; a foreign key to themselves. This&amp;nbsp;means &lt;code&gt;to-do item&lt;/code&gt;s have as a parent&amp;nbsp;another &lt;code&gt;to-do item&lt;/code&gt;. A to-do list is just&amp;nbsp;a &lt;code&gt;to-do item&lt;/code&gt; with a null 
+parent. We can track &amp;#8216;depth&amp;#8217; of the item by counting the number of parents; it may be convenient to store this in the model&amp;nbsp;too.&lt;/p&gt;
+&lt;h3&gt;And how would you make a &lt;span class="caps"&gt;REST&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; for this data&amp;nbsp;model?&lt;/h3&gt;
+&lt;p&gt;The question can lead to implementation thoughts on what a &lt;span class="caps"&gt;REST&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; for this data model would look like. Again, this should lead to an open-ended discussion. If they bring up &lt;span class="caps"&gt;HTMX&lt;/span&gt; or GraphQL, 
+that&amp;#8217;s an interesting (and permitted) solution too of&amp;nbsp;course.&lt;/p&gt;
+&lt;p&gt;Experienced developers will have the experience to discuss security; &lt;span class="caps"&gt;HTTP&lt;/span&gt; methods; statefulness; versioning the &lt;span class="caps"&gt;API&lt;/span&gt; future-proofing; and more. Do they consider getting the whole data for a nested 
+to-do in one go - or just the top level?; how would they handle pagination; authentication; permissions; versioning. So lots of quite interesting topics to&amp;nbsp;discuss.&lt;/p&gt;
+&lt;p&gt;A more junior developer might be stumped by many of 
+these 
+concerns; 
+but they should be able to immediately grasp the reason why these things are important as soon as they&amp;#8217;re&amp;nbsp;raised.&lt;/p&gt;
+&lt;h3&gt;Maintainable&amp;nbsp;code&lt;/h3&gt;
+&lt;p&gt;If there&amp;#8217;s time (and there can be if the interview&amp;#8217;s long enough), it&amp;#8217;s possible to actually get the candidate to build some of this in Django; it can allow insights into maintainability and 
+bring up a 
+discussion on test-driven development; &lt;span class="caps"&gt;SOLID&lt;/span&gt; principles and so&amp;nbsp;on. &lt;/p&gt;
+&lt;h3&gt;Summary&lt;/h3&gt;
+&lt;p&gt;Obviously a coding interview is stressful to the candidate but at least it&amp;#8217;s more of a &amp;#8216;guided conversation&amp;#8217; rather than a grilling - which I think is a lot less&amp;nbsp;intimidating.&lt;/p&gt;
+&lt;p&gt;If the candidate&amp;#8217;s made 
+these kind of things before (and they 
+should have if they&amp;#8217;re a genuine Django candidate) then it should really be a breeze to come up with something workable. They might be time-pressured (stress and being interviewed makes candidates 
+forget things) but that&amp;#8217;s okay; the 
+goal 
+isn&amp;#8217;t to finish the project. They might not get the finer details; but this gives some context to judge one candidate against another: My experience is that candidates diverge quite a lot in their 
+ability to tackle the problem; and that&amp;#8217;s allows it to be a discerning&amp;nbsp;factor.&lt;/p&gt;
+&lt;h3&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;So that&amp;#8217;s one set of interesting questions to ask in a Django interview. It would be a single aspect of a more rounded process of course; but I do think it&amp;#8217;s necessary to have some &amp;#8216;hands-on&amp;#8217; 
+coding-based enquiry for a developer job - that isn&amp;#8217;t just on a &amp;#8216;whiteboard&amp;#8217;; or trivia / &amp;#8216;gotcha&amp;#8217; questions; but is actually something of a practical exercise that&amp;#8217;s at least relevant to the job 
+of a Django developer. Needless to say, there&amp;#8217;s more to the job than just this; but in an hour - or two - we&amp;#8217;ve got to gain some indications; and we have to start&amp;nbsp;somewhere.&lt;/p&gt;</content><category term="Developer"></category><category term="Python"></category><category term="Data"></category><category term="Django"></category></entry><entry><title>Using Quarto in a Performance Test</title><link href="2023/10/02/using-quarto-in-a-performance-test/" rel="alternate"></link><published>2023-10-02T00:00:00-03:00</published><updated>2023-10-02T00:00:00-03:00</updated><author><name>Julz</name></author><id>tag:None,2023-10-02:2023/10/02/using-quarto-in-a-performance-test/</id><summary type="html">&lt;p&gt;I find the data exploration ecosystem to be extremely useful and interesting. And it&amp;#8217;s bubbling up with new tools all the time.: eg: Jupyter Notebooks, Streamlit, Voila and all the&amp;nbsp;rest. &lt;/p&gt;
+&lt;p&gt;Here&amp;#8217;s a use case for one perhaps less well know :&lt;a href="https://quarto.org"&gt;Quarto&lt;/a&gt; : it&amp;#8217;s got that great mix …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I find the data exploration ecosystem to be extremely useful and interesting. And it&amp;#8217;s bubbling up with new tools all the time.: eg: Jupyter Notebooks, Streamlit, Voila and all the&amp;nbsp;rest. &lt;/p&gt;
+&lt;p&gt;Here&amp;#8217;s a use case for one perhaps less well know :&lt;a href="https://quarto.org"&gt;Quarto&lt;/a&gt; : it&amp;#8217;s got that great mix of  markdown text plus code in a Jupyter Notebook with nice output options. We can use it 
+to output our Notebook results into a professional report&amp;nbsp;document.&lt;/p&gt;
+&lt;h2&gt;Quarto and Locust and performance&amp;nbsp;testing&lt;/h2&gt;
+&lt;p&gt;Recently I had to perform some performance testing on a web application under simulated (but realistic) loads,  so I used &lt;a href="https://locust.io"&gt;Locust&lt;/a&gt; to automatically generate realistic load 
+profiles 
+of a cohort of&amp;nbsp;users.&lt;/p&gt;
+&lt;p&gt;Writing and running Locust tests is easy (and quite fun) but the tricky thing was automating the running of the tests and generating a report: it was tiresome to manually run each 
+test and compile the results - but what I wanted was to kick off the performance test and the collation of the data all from a single command. 
+Each performance test took at least ten minutes. Annoying to have to baby-sit, waiting for the run to finish to start the next&amp;nbsp;one.&lt;/p&gt;
+&lt;p&gt;Here&amp;#8217;s how I went about it. It&amp;#8217;s not that technically challenging really – just wiring up os.system calls from the notebook. But this way makes the running multiple test runs and generation of a 
+report all
+self-contained and&amp;nbsp;repeatable.&lt;/p&gt;
+&lt;p&gt;There&amp;#8217;s quite a lot of subtle details in getting load tests right. You have to be careful that you&amp;#8217;re testing what you think you&amp;#8217;re testing! More on that another time perhaps, but let&amp;#8217;s keep it 
+simple: 
+imagine you 
+want to single test of a system under test with the following load:  a cohort of simulated users randomly clicking a link every 
+few seconds. The number of these users increases linearly rapidly, then plateaus, then decreases back to&amp;nbsp;zero.&lt;/p&gt;
+&lt;p&gt;Locust makes this type of test extremely convenient and can simulate thousands of simultaneous users nicely, as it defines the user behaviour in a Python class. This can be executed from the 
+command line and 
+generate 
+wonderfully 
+detailed 
+reports. Use it in non-headless mode to run from the browser and to debug the tests are working as&amp;nbsp;expected.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# locustfile.py&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;locust&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;HttpUser&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;task&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;between&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;random&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;WebsiteUser&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;HttpUser&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;wait_time&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;between&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# Wait between 1 and 5 seconds&lt;/span&gt;
+
+    &lt;span class="nd"&gt;@task&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;click_link&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;links&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/link1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;/link2&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;/link3&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;/link4&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;choice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;links&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;link&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;A test with a cohort of users made up of&amp;nbsp;our &lt;code&gt;WebsiteUser&lt;/code&gt; can be executed from the browser and is extremely convenient for a manual test. We can make this behaviour much more complex and we can 
+have a variety of user classes each modelling different behaviours. For my situation, I had the user class read the OpenAPI &lt;span class="caps"&gt;API&lt;/span&gt; specifications and extract all the viable endpoints, and then&lt;br&gt;
+going on a&amp;nbsp;click-frenzy.&lt;/p&gt;
+&lt;p&gt;We could run tests manually from the browser and download a spreadsheet of the results (or take screenshots). But I wanted to automate this process entirely – and have the results in a nice&amp;nbsp;report.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Sample Locust report" src="images/locust_report_sample.png"&gt;&lt;/p&gt;
+&lt;p&gt;But now lets make the test more sophisticated and repeatable? We can &lt;a href="https://docs.locust.io/en/stable/configuration.html#id4"&gt;configure the locust test&lt;/a&gt; from&amp;nbsp;a &lt;code&gt;locust.conf&lt;/code&gt; file.&amp;nbsp;eg: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;headless = true
+host = https://example.com
+users = 100
+spawn-rate = 10
+run-time = 10m
+csv = data/blog_data.csv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;So now we have Locust set up to run from the command line with a configuration file instead of passing in&amp;nbsp;arguments.  &lt;/p&gt;
+&lt;h2&gt;Run locust from the command&amp;nbsp;line&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;  &lt;/span&gt;locust&lt;span class="w"&gt; &lt;/span&gt;-f&lt;span class="w"&gt; &lt;/span&gt;locustfile.py&lt;span class="w"&gt; &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now we don&amp;#8217;t need to pass in args such&amp;nbsp;as: &lt;code&gt;--headless --csv=my_results&lt;/code&gt;. And Locust will now automatically save results to a &lt;span class="caps"&gt;CSV&lt;/span&gt; file. This is going to be a bit&lt;br&gt;
+more standardized and more repeatable 
+when we 
+kick-off many performance&amp;nbsp;tests. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;locust&lt;span class="w"&gt; &lt;/span&gt;-f&lt;span class="w"&gt; &lt;/span&gt;my_locust_file.py&lt;span class="w"&gt; &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ok so now Locust is easy to run and generates a &lt;span class="caps"&gt;CSV&lt;/span&gt; file of the results, let&amp;#8217;s get Quarto to generate a report from the &lt;span class="caps"&gt;CSV&lt;/span&gt; file as a&amp;nbsp;table:&lt;/p&gt;
+&lt;h2&gt;Quarto and&amp;nbsp;Pandas&lt;/h2&gt;
+&lt;p&gt;By writing conclusions and analysis in a Quarto document, we can initiate and display results of the performance test in a nice&amp;nbsp;report.&lt;/p&gt;
+&lt;p&gt;In an early cell, we can run the Locust bash command to generate the &lt;span class="caps"&gt;CSV&lt;/span&gt; file. We can add a comment to the cell to hide the&amp;nbsp;output. &lt;/p&gt;
+&lt;p&gt;In a subsequent cell we can read the &lt;span class="caps"&gt;CSV&lt;/span&gt; file into a Pandas DataFrame and display the results - also with the comments to hide the&amp;nbsp;code.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;locust -f locustfile.py&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;That generates the performance test results into a &lt;span class="caps"&gt;CSV&lt;/span&gt;&amp;nbsp;file.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Discussion of the results. (in markdown)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;data/blog_data.csv_stats_history.csv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;# some analysis and then show the dataframe as a table&lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;describe&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;Conclusions and charts based on the dataframe&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Now, final step to make the run fully automated. (similarly hidden) this add a command to output the Quarto file as a pdf, and not display the&amp;nbsp;output.:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;import&lt;span class="w"&gt; &lt;/span&gt;os
+os.system&lt;span class="o"&gt;(&lt;/span&gt;f&lt;span class="s1"&gt;&amp;#39;quarto render blog_performance_report.ipynb --to pdf &amp;gt;/dev/null 2&amp;gt;&amp;amp;1&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Conclusions&lt;/h2&gt;
+&lt;p&gt;So we can now run both a large number of performance tests and have the report generate from a single &amp;#8216;run all cells&amp;#8217; execution of a notebook file.  This is (of course!) just the bare bones; but 
+I hope it&amp;#8217;s clear that this 
+automates out 
+the manual 
+steps in 
+performance testing 
+and report&amp;nbsp;generation. &lt;/p&gt;
+&lt;p&gt;Lots more in the  &lt;a href="https://quarto.org"&gt;Quarto documentation&lt;/a&gt;, and there&amp;#8217;s an example of the above in the &lt;a href="https://github.com/julzhk/julzhk.github.io/tree/main/code_samples/quarto_and_locust_performance_tests"&gt;github&amp;nbsp;repo&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;And here&amp;#8217;s the sample&amp;nbsp;report:  &lt;/p&gt;
+&lt;p&gt;&lt;embed type="application/pdf" src="https://github.com/julzhk/julzhk.github.io/blob/main/code_samples/quarto_and_locust_performance_tests/blog_performance_report.pdf" width="250" height="200"&gt;&lt;/p&gt;</content><category term="Developer"></category><category term="Python"></category><category term="Data"></category><category term="Testing"></category><category term="Tools"></category></entry></feed>
