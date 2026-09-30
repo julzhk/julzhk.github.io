@@ -1,0 +1,29 @@
+This new phase of Generative-AI calls for a new vocabulary of experiences. I'll add the one's I've found & add the new experience that need a name. 
+
+* AI Slop : we all know it.. 
+* AI Mania: DHH and Yegge, we're looking at you..
+* [AI Psychosis](https://en.wikipedia.org/wiki/AI-induced_psychosis?utm_source=substack&utm_medium=email) 
+* [Deep Blue Feeling](https://simonwillison.net/2026/Feb/15/deep-blue/)
+* Roko's Basilisk
+
+### Experiences without a name yet. 
+
+_The feeling of..._
+
+* This would've been quicker without AI. Such AI!
+* Is this colleague going to pretend they didn't use AI for this work? Such AI!
+* I'm not reading all that AI content - even if it is good. I'll just get an AI to summarize the AI.Such AI!
+* Your new app? It looks AI because it has so many inessential features. YOu thought: 'It's free so sure: Why not add it?' Such AI!
+* Your new app? No human UX designer would allow so many UX inconsistencies! Such AI!
+* Your new app? I just don't think the world needs it, but good luck. Such AI!
+* Had a concept for ten years I've never got 'round to. Stayed up 'til 2am & now I have it. Such AI!
+* Data centre build-out will consume the whole of the economy. We're doomed. Such AI!
+* Another model? Another shiny new thing that changes everything? I can't keep up! Such AI!
+* Is this all I do now? : hit 'accept' to AI's changes? This job used to be a puzzle and an interesting challenge. Such AI!
+* If AI's decimated programming, Math research, education & so much else, what's the point? Such AI!
+* AI making me wish I was a plumber. Or a landlord. Such AI! 
+* Oh you're in profession X and you don't realise the coming storm? Buckle up. Such AI!
+* Slight embarassment that I can't take too much credit for that thing - all I did was ask an AI nicely. Such AI!
+* Why should I buy that Saas? I'll just get AI to build me it. Such AI!
+* The realization that giving code review comments to a colleague means they'll just paste them into an AI and they'll just ship the results and pretend they care. Such AI!
+* That the luddite's were onto something. Such AI!
