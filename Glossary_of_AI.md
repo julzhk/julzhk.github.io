@@ -27,3 +27,4 @@ _The feeling of..._
 * Why should I buy that Saas? I'll just get AI to build me it. Such AI!
 * The realization that giving code review comments to a colleague means they'll just paste them into an AI and they'll just ship the results and pretend they care. Such AI!
 * That the luddite's were onto something. Such AI!
+* One day this will all revert to a new normal. Bring on the [AI Pendulum](https://jonathanstark.com/daily/20260927-2359-the-inevitable-ai-pendulum)
