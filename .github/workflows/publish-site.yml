@@ -1,0 +1,45 @@
+name: Publish TIL site
+
+# Builds a static site from the top-level markdown files and publishes it
+# to the gh-pages branch of julzhk/julzhk.github.io (served at https://julzhk.github.io).
+#
+# One-time setup:
+#   1. ssh-keygen -t ed25519 -N "" -f til_deploy_key
+#   2. julzhk/julzhk.github.io → Settings → Deploy keys → add til_deploy_key.pub, tick "Allow write access"
+#   3. julzhk/til → Settings → Secrets → Actions → new secret ACTIONS_DEPLOY_KEY = contents of til_deploy_key
+
+on:
+  push:
+    branches: [master]
+    paths: ["*.md", "scripts/build_site.py", ".github/workflows/publish-site.yml"]
+  workflow_dispatch:
+
+concurrency:
+  group: publish-site
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history, so post dates come from git
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Build site
+        run: |
+          pip install markdown
+          python scripts/build_site.py _site
+
+      - name: Deploy to julzhk.github.io
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          external_repository: julzhk/julzhk.github.io
+          publish_branch: gh-pages
+          publish_dir: ./_site
+          commit_message: "Publish TIL site from julzhk/til@${{ github.sha }}"
