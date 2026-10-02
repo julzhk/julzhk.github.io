@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Packing optimal 3d · TIL</title>
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>tailwind.config = { darkMode: 'media' }</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', () => hljs.highlightAll());</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .font-mono, code, pre { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+    .prose pre { padding: 0; }
+    .prose pre code.hljs { border-radius: 0.5rem; }
+  </style>
+</head>
+<body class="min-h-full bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200 antialiased">
+  <header class="border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur sticky top-0 z-10">
+    <div class="max-w-3xl mx-auto px-4 h-14 flex items-center justify-between">
+      <a href="../index.html" class="font-mono font-semibold text-slate-900 dark:text-white">
+        <span class="text-emerald-500">~/</span>til<span class="animate-pulse text-emerald-500">_</span>
+      </a>
+      <nav class="flex gap-5 text-sm text-slate-500 dark:text-slate-400">
+        <a href="../index.html" class="hover:text-emerald-500">Posts</a>
+        <a href="https://github.com/julzhk/til" class="hover:text-emerald-500">GitHub</a>
+      </nav>
+    </div>
+  </header>
+  <main class="max-w-3xl mx-auto px-4 py-10">
+    <article>
+      <header class="mb-8">
+        <a href="../index.html" class="font-mono text-sm text-slate-400 hover:text-emerald-500">← all posts</a>
+        <h1 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">Packing optimal 3d</h1>
+        <div class="mt-3 font-mono text-xs text-slate-500 flex gap-4">
+          <time>January 2, 2026</time>
+          <a class="hover:text-emerald-500" href="https://github.com/julzhk/til/blob/master/packing-optimal-3d.md">view source</a>
+        </div>
+      </header>
+      <div class="prose prose-slate dark:prose-invert max-w-none prose-a:text-emerald-600 dark:prose-a:text-emerald-400 prose-code:before:content-none prose-code:after:content-none">
+<p>TIL: A library to pack 3d objects.</p>
+<p>I was asked (in a pub years ago) about optimizing fabric cutting: How to cut shapes from a fabric and minimize the waste.</p>
+<p>Because it&rsquo;s actually a really hard problem, I chewed it over a bit and moved on. But when it comes up, it tweaks my interest.</p>
+<p>Very much a problem with trade-offs between speed and quality. Finding the very best solution is probably too time-consuming for real life. But good enough is good enough.</p>
+<h2 id="psacking-is-a-library-for-this">&lsquo;psacking&rsquo; is a library for this.</h2>
+<p>This solves an even harder problem: It packs random shapes in 3d.
+Via <a href="https://news.ycombinator.com/item?id=46400158">Hacker news</a>: https://github.com/Vrroom/psacking</p>
+<p>Especially nice for the super animation showing the packing result.</p>
+<p><a href="https://github.com/Vrroom/psacking?tab=readme-ov-file#packing-from-stl-files">Allows packing from STL files too</a> - so can use it to pack 3d print outputs.</p>
+      </div>
+    </article>
+  </main>
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs font-mono text-slate-400">
+    Built from <a class="underline hover:text-emerald-500" href="https://github.com/julzhk/til">julzhk/til</a> · 2026-10-02
+  </footer>
+</body>
+</html>

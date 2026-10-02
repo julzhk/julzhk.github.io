@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TIL a nice way to explicitly pass data into exceptions · TIL</title>
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>tailwind.config = { darkMode: 'media' }</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', () => hljs.highlightAll());</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .font-mono, code, pre { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+    .prose pre { padding: 0; }
+    .prose pre code.hljs { border-radius: 0.5rem; }
+  </style>
+</head>
+<body class="min-h-full bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200 antialiased">
+  <header class="border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur sticky top-0 z-10">
+    <div class="max-w-3xl mx-auto px-4 h-14 flex items-center justify-between">
+      <a href="../index.html" class="font-mono font-semibold text-slate-900 dark:text-white">
+        <span class="text-emerald-500">~/</span>til<span class="animate-pulse text-emerald-500">_</span>
+      </a>
+      <nav class="flex gap-5 text-sm text-slate-500 dark:text-slate-400">
+        <a href="../index.html" class="hover:text-emerald-500">Posts</a>
+        <a href="https://github.com/julzhk/til" class="hover:text-emerald-500">GitHub</a>
+      </nav>
+    </div>
+  </header>
+  <main class="max-w-3xl mx-auto px-4 py-10">
+    <article>
+      <header class="mb-8">
+        <a href="../index.html" class="font-mono text-sm text-slate-400 hover:text-emerald-500">← all posts</a>
+        <h1 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">TIL a nice way to explicitly pass data into exceptions</h1>
+        <div class="mt-3 font-mono text-xs text-slate-500 flex gap-4">
+          <time>November 27, 2025</time>
+          <a class="hover:text-emerald-500" href="https://github.com/julzhk/til/blob/master/data_in_exceptions.md">view source</a>
+        </div>
+      </header>
+      <div class="prose prose-slate dark:prose-invert max-w-none prose-a:text-emerald-600 dark:prose-a:text-emerald-400 prose-code:before:content-none prose-code:after:content-none">
+
+<p>Exceptions are just classes; so we can extend them and add extra attributes.</p>
+<p>Let&rsquo;s pass a <code>numb</code> attribute to a custom exception:</p>
+<pre><code class="language-python"># Source - https://stackoverflow.com/a
+# Posted by Ray Salemi
+# Retrieved 2025-11-20, License - CC BY-SA 4.0
+
+class MyException(RuntimeError):
+    def __init__(self,message,numb):
+        super().__init__(message)
+        self.numb = numb
+
+try:
+    raise MyException(&quot;My bad&quot;, 3)
+except MyException as err:
+    print(err)
+    print(err.numb)
+</code></pre>
+<p>Previously I&rsquo;d just added an attribute to the exception dynamically; I wouldn&rsquo;t subclass the Exception definition. This is better.</p>
+<hr />
+<h3 id="want-to-attach-some-notes-to-an-exception">Want to attach some notes to an exception?</h3>
+<p>Use <code>add_note</code>: https://docs.python.org/3/library/exceptions.html#BaseException.add_note</p>
+<pre><code>my_exception.add_note(&quot;Attempted to process invalid data&quot;)
+</code></pre>
+      </div>
+    </article>
+  </main>
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs font-mono text-slate-400">
+    Built from <a class="underline hover:text-emerald-500" href="https://github.com/julzhk/til">julzhk/til</a> · 2026-10-02
+  </footer>
+</body>
+</html>

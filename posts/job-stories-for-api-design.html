@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Job stories for api design · TIL</title>
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>tailwind.config = { darkMode: 'media' }</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', () => hljs.highlightAll());</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .font-mono, code, pre { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+    .prose pre { padding: 0; }
+    .prose pre code.hljs { border-radius: 0.5rem; }
+  </style>
+</head>
+<body class="min-h-full bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200 antialiased">
+  <header class="border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur sticky top-0 z-10">
+    <div class="max-w-3xl mx-auto px-4 h-14 flex items-center justify-between">
+      <a href="../index.html" class="font-mono font-semibold text-slate-900 dark:text-white">
+        <span class="text-emerald-500">~/</span>til<span class="animate-pulse text-emerald-500">_</span>
+      </a>
+      <nav class="flex gap-5 text-sm text-slate-500 dark:text-slate-400">
+        <a href="../index.html" class="hover:text-emerald-500">Posts</a>
+        <a href="https://github.com/julzhk/til" class="hover:text-emerald-500">GitHub</a>
+      </nav>
+    </div>
+  </header>
+  <main class="max-w-3xl mx-auto px-4 py-10">
+    <article>
+      <header class="mb-8">
+        <a href="../index.html" class="font-mono text-sm text-slate-400 hover:text-emerald-500">← all posts</a>
+        <h1 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">Job stories for api design</h1>
+        <div class="mt-3 font-mono text-xs text-slate-500 flex gap-4">
+          <time>November 23, 2025</time>
+          <a class="hover:text-emerald-500" href="https://github.com/julzhk/til/blob/master/job-stories-for-API-design.md">view source</a>
+        </div>
+      </header>
+      <div class="prose prose-slate dark:prose-invert max-w-none prose-a:text-emerald-600 dark:prose-a:text-emerald-400 prose-code:before:content-none prose-code:after:content-none">
+<p>TIL API design with job stories</p>
+<p>Reading <a href="https://learning.oreilly.com/library/view/principles-of-web/9780137355754/ch03.xhtml#ch03">Principles of web api design book</a>: Applying &lsquo;job stories&rsquo; to API design is a useful technique.</p>
+<h3 id="whats-a-job-story">What&rsquo;s a job story?</h3>
+<p>It&rsquo;s an alternative to the familiar user story <em>&lsquo;As a &hellip; I want to &hellip; in order to achieve....&rsquo;</em> formulation. </p>
+<p>It&rsquo;s also similar ofc to the BDD/Gherkin : <em>Given .... when &hellip; then &hellip;</em> style. </p>
+<p>So similar to other requirement &lsquo;story&rsquo; formats but with a different emphasis.</p>
+<h3 id="definition-of-a-job-story">Definition of a job story?</h3>
+<p>Here&rsquo;s a <a href="https://learning.oreilly.com/library/view/principles-of-web/9780137355754/ch03.xhtml#:-:text=The%20Components%20of,the%20API%20design.">definition</a>:</p>
+<blockquote>
+<p>Job stories are composed of three components using the “When, I want to, so I can” format:</p>
+<p><strong>When</strong>: The triggering event to establish causality is the situation or reason why the customer desires the outcome. Triggering events are key indicators for when an API will be used.</p>
+<p><strong>I want to</strong>: The capability is what the customer has identified as the action that needs to be taken. The capability identifies the important role that the API will play to deliver the desired outcome. It is also used to deconstruct the operations that the API will deliver.</p>
+<p><strong>So I can</strong>: The outcome is the desired end state. It is the result of applying the capability when the triggering event occurs. The outcome drives the acceptance criteria for the API design.</p>
+</blockquote>
+<h3 id="why-a-job-story">Why a job story?</h3>
+<p>This &lsquo;Job to be done&rsquo; variation is perhaps a bit more concrete than the others mentioned. </p>
+<p>I do appreciate the &lsquo;narrative&rsquo; element to a user story - we should be aware of the &lsquo;voice of the customer&rsquo; but this VOC concept can become quite rote and pro forma. </p>
+<p>Perhaps a user story formulation suit high-level epics better? Maybe &lsquo;user epics&rsquo; would be better? : When there&rsquo;s fewer of them we might consider each component of each story more closely?</p>
+<p>Anyway, just a thought.</p>
+<hr />
+<h3 id="how-does-this-relate-to-api-design">How does this relate to API design?</h3>
+<p><a href="https://learning.oreilly.com/library/view/principles-of-web/9780137355754/ch03.xhtml#:-:text=Table%203.2%20Job%20Stories,ID">This all maps quite neatly to an API design process:
+</a>
+eg: </p>
+<table>
+<thead>
+<tr>
+<th>When (trigger)</th>
+<th>I want to (capability)</th>
+<th>So I can (outcome)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I want to see the new books that have been released</td>
+<td>List recently added books</td>
+<td>Keep up with the latest watercooler talk</td>
+</tr>
+<tr>
+<td>I want to find a book that will be entertaining or teach me something new</td>
+<td>Search for a book by topic or keyword</td>
+<td>Browse related books</td>
+</tr>
+</tbody>
+</table>
+<p>It should be clear how this can relate to an API.</p>
+<p>There&rsquo;s <a href="https://jtbd.info/replacing-the-user-story-with-the-job-story-af7cdee10c27?gi=14ca43e848e9">more to the Jobs to be done formulation</a>, the API book &amp; API design, but this is a simple TIL. </p>
+      </div>
+    </article>
+  </main>
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs font-mono text-slate-400">
+    Built from <a class="underline hover:text-emerald-500" href="https://github.com/julzhk/til">julzhk/til</a> · 2026-10-02
+  </footer>
+</body>
+</html>

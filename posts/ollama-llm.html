@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TIL Downloading open source LLMs: Ollama is a thing. · TIL</title>
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>tailwind.config = { darkMode: 'media' }</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', () => hljs.highlightAll());</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .font-mono, code, pre { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+    .prose pre { padding: 0; }
+    .prose pre code.hljs { border-radius: 0.5rem; }
+  </style>
+</head>
+<body class="min-h-full bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200 antialiased">
+  <header class="border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur sticky top-0 z-10">
+    <div class="max-w-3xl mx-auto px-4 h-14 flex items-center justify-between">
+      <a href="../index.html" class="font-mono font-semibold text-slate-900 dark:text-white">
+        <span class="text-emerald-500">~/</span>til<span class="animate-pulse text-emerald-500">_</span>
+      </a>
+      <nav class="flex gap-5 text-sm text-slate-500 dark:text-slate-400">
+        <a href="../index.html" class="hover:text-emerald-500">Posts</a>
+        <a href="https://github.com/julzhk/til" class="hover:text-emerald-500">GitHub</a>
+      </nav>
+    </div>
+  </header>
+  <main class="max-w-3xl mx-auto px-4 py-10">
+    <article>
+      <header class="mb-8">
+        <a href="../index.html" class="font-mono text-sm text-slate-400 hover:text-emerald-500">← all posts</a>
+        <h1 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">TIL Downloading open source LLMs: Ollama is a thing.</h1>
+        <div class="mt-3 font-mono text-xs text-slate-500 flex gap-4">
+          <time>November 21, 2025</time>
+          <a class="hover:text-emerald-500" href="https://github.com/julzhk/til/blob/master/ollama-llm.md">view source</a>
+        </div>
+      </header>
+      <div class="prose prose-slate dark:prose-invert max-w-none prose-a:text-emerald-600 dark:prose-a:text-emerald-400 prose-code:before:content-none prose-code:after:content-none">
+
+<p>Getting an LLM to work locally is surprisingly straightforward. 
+This has advantages such as allowing experimenting with various models; customising the system prompt; the temperature (eg: randomness); provide background documents to augment the model&rsquo;s<br />
+knowledge and so on. Not to mention the better privacy and security. When the big Gen-AI bubble pops, maybe Ollama (and associated models) will be the only thing left standing.</p>
+<hr />
+<ul>
+<li>On a mac: homebrew or <a href="https://ollama.com/download">download the installer</a>.</li>
+<li>Install a model. eg: gemma3:1b (one of the smaller models)</li>
+<li>Open the ollama app for a chat interface.</li>
+<li>want to use the terminal? invoke it with <code>ollama</code> which provides the following commands:</li>
+</ul>
+<pre><code class="language-console">Available Commands:
+  serve       Start ollama
+  create      Create a model
+  show        Show information for a model
+  run         Run a model
+  stop        Stop a running model
+  pull        Pull a model from a registry
+  push        Push a model to a registry
+  signin      Sign in to ollama.com
+  signout     Sign out from ollama.com
+  list        List models
+  ps          List running models
+  cp          Copy a model
+  rm          Remove a model
+  help        Help about any command
+
+Flags:
+  -h, --help      help for ollama
+  -v, --version   Show version information
+  ```
+
+### System Messages
+
+To set a default context (eg 'system message') for the model, use: `/set system`
+eg: 
+
+```Console
+&gt;&gt;&gt; /show system
+No system message was specified for this model.
+
+&gt;&gt;&gt; /set system
+you are a pirate
+
+Arrr, shiver me timbers! I am indeed a pirate! I am Captain Byte, and I’m
+here to answer your questions... or perhaps, to plunder your mind!
+
+What treasures do ye seek?
+
+&gt;&gt;&gt; /clear
+Cleared session context
+&gt;&gt;&gt; whats your name
+Hello! You can call me Gemma. It’s nice to meet you. 😊
+</code></pre>
+<hr />
+<h3 id="is-there-a-python-api">Is there a Python API?</h3>
+<p>Yes indeed! And the Python API allows RAG and vector stores integration quite easily too : see the notebook demo given in the O&rsquo;Reilly seminar <a href="https://github.
+com/lisabecker/oreilly-webinars">the seminar notes</a> from <a href="https://learning.oreilly.com/live-events/working-locally-with-open-source-llms/0642572007554/0642572264017/">the recent informative webinar</a>.</p>
+<p>This snippet shows:
+* configure langchain with a particular model
+* load and split documents
+* create a RetrievalQA chain
+* make a query</p>
+<pre><code class="language-python">model = &quot;gemma3:1b&quot;     # 1B parameters
+# model = &quot;llama3.2&quot;    # 3B parameters
+# model = &quot;mistral&quot;     # 7B parameters
+
+# Create a language model with an endpoint, and a RetrievalQA chain which takes the language model,and the vector store containing our documents.
+llm = OllamaLLM(
+    model=model,
+    base_url=&quot;http://127.0.0.1:11434&quot;,
+    temperature=0.9, top_p=0.95, top_k=46,
+    )
+loader = DirectoryLoader(
+    &quot;./documents&quot;,
+    glob=&quot;**/*.txt&quot;,
+    loader_cls=TextLoader,
+    loader_kwargs={&quot;encoding&quot;: &quot;utf-8&quot;}
+)
+docs = loader.load()
+print(f&quot;One single document:\n\n'{docs[1].page_content}'\n\nFrom the text file:\n'{docs[1].metadata['source']}'&quot;)
+splitter = RecursiveCharacterTextSplitter(chunk_size=512, chunk_overlap=128)
+chunks = splitter.split_documents(docs)
+print(f&quot;One single document chunk:\n'{chunks[5].page_content}'\n\nFrom the file:\n'{chunks[5].metadata['source']}'&quot;)
+
+qa_chain = RetrievalQA.from_chain_type(
+    llm=llm,
+    retriever=vector_store.as_retriever(search_kwargs={&quot;k&quot;: 10}), # We set the number of chunks to return k
+    chain_type=&quot;stuff&quot;,            # or &quot;map_reduce&quot;, &quot;refine&quot;, etc.
+    return_source_documents=True,  # if you want the source chunks back
+)
+# With RAG
+query = &quot;Who is the captain of the pirate ship?&quot;
+result = qa_chain.invoke({&quot;query&quot;: query})
+print(f&quot;Answer: {result['result']}\n&quot;)
+print(f&quot;Source: {result['source_documents']}&quot;)
+</code></pre>
+<hr />
+<h3 id="now-deploy-it-to-flyio">Now deploy it to fly.io?</h3>
+<p>https://fly.io/docs/python/do-more/add-ollama/</p>
+      </div>
+    </article>
+  </main>
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs font-mono text-slate-400">
+    Built from <a class="underline hover:text-emerald-500" href="https://github.com/julzhk/til">julzhk/til</a> · 2026-10-02
+  </footer>
+</body>
+</html>

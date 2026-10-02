@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dev containers in JetBrains is a thing. · TIL</title>
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>tailwind.config = { darkMode: 'media' }</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', () => hljs.highlightAll());</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .font-mono, code, pre { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+    .prose pre { padding: 0; }
+    .prose pre code.hljs { border-radius: 0.5rem; }
+  </style>
+</head>
+<body class="min-h-full bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200 antialiased">
+  <header class="border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur sticky top-0 z-10">
+    <div class="max-w-3xl mx-auto px-4 h-14 flex items-center justify-between">
+      <a href="../index.html" class="font-mono font-semibold text-slate-900 dark:text-white">
+        <span class="text-emerald-500">~/</span>til<span class="animate-pulse text-emerald-500">_</span>
+      </a>
+      <nav class="flex gap-5 text-sm text-slate-500 dark:text-slate-400">
+        <a href="../index.html" class="hover:text-emerald-500">Posts</a>
+        <a href="https://github.com/julzhk/til" class="hover:text-emerald-500">GitHub</a>
+      </nav>
+    </div>
+  </header>
+  <main class="max-w-3xl mx-auto px-4 py-10">
+    <article>
+      <header class="mb-8">
+        <a href="../index.html" class="font-mono text-sm text-slate-400 hover:text-emerald-500">← all posts</a>
+        <h1 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">Dev containers in JetBrains is a thing.</h1>
+        <div class="mt-3 font-mono text-xs text-slate-500 flex gap-4">
+          <time>November 21, 2025</time>
+          <a class="hover:text-emerald-500" href="https://github.com/julzhk/til/blob/master/dev-containers-in-jetbrains.md">view source</a>
+        </div>
+      </header>
+      <div class="prose prose-slate dark:prose-invert max-w-none prose-a:text-emerald-600 dark:prose-a:text-emerald-400 prose-code:before:content-none prose-code:after:content-none">
+
+<p>TIL you can use <a href="https://www.jetbrains.com/help/pycharm/start-dev-container-from-scratch.html">dev containers</a> in JetBrains IDEs. </p>
+<h3 id="whats-a-dev-container">What&rsquo;s a dev container?</h3>
+<p>It&rsquo;s a typical set up these days to make a docker container for your dev env. If not a docker container, then a docker compose - then there&rsquo;s a dev container with the code dependencies as well as 
+any other requirements. Maybe a database, redis cache and whatever else you need.</p>
+<p>Some troubles with this: the developer requirements are a super-set of the production requirements.</p>
+<p>Often the docker compose file is a parallel construction to the deployment infrastucture, which is obviously a duplicative effort and can be out-of-step with the production environment - precisely the scenario using containers was designed to solve.</p>
+<h3 id="dev-containers-are-an-attempt-to-solve-this-problem">Dev containers are an attempt to solve this problem.</h3>
+<p>Imagine a file that is an extension of your production Dockerfile, but also contains all the IDE plugins, development dependencies, ENV variables and so on: a file that enables a &lsquo;click-and-go&rsquo; development setup.</p>
+<p>That&rsquo;s the goal of a dev container configuration file.</p>
+<p><a href="https://www.jetbrains.com/help/idea/connect-to-devcontainer.html#dev_container_scenarios">Docker Container: but for your dev env
+</a></p>
+<p>Example project : <a href="https://github.com/IdeaUJetBrains/idea-demo-devcontainers">github/idea-demo-devcontainers</a></p>
+<hr />
+<p>They appear to have been developed by/for VSCode and Jetbrains is playing catch-up and now supporting them. </p>
+<p>In practice, using dev containers isolates the IDE from the rest of the host system. More: secure, repeatable, &amp; consistent..</p>
+<hr />
+<p>The downside is that it&rsquo;s a bit more work to set up and the documentation is a bit terse, especially for using them with JetBrains.</p>
+<p>FWIW: &amp; here&rsquo;s what they look like: an example dev container config file that uses a docker compose file:</p>
+<pre><code class="language-json">// Info https://containers.dev/implementors/json_reference/
+{
+  &quot;dockerComposeFile&quot;: &quot;docker-compose.yml&quot;,
+  &quot;service&quot;: &quot;devcontainer&quot;,
+  &quot;workspaceFolder&quot;: &quot;/workspaces/${localWorkspaceFolderBasename}&quot;,
+  &quot;customizations&quot;: {
+    &quot;jetbrains&quot;: {
+      &quot;plugins&quot;: [
+        &quot;org.intellij.plugins.10650-json-parser-and-code-generation&quot;,
+      ],
+      &quot;settings&quot;: {
+        &quot;com.intellij:app:BuiltInServerOptions.builtInServerPort&quot;: 56165,
+        &quot;com.intellij:app:HttpConfigurable.use_proxy_pac&quot;: true,
+        &quot;com.intellij:app:EditorSettings.soft_wrap_file_masks&quot;: &quot;*.md; *.txt; *.rst; *.adoc&quot;,
+        &quot;Git4Idea:app:Git-Application-Settings.use_credential_helper&quot;: true,
+        &quot;com.intellij:app:Vcs-Log-App-Settings.show_changes_from_parents&quot;: true,
+        &quot;com.intellij:app:BaseRefactoringSettings.safe_delete_when_delete&quot;: false,
+        &quot;com.intellij:app:BaseRefactoringSettings.rename_search_in_comments_for_file&quot;: false,
+        &quot;com.intellij:app:BaseRefactoringSettings.rename_search_for_text_for_file&quot;: false,
+        &quot;com.intellij:app:BaseRefactoringSettings.rename_search_for_references_for_file&quot;: false,
+        &quot;com.intellij:app:BaseRefactoringSettings.rename_search_for_references_for_directory&quot;: false,
+        &quot;com.intellij.database:app:DatabaseSettings.enable-local-filter-by-default&quot;: false,
+        &quot;com.intellij:app:UsageViewSettings.is_preview_usages&quot;: false
+      }
+    }
+  }
+}
+</code></pre>
+      </div>
+    </article>
+  </main>
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs font-mono text-slate-400">
+    Built from <a class="underline hover:text-emerald-500" href="https://github.com/julzhk/til">julzhk/til</a> · 2026-10-02
+  </footer>
+</body>
+</html>

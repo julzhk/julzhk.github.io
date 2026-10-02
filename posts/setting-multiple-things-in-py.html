@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Setting multiple things in py · TIL</title>
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>tailwind.config = { darkMode: 'media' }</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', () => hljs.highlightAll());</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .font-mono, code, pre { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+    .prose pre { padding: 0; }
+    .prose pre code.hljs { border-radius: 0.5rem; }
+  </style>
+</head>
+<body class="min-h-full bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200 antialiased">
+  <header class="border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur sticky top-0 z-10">
+    <div class="max-w-3xl mx-auto px-4 h-14 flex items-center justify-between">
+      <a href="../index.html" class="font-mono font-semibold text-slate-900 dark:text-white">
+        <span class="text-emerald-500">~/</span>til<span class="animate-pulse text-emerald-500">_</span>
+      </a>
+      <nav class="flex gap-5 text-sm text-slate-500 dark:text-slate-400">
+        <a href="../index.html" class="hover:text-emerald-500">Posts</a>
+        <a href="https://github.com/julzhk/til" class="hover:text-emerald-500">GitHub</a>
+      </nav>
+    </div>
+  </header>
+  <main class="max-w-3xl mx-auto px-4 py-10">
+    <article>
+      <header class="mb-8">
+        <a href="../index.html" class="font-mono text-sm text-slate-400 hover:text-emerald-500">← all posts</a>
+        <h1 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">Setting multiple things in py</h1>
+        <div class="mt-3 font-mono text-xs text-slate-500 flex gap-4">
+          <time>December 9, 2025</time>
+          <a class="hover:text-emerald-500" href="https://github.com/julzhk/til/blob/master/setting-multiple-things-in-py.md">view source</a>
+        </div>
+      </header>
+      <div class="prose prose-slate dark:prose-invert max-w-none prose-a:text-emerald-600 dark:prose-a:text-emerald-400 prose-code:before:content-none prose-code:after:content-none">
+<p>TIL: In python you can set multiple variables simultaneously:</p>
+<p>eg: This works: </p>
+<pre><code class="language-python">a = b = c = d = 123
+print(a, b, c, d)
+# &gt;&gt; 123 123 123 123
+</code></pre>
+<p>And similarly, with unpacking:</p>
+<pre><code class="language-python">a, b, *c = 1,2,3,4,5
+print(a, b, c)
+# &gt;&gt; 1 2 [3, 4, 5]
+a, *b, c = 1,2,3,4,5
+print(a, b, c)
+# &gt;&gt; 1 [2, 3, 4] 5
+</code></pre>
+<p>I&rsquo;m not surprised it works tbh, but I don&rsquo;t think I&rsquo;d ever seen it in the wild before; so hence TIL!</p>
+<hr />
+<p>There&rsquo;s a similar multiple attribute trick for assigning multiple returns from a function:</p>
+<pre><code class="language-python">a, b = fn(1,2)
+</code></pre>
+<p>This is (of course) just doing a swift tuple unpacking from the implicit tuple the function is returning.</p>
+<p>It gives a nice answer to the (silly) coding interview question about swapping two variables without using an intermediate variable.</p>
+<p>It&rsquo;s a silly question as it&rsquo;s unrealistic and the only way you&rsquo;d know the answer (imho) is to have seen it previously. I guess the expected answer requires clever maths or something, allowing the 
+interviewer a chance to flex. </p>
+<p>I was actually asked it in an interview once. And immediately gave the following:</p>
+<pre><code class="language-python">a, b = b, a
+</code></pre>
+<p>Did they think that was neat? Clever? Simple? Elegant? </p>
+<p>No! They appeared to be annoyed they couldn&rsquo;t show-off! </p>
+      </div>
+    </article>
+  </main>
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs font-mono text-slate-400">
+    Built from <a class="underline hover:text-emerald-500" href="https://github.com/julzhk/til">julzhk/til</a> · 2026-10-02
+  </footer>
+</body>
+</html>
