@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TIL new subtest feature added to pytest · TIL</title>
+  <title>TIL: like robots.txt in a website, but for LLM · TIL</title>
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
   <script>tailwind.config = { darkMode: 'media' }</script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
@@ -34,23 +34,20 @@
     <article>
       <header class="mb-8">
         <a href="../index.html" class="font-mono text-sm text-slate-400 hover:text-emerald-500">← all posts</a>
-        <h1 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">TIL new subtest feature added to pytest</h1>
+        <h1 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">TIL: like robots.txt in a website, but for LLM</h1>
         <div class="mt-3 font-mono text-xs text-slate-500 flex gap-4">
-          <time>December 12, 2025</time>
-          <a class="hover:text-emerald-500" href="https://github.com/julzhk/til/blob/master/subtests-in-pytest.md">view source</a>
+          <time>October 7, 2026</time>
+          <a class="hover:text-emerald-500" href="https://github.com/julzhk/til/blob/master/robot-txt-files-for-llm.md">view source</a>
         </div>
       </header>
       <div class="prose prose-slate dark:prose-invert max-w-none prose-a:text-emerald-600 dark:prose-a:text-emerald-400 prose-code:before:content-none prose-code:after:content-none">
 
-<p><a href="https://til.simonwillison.net/pytest/subtests">TIL about another TIL</a></p>
-<pre><code class="language-Python">def test_settings_are_documented(settings_headings, subtests):
-    for setting in app.SETTINGS:
-        with subtests.test(setting=setting.name):
-            assert setting.name in settings_headings
-</code></pre>
-<p>It&rsquo;s somewhat interchangeable with parameterized tests, however:
-* <a href="https://docs.pytest.org/en/stable/changelog.html#pytest-9-0-0-2025-11-05">&ldquo;subtests are an alternative to parametrization, useful in situations where the parametrization values are not all known at collection time.&rdquo;</a>
-* less chatty: it&rsquo;s one test rather than reporting each parameterized test individually</p>
+<p>Just as a &lsquo;robots.txt&rsquo; file directs web scrapers, a llm.txt file is there to direct our new AI overlords.</p>
+<p>The famous &lsquo;lighthouse&rsquo; accessibility scoring now includes checks for it too - a new category called &lsquo;Agentic Browsing&rsquo;, which checks how well AI agents can read and operate the site. On Chrome 150+:</p>
+<p><code>DevTools &gt; Lighthouse &gt; tick Agentic Browsing &gt; Analyze page load</code></p>
+<hr />
+<p>The new standard: https://llmstxt.org</p>
+<p>and here&rsquo;s a tool for making one: https://design.dev/ai/llms-txt-generator/</p>
       </div>
     </article>
   </main>
