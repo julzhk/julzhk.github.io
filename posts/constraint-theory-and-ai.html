@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TIL That knowing (and applying!) the theory of constraints with AI is obviously hard, or we’d all be doing it. · TIL</title>
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>tailwind.config = { darkMode: 'media' }</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', () => hljs.highlightAll());</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .font-mono, code, pre { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+    .prose pre { padding: 0; }
+    .prose pre code.hljs { border-radius: 0.5rem; }
+  </style>
+</head>
+<body class="min-h-full bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200 antialiased">
+  <header class="border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur sticky top-0 z-10">
+    <div class="max-w-3xl mx-auto px-4 h-14 flex items-center justify-between">
+      <a href="../index.html" class="font-mono font-semibold text-slate-900 dark:text-white">
+        <span class="text-emerald-500">~/</span>til<span class="animate-pulse text-emerald-500">_</span>
+      </a>
+      <nav class="flex gap-5 text-sm text-slate-500 dark:text-slate-400">
+        <a href="../index.html" class="hover:text-emerald-500">Posts</a>
+        <a href="https://github.com/julzhk/til" class="hover:text-emerald-500">GitHub</a>
+      </nav>
+    </div>
+  </header>
+  <main class="max-w-3xl mx-auto px-4 py-10">
+    <article>
+      <header class="mb-8">
+        <a href="../index.html" class="font-mono text-sm text-slate-400 hover:text-emerald-500">← all posts</a>
+        <h1 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">TIL That knowing (and applying!) the theory of constraints with AI is obviously hard, or we’d all be doing it.</h1>
+        <div class="mt-3 font-mono text-xs text-slate-500 flex gap-4">
+          <time>October 19, 2026</time>
+          <a class="hover:text-emerald-500" href="https://github.com/julzhk/til/blob/master/constraint_theory_and_AI.md">view source</a>
+        </div>
+      </header>
+      <div class="prose prose-slate dark:prose-invert max-w-none prose-a:text-emerald-600 dark:prose-a:text-emerald-400 prose-code:before:content-none prose-code:after:content-none">
+
+<p>My current thoughts is that AI is really good at prototyping and version one - when the scope are tightly managed and simple. </p>
+<p>And the reason this type of development is so quick and satisfying is that the process is just simpler and smoother: ideas -&gt; prompts -&gt; AI code generation -&gt; Do we like it?</p>
+<p>If it&rsquo;s just me as a solo developer, then the slowest phase in the process might be coming up with the ideas, which is the source of the intoxicating &lsquo;AI mania&rsquo; (the new subset of AI 
+psychosis that&rsquo;s going 
+around). And this manic point-of-view makes developing look &lsquo;solved&rsquo;. </p>
+<p>However, in a more mature project, this isn&rsquo;t how developers work at all and these speed-ups aren&rsquo;t so obviously observed.</p>
+<p><em>&ldquo;What grew &hellip; was the wait. A pull request used to take about seven days to merge, and with agents &hellip; it took about ten and a half.
+&ldquo;</em> <a href="https://galratner.substack.com/p/thank-you-for-mandating-ai-we-still">Source: we still ship the same amount, why?</a> </p>
+<p>More observations from that source:</p>
+<ul>
+<li>The researchers estimate that engineers spend between about a third of their time actually writing code and the rest of the time reviewing, planning and in meetings.</li>
+<li>The time from opening a pull request to merging rose 49 percent. Before AI adoption reviewers requested changes on about one pull request in eight. After, it was closer to one in four.</li>
+<li>Moving people into code review can clear a productivity bottleneck. A quality bottleneck will only clears when the [AI] technology gets better.</li>
+</ul>
+<p>And this observation correllates to my personal experience: With AI the code review process becomes a lot more tricky: A human didn&rsquo;t write the code so it&rsquo;s not got the affordances and &lsquo;architectural 
+characteristics&rsquo; 
+that a human-written code should have: we should care about maintainability, future extensibility, modularity / composability / reusability. And as a code reviewer I might reject code that&rsquo;s 
+repetitive (eg not DRY.) of course, the AI doesn&rsquo;t really get those NFR qualities. So it requires more time to appraise and even takes a second opinion, soaking up yet more time. It&rsquo;s stressful to 
+reject code that ostensibly &lsquo;works&rsquo; yet isn&rsquo;t going to make our project worse in the medium or longer term. Maybe we should be adding NFRs into the prompts - but I doubt this would work (<code>'use DRY principles and don't make mistakes'</code> ) </p>
+<p>Lean manufacturing and &lsquo;<a href="http://focusandleverage.blogspot.com/2015/03/focus-and-leverage-part-410.html">theory of constraints</a>&rsquo; would predict this of course: By speeding up one phase that&rsquo;s not the critical bottleneck , all that happens is that downstream processes become 
+overloaded - and even slower!</p>
+<p>Lean would also have comments about speed-ups making &lsquo;quality&rsquo; issues harder, worse and in all ways more difficult. But that&rsquo;s another story.</p>
+      </div>
+    </article>
+  </main>
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs font-mono text-slate-400">
+    Built from <a class="underline hover:text-emerald-500" href="https://github.com/julzhk/til">julzhk/til</a> · 2026-10-19
+  </footer>
+</body>
+</html>
