@@ -89,30 +89,74 @@
 
 <header class="sticky top-0 z-20 bg-stone-50/85 dark:bg-stone-950/85 backdrop-blur border-b border-stone-200 dark:border-stone-800">
     <div class="max-w-4xl mx-auto px-5 flex flex-col sm:flex-row sm:items-center sm:justify-between">
-        <a href="index.html" class="pt-4 sm:py-4 font-serif text-lg font-semibold text-stone-900 dark:text-stone-50 hover:text-accent transition-colors">julz.dev</a>
+        <a href="index.html" class="pt-4 sm:py-4 flex items-center gap-2 font-serif text-lg font-semibold text-stone-900 dark:text-stone-50 hover:text-accent transition-colors"><svg xmlns="http://www.w3.org/2000/svg" id="crane-logo" class="h-7 w-7 shrink-0" viewBox="0 0 64 64"
+     fill="none" stroke="currentColor" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+  <!-- Origami crane logo: one sheet folds into a crane over 5s, then holds.
+       Each polygon morphs through five stages (values=):
+       square sheet; folded triangle; bird-base kite; neck and tail raised; wings open.
+       Drawn in currentColor so it follows the surrounding text colour. -->
+  <!-- body -->
+  <polygon points="24,40 32,35 40,40 32,46" vector-effect="non-scaling-stroke">
+    <animate attributeName="points" dur="5s" fill="freeze" calcMode="spline" keyTimes="0;0.2;0.45;0.7;1" keySplines="0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1"
+             values="14,36 32,18 50,36 32,54;14,36 32,18 50,36 32,36;25,38 32,16 39,38 32,52;24,40 32,35 40,40 32,46;24,40 32,35 40,40 32,46"/>
+  </polygon>
+  <!-- neck -->
+  <polygon points="24,40 30,44.5 10,22 10,22" vector-effect="non-scaling-stroke">
+    <animate attributeName="points" dur="5s" fill="freeze" calcMode="spline" keyTimes="0;0.2;0.45;0.7;1" keySplines="0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1"
+             values="14,36 32,54 50,36 32,18;14,36 32,36 50,36 32,18;25,38 32,52 32,38 32,38;24,40 30,44.5 10,22 10,22;24,40 30,44.5 10,22 10,22"/>
+  </polygon>
+  <!-- head -->
+  <polygon points="10,22 13,23 5,27 5,27" vector-effect="non-scaling-stroke">
+    <animate attributeName="points" dur="5s" fill="freeze" calcMode="spline" keyTimes="0;0.2;0.45;0.7;1" keySplines="0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1"
+             values="32,54 32,54 32,54 32,54;32,36 32,36 32,36 32,36;32,52 32,52 32,52 32,52;10,22 10,22 10,22 10,22;10,22 13,23 5,27 5,27"/>
+  </polygon>
+  <!-- tail -->
+  <polygon points="40,40 34,44.5 56,22 56,22" vector-effect="non-scaling-stroke">
+    <animate attributeName="points" dur="5s" fill="freeze" calcMode="spline" keyTimes="0;0.2;0.45;0.7;1" keySplines="0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1"
+             values="50,36 32,54 14,36 32,18;50,36 32,36 14,36 32,18;39,38 32,52 32,38 32,38;40,40 34,44.5 56,22 56,22;40,40 34,44.5 56,22 56,22"/>
+  </polygon>
+  <!-- front wing -->
+  <polygon points="32,35 37,38 42,8 42,8" vector-effect="non-scaling-stroke">
+    <animate attributeName="points" dur="5s" fill="freeze" calcMode="spline" keyTimes="0;0.2;0.45;0.7;1" keySplines="0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1"
+             values="32,18 50,36 14,36 32,18;32,18 50,36 14,36 32,18;32,38 39,38 32,16 32,16;32,35 35,37 32,13 32,13;32,35 37,38 42,8 42,8"/>
+  </polygon>
+  <!-- back wing -->
+  <polygon points="27,38 32,35 22,10 22,10" vector-effect="non-scaling-stroke">
+    <animate attributeName="points" dur="5s" fill="freeze" calcMode="spline" keyTimes="0;0.2;0.45;0.7;1" keySplines="0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1"
+             values="14,36 32,18 50,36 32,18;14,36 32,18 50,36 32,18;25,38 32,38 32,16 32,16;29,37 32,35 32,13 32,13;27,38 32,35 22,10 22,10"/>
+  </polygon>
+</svg>julz.dev</a>
+        <script>
+            // Respect reduced-motion: jump the crane logo straight to its finished pose.
+            if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                const crane = document.getElementById('crane-logo');
+                crane.pauseAnimations();
+                crane.setCurrentTime(5);
+            }
+        </script>
         <nav aria-label="Main" class="-mx-5 px-5 sm:mx-0 sm:px-0 overflow-x-auto">
             <div class="flex gap-6 text-sm font-medium">
-                  <a href="index.html" aria-current="page" class="shrink-0 py-4 border-b-2 transition-colors text-stone-900 dark:text-stone-50 border-accent">Home</a>
+                  <a href="index.html" aria-current="page" class="shrink-0 py-4 border-b-2 transition-colors text-stone-900 dark:text-stone-50 border-accent hover:decoration-indigo-600/20">Home</a>
 
                   <a href="blog/index.html" class="shrink-0 py-4 border-b-2 transition-colors text-stone-500
   dark:text-stone-400 border-transparent hover:text-stone-900 dark:hover:text-stone-100
-  hover:border-stone-100 dark:hover:border-stone-200">Blog</a>
+  hover:border-stone-100 dark:hover:border-stone-200 hover:decoration-indigo-600/20">Blog</a>
 
                   <a href="projects.html" class="shrink-0 py-4 border-b-2 transition-colors text-stone-500
   dark:text-stone-400 border-transparent hover:text-stone-900 dark:hover:text-stone-100
-  hover:border-stone-100 dark:hover:border-stone-200">Projects</a>
+  hover:border-stone-100 dark:hover:border-stone-200 hover:decoration-indigo-600/20">Projects</a>
 
                   <a href="about.html" class="shrink-0 py-4 border-b-2 transition-colors text-stone-500
   dark:text-stone-400 border-transparent hover:text-stone-900 dark:hover:text-stone-100
-  hover:border-stone-100 dark:hover:border-stone-200">About</a>
+  hover:border-stone-100 dark:hover:border-stone-200 hover:decoration-indigo-600/20">About</a>
 
                   <a href="now.html" class="shrink-0 py-4 border-b-2 transition-colors text-stone-500
   dark:text-stone-400 border-transparent hover:text-stone-900 dark:hover:text-stone-100
-  hover:border-stone-100 dark:hover:border-stone-200">Now</a>
+  hover:border-stone-100 dark:hover:border-stone-200 hover:decoration-indigo-600/20">Now</a>
 
                   <a href="contact.html" class="shrink-0 py-4 border-b-2 transition-colors text-stone-500
   dark:text-stone-400 border-transparent hover:text-stone-900 dark:hover:text-stone-100
-  hover:border-stone-100 dark:hover:border-stone-200">Contact</a>
+  hover:border-stone-100 dark:hover:border-stone-200 hover:decoration-indigo-600/20">Contact</a>
 
             </div>
         </nav>
@@ -143,6 +187,12 @@
   </div>
   <ul class="divide-y divide-stone-200/70 dark:divide-stone-800/70">
     <li>
+      <a href="posts/datastar.html" class="group flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6 py-3">
+        <time datetime="2026-11-06" class="shrink-0 w-20 font-mono text-xs text-stone-400">2026-11-06</time>
+        <span class="text-stone-800 dark:text-stone-200 group-hover:text-accent transition-colors">TIL: Finding Datastar works nicely for a prototype</span>
+      </a>
+    </li>
+    <li>
       <a href="posts/dbos-and-fly-sprites.html" class="group flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6 py-3">
         <time datetime="2026-11-04" class="shrink-0 w-20 font-mono text-xs text-stone-400">2026-11-04</time>
         <span class="text-stone-800 dark:text-stone-200 group-hover:text-accent transition-colors">Dbos and fly sprites</span>
@@ -172,12 +222,6 @@
         <span class="text-stone-800 dark:text-stone-200 group-hover:text-accent transition-colors">TIL the cross-over between AI assisted development and DDD</span>
       </a>
     </li>
-    <li>
-      <a href="posts/the-last-museum.html" class="group flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6 py-3">
-        <time datetime="2026-11-03" class="shrink-0 w-20 font-mono text-xs text-stone-400">2026-11-03</time>
-        <span class="text-stone-800 dark:text-stone-200 group-hover:text-accent transition-colors">The last museum</span>
-      </a>
-    </li>
   </ul>
 </section>
 
@@ -187,7 +231,12 @@
     <a href="projects.html" class="text-sm text-stone-500 hover:text-accent transition-colors">All projects &rarr;</a>
   </div>
   <div class="mt-6"><div class="grid gap-4 sm:grid-cols-2">
-<a href="https://github.com/julzhk/til" class="group block rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 p-5 hover:border-accent/60 transition-colors">
+<a href="https://github.com/julzhk/til" class="group block overflow-hidden rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 hover:border-accent/60 transition-colors">
+    <div class="aspect-[16/9] overflow-hidden border-b border-stone-200 dark:border-stone-800 bg-stone-100 dark:bg-stone-800">
+      <img src="images/projects/til.jpg" alt="TIL" loading="lazy"
+           class="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105">
+    </div>
+    <div class="p-5">
     <div class="flex items-baseline justify-between gap-3">
       <h3 class="font-serif text-lg font-semibold text-stone-900 dark:text-stone-50 group-hover:text-accent transition-colors">TIL</h3>
       <span class="font-mono text-xs text-stone-400">2025</span>
@@ -197,7 +246,13 @@
       <span class="font-mono text-[11px] text-stone-500 dark:text-stone-400">Python</span>
       <span class="font-mono text-[11px] text-stone-500 dark:text-stone-400">Markdown</span>
     </div>
-  </a><a href="https://github.com/julzhk/screendream#screendream" class="group block rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 p-5 hover:border-accent/60 transition-colors">
+    </div>
+  </a><a href="https://github.com/julzhk/screendream#screendream" class="group block overflow-hidden rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 hover:border-accent/60 transition-colors">
+    <div class="aspect-[16/9] overflow-hidden border-b border-stone-200 dark:border-stone-800 bg-stone-100 dark:bg-stone-800">
+      <img src="images/projects/screendream.jpg" alt="Screen Dream" loading="lazy"
+           class="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105">
+    </div>
+    <div class="p-5">
     <div class="flex items-baseline justify-between gap-3">
       <h3 class="font-serif text-lg font-semibold text-stone-900 dark:text-stone-50 group-hover:text-accent transition-colors">Screen Dream</h3>
       <span class="font-mono text-xs text-stone-400">2026</span>
@@ -206,6 +261,7 @@
     <div class="mt-4 flex gap-3">
       <span class="font-mono text-[11px] text-stone-500 dark:text-stone-400">App</span>
       <span class="font-mono text-[11px] text-stone-500 dark:text-stone-400">Rust</span>
+    </div>
     </div>
   </a>  </div></div>
 </section>
@@ -216,7 +272,7 @@
         <div>
             <p class="font-serif text-lg font-semibold text-stone-900 dark:text-stone-50">Julian Harley</p>
             <p class="mt-2 text-stone-500 dark:text-stone-400 max-w-xs">Software developer. I build things. and think about things. and maybe write about them.</p>
-            <p id="quip" class="mt-4 italic text-stone-500 dark:text-stone-400">How hard could it be?</p>
+            <p id="quip" class="mt-4 italic text-stone-500 dark:text-stone-400">Best viewed with curiosity and a hot drink.</p>
         </div>
         <div>
     <h2 class="text-xs font-semibold uppercase tracking-widest text-stone-400">Elsewhere</h2>
@@ -240,7 +296,7 @@
     <div class="border-t border-stone-200 dark:border-stone-800">
         <div class="max-w-4xl mx-auto px-5 py-5 flex flex-col sm:flex-row gap-2 sm:justify-between text-xs font-mono text-stone-400">
             <p>&copy; 2026 Julian Harley &middot; made in somewhere with decent tea</p>
-            <p>56 posts &middot; built 2026-11-06 from <a class="hover:text-accent" href="https://github.com/julzhk/til/commit/dbc4809">dbc4809</a>
+            <p>57 posts &middot; built 2026-11-06 from <a class="hover:text-accent" href="https://github.com/julzhk/til/commit/cf09587">cf09587</a>
                 &middot; <a class="hover:text-accent" href="#top">back to top</a></p>
         </div>
     </div>
