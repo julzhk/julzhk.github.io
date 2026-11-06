@@ -15,8 +15,8 @@
                 extend: {
                     colors: {accent: 'rgb(var(--accent) / <alpha-value>)'},
                     fontFamily: {
-                        sans: ['"Inter"', 'system-ui', 'sans-serif'],
-                        serif: ['"Fraunces"', 'Georgia', 'serif'],
+                        sans: ['"Lato"', 'system-ui', 'sans-serif'],
+                        serif: ['"Cabin"', 'system-ui', 'sans-serif'],
                         mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
                     },
                 }
@@ -55,7 +55,7 @@
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Lato:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark-dimmed.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
@@ -89,20 +89,30 @@
 
 <header class="sticky top-0 z-20 bg-stone-50/85 dark:bg-stone-950/85 backdrop-blur border-b border-stone-200 dark:border-stone-800">
     <div class="max-w-4xl mx-auto px-5 flex flex-col sm:flex-row sm:items-center sm:justify-between">
-        <a href="../index.html" class="pt-4 sm:py-4 font-serif text-lg font-semibold text-stone-900 dark:text-stone-50 hover:text-accent transition-colors">Jooles.dev</a>
+        <a href="../index.html" class="pt-4 sm:py-4 font-serif text-lg font-semibold text-stone-900 dark:text-stone-50 hover:text-accent transition-colors">julz.dev</a>
         <nav aria-label="Main" class="-mx-5 px-5 sm:mx-0 sm:px-0 overflow-x-auto">
             <div class="flex gap-6 text-sm font-medium">
-                  <a href="../index.html" class="shrink-0 py-4 border-b-2 transition-colors text-stone-500 dark:text-stone-400 border-transparent hover:text-stone-900 dark:hover:text-stone-100 hover:border-stone-300 dark:hover:border-stone-600">Home</a>
+                  <a href="../index.html" class="shrink-0 py-4 border-b-2 transition-colors text-stone-500
+  dark:text-stone-400 border-transparent hover:text-stone-900 dark:hover:text-stone-100
+  hover:border-stone-100 dark:hover:border-stone-200">Home</a>
 
                   <a href="../blog/index.html" aria-current="page" class="shrink-0 py-4 border-b-2 transition-colors text-stone-900 dark:text-stone-50 border-accent">Blog</a>
 
-                  <a href="../projects.html" class="shrink-0 py-4 border-b-2 transition-colors text-stone-500 dark:text-stone-400 border-transparent hover:text-stone-900 dark:hover:text-stone-100 hover:border-stone-300 dark:hover:border-stone-600">Projects</a>
+                  <a href="../projects.html" class="shrink-0 py-4 border-b-2 transition-colors text-stone-500
+  dark:text-stone-400 border-transparent hover:text-stone-900 dark:hover:text-stone-100
+  hover:border-stone-100 dark:hover:border-stone-200">Projects</a>
 
-                  <a href="../about.html" class="shrink-0 py-4 border-b-2 transition-colors text-stone-500 dark:text-stone-400 border-transparent hover:text-stone-900 dark:hover:text-stone-100 hover:border-stone-300 dark:hover:border-stone-600">About</a>
+                  <a href="../about.html" class="shrink-0 py-4 border-b-2 transition-colors text-stone-500
+  dark:text-stone-400 border-transparent hover:text-stone-900 dark:hover:text-stone-100
+  hover:border-stone-100 dark:hover:border-stone-200">About</a>
 
-                  <a href="../now.html" class="shrink-0 py-4 border-b-2 transition-colors text-stone-500 dark:text-stone-400 border-transparent hover:text-stone-900 dark:hover:text-stone-100 hover:border-stone-300 dark:hover:border-stone-600">Now</a>
+                  <a href="../now.html" class="shrink-0 py-4 border-b-2 transition-colors text-stone-500
+  dark:text-stone-400 border-transparent hover:text-stone-900 dark:hover:text-stone-100
+  hover:border-stone-100 dark:hover:border-stone-200">Now</a>
 
-                  <a href="../contact.html" class="shrink-0 py-4 border-b-2 transition-colors text-stone-500 dark:text-stone-400 border-transparent hover:text-stone-900 dark:hover:text-stone-100 hover:border-stone-300 dark:hover:border-stone-600">Contact</a>
+                  <a href="../contact.html" class="shrink-0 py-4 border-b-2 transition-colors text-stone-500
+  dark:text-stone-400 border-transparent hover:text-stone-900 dark:hover:text-stone-100
+  hover:border-stone-100 dark:hover:border-stone-200">Contact</a>
 
             </div>
         </nav>
@@ -146,7 +156,7 @@ for subscription in subscriptions.data:
         <div>
             <p class="font-serif text-lg font-semibold text-stone-900 dark:text-stone-50">Julian Harley</p>
             <p class="mt-2 text-stone-500 dark:text-stone-400 max-w-xs">Software developer. I build things. and think about things. and maybe write about them.</p>
-            <p id="quip" class="mt-4 italic text-stone-500 dark:text-stone-400">Contains no trackers, cookies, or newsletter pop-ups.</p>
+            <p id="quip" class="mt-4 italic text-stone-500 dark:text-stone-400">Written by a human. So typos are a feature.</p>
         </div>
         <div>
     <h2 class="text-xs font-semibold uppercase tracking-widest text-stone-400">Elsewhere</h2>
@@ -170,7 +180,7 @@ for subscription in subscriptions.data:
     <div class="border-t border-stone-200 dark:border-stone-800">
         <div class="max-w-4xl mx-auto px-5 py-5 flex flex-col sm:flex-row gap-2 sm:justify-between text-xs font-mono text-stone-400">
             <p>&copy; 2026 Julian Harley &middot; made in somewhere with decent tea</p>
-            <p>56 posts &middot; built 2026-11-05 from <a class="hover:text-accent" href="https://github.com/julzhk/til/commit/87de7a9">87de7a9</a>
+            <p>56 posts &middot; built 2026-11-06 from <a class="hover:text-accent" href="https://github.com/julzhk/til/commit/dbc4809">dbc4809</a>
                 &middot; <a class="hover:text-accent" href="#top">back to top</a></p>
         </div>
     </div>

@@ -2,215 +2,215 @@
 <rss version="2.0">
   <channel>
     <title>Julian Harley</title>
-    <link>https://julzhk.fly.dev</link>
+    <link>https://julz.dev</link>
     <description>Software developer. I build things. and think about things. and maybe write about them.</description>
     <item>
       <title>Dbos and fly sprites</title>
-      <link>https://julzhk.fly.dev/posts/dbos-and-fly-sprites.html</link>
-      <guid>https://julzhk.fly.dev/posts/dbos-and-fly-sprites.html</guid>
+      <link>https://julz.dev/posts/dbos-and-fly-sprites.html</link>
+      <guid>https://julz.dev/posts/dbos-and-fly-sprites.html</guid>
       <pubDate>Wed, 04 Nov 2026 22:04:40 -0400</pubDate>
       <description>Fly sprites are a new VM deployment model (they’re fast starting/fast pausing persistant VMs) Really good for a cheap dev or demo; or some particular workers and spinning up AI related. DBOS is a…</description>
     </item>
     <item>
       <title>Jottings</title>
-      <link>https://julzhk.fly.dev/posts/jottings.html</link>
-      <guid>https://julzhk.fly.dev/posts/jottings.html</guid>
+      <link>https://julz.dev/posts/jottings.html</link>
+      <guid>https://julz.dev/posts/jottings.html</guid>
       <pubDate>Wed, 04 Nov 2026 22:04:40 -0400</pubDate>
       <description>First take ‘jottings’ Anything new, anything that piqued my interest or made me scratch my head, I jotted down a note about it. This is the first phase of note-taking that Sönke Ahrens lays out in…</description>
     </item>
     <item>
       <title>TIL: LLM trained on only historical materials.</title>
-      <link>https://julzhk.fly.dev/posts/llm-as-time-traveller.html</link>
-      <guid>https://julzhk.fly.dev/posts/llm-as-time-traveller.html</guid>
+      <link>https://julz.dev/posts/llm-as-time-traveller.html</link>
+      <guid>https://julz.dev/posts/llm-as-time-traveller.html</guid>
       <pubDate>Wed, 04 Nov 2026 22:04:40 -0400</pubDate>
       <description>‘We’re literally running out of science fiction topics faster than we can create new ones’ History LLM via: Hacker News</description>
     </item>
     <item>
       <title>Make design system via claude</title>
-      <link>https://julzhk.fly.dev/posts/make-design-system-via-claude.html</link>
-      <guid>https://julzhk.fly.dev/posts/make-design-system-via-claude.html</guid>
+      <link>https://julz.dev/posts/make-design-system-via-claude.html</link>
+      <guid>https://julz.dev/posts/make-design-system-via-claude.html</guid>
       <pubDate>Wed, 04 Nov 2026 22:04:40 -0400</pubDate>
       <description>Claude is really good at distilling a site into a style guide and then use it for future designs. Really nice ‘how to’ here:…</description>
     </item>
     <item>
       <title>TIL the cross-over between AI assisted development and DDD</title>
-      <link>https://julzhk.fly.dev/posts/spec-driven-development-and-ddd.html</link>
-      <guid>https://julzhk.fly.dev/posts/spec-driven-development-and-ddd.html</guid>
+      <link>https://julz.dev/posts/spec-driven-development-and-ddd.html</link>
+      <guid>https://julz.dev/posts/spec-driven-development-and-ddd.html</guid>
       <pubDate>Wed, 04 Nov 2026 22:04:40 -0400</pubDate>
       <description>DDD is a great tool for approaching a technical problem: useful concepts and useful methodology to write the code. Of course these days we can (debatably!) defer that code-creation to AI. Perhaps we…</description>
     </item>
     <item>
       <title>The last museum</title>
-      <link>https://julzhk.fly.dev/posts/the-last-museum.html</link>
-      <guid>https://julzhk.fly.dev/posts/the-last-museum.html</guid>
+      <link>https://julz.dev/posts/the-last-museum.html</link>
+      <guid>https://julz.dev/posts/the-last-museum.html</guid>
       <pubDate>Tue, 03 Nov 2026 15:48:49 -0400</pubDate>
       <description>TIL The last museum : I love a good museum! This gives me the chance to at least appreciate their contents, even if I can’t get to see them in person. I particularly love the historical graphic…</description>
     </item>
     <item>
       <title>TIL: the laws of software</title>
-      <link>https://julzhk.fly.dev/posts/laws-of-software.html</link>
-      <guid>https://julzhk.fly.dev/posts/laws-of-software.html</guid>
+      <link>https://julz.dev/posts/laws-of-software.html</link>
+      <guid>https://julz.dev/posts/laws-of-software.html</guid>
       <pubDate>Tue, 03 Nov 2026 15:48:49 -0400</pubDate>
       <description>This is a great resource of all the things to know. Or at least to quote to appear like you know https://lawsofsoftwareengineering.com. Quick review: Some of them I don’t really understand, but I…</description>
     </item>
     <item>
       <title>Make an audio book for free</title>
-      <link>https://julzhk.fly.dev/posts/make-an-audio-book-for-free.html</link>
-      <guid>https://julzhk.fly.dev/posts/make-an-audio-book-for-free.html</guid>
+      <link>https://julz.dev/posts/make-an-audio-book-for-free.html</link>
+      <guid>https://julz.dev/posts/make-an-audio-book-for-free.html</guid>
       <pubDate>Tue, 03 Nov 2026 15:48:49 -0400</pubDate>
       <description>TIL: pdf to audio. Neato. https://pdftomp3.com/connect-ai But what I’d like is to chop it up into chapters and turn the audio into a personal podcast.</description>
     </item>
     <item>
       <title>Docling   the python document reading library</title>
-      <link>https://julzhk.fly.dev/posts/docling-the-python-document-reading-library.html</link>
-      <guid>https://julzhk.fly.dev/posts/docling-the-python-document-reading-library.html</guid>
+      <link>https://julz.dev/posts/docling-the-python-document-reading-library.html</link>
+      <guid>https://julz.dev/posts/docling-the-python-document-reading-library.html</guid>
       <pubDate>Tue, 03 Nov 2026 15:47:29 -0400</pubDate>
       <description>Just discoverered the excellent docling library TL;DR: it reads a variety of digital document formats and converts them to (eg) markdown - ready to slurping into an AI. I’ve got a downloaded pdf book…</description>
     </item>
     <item>
       <title>TIL That knowing (and applying!) the theory of constraints with AI is obviously hard, or we’d all be doing it.</title>
-      <link>https://julzhk.fly.dev/posts/constraint-theory-and-ai.html</link>
-      <guid>https://julzhk.fly.dev/posts/constraint-theory-and-ai.html</guid>
+      <link>https://julz.dev/posts/constraint-theory-and-ai.html</link>
+      <guid>https://julz.dev/posts/constraint-theory-and-ai.html</guid>
       <pubDate>Mon, 19 Oct 2026 10:20:29 -0300</pubDate>
       <description>My current thoughts is that AI is really good at prototyping and version one - when the scope are tightly managed and simple. And the reason this type of development is so quick and satisfying is…</description>
     </item>
     <item>
       <title>TIL: like robots.txt in a website, but for LLM</title>
-      <link>https://julzhk.fly.dev/posts/robot-txt-files-for-llm.html</link>
-      <guid>https://julzhk.fly.dev/posts/robot-txt-files-for-llm.html</guid>
+      <link>https://julz.dev/posts/robot-txt-files-for-llm.html</link>
+      <guid>https://julz.dev/posts/robot-txt-files-for-llm.html</guid>
       <pubDate>Wed, 07 Oct 2026 10:56:03 -0300</pubDate>
       <description>Just as a ‘robots.txt’ file directs web scrapers, a llm.txt file is there to direct our new AI overlords. The famous ‘lighthouse’ accessibility scoring now includes checks for it too - a new category…</description>
     </item>
     <item>
       <title>Simple style html page</title>
-      <link>https://julzhk.fly.dev/posts/simple-style-html-page.html</link>
-      <guid>https://julzhk.fly.dev/posts/simple-style-html-page.html</guid>
+      <link>https://julz.dev/posts/simple-style-html-page.html</link>
+      <guid>https://julz.dev/posts/simple-style-html-page.html</guid>
       <pubDate>Fri, 02 Oct 2026 10:45:54 -0300</pubDate>
       <description>TIL: CSSBED : simply add a default style to bland HTML with this default CDN stylesheet. Eg make a boring page at least Tufte-styled. I’m surprised how frequently this comes up - just want a bit of a…</description>
     </item>
     <item>
       <title>TIL: You don’t need Javascript for common UX patterns</title>
-      <link>https://julzhk.fly.dev/posts/why-not-just-use-html.html</link>
-      <guid>https://julzhk.fly.dev/posts/why-not-just-use-html.html</guid>
+      <link>https://julz.dev/posts/why-not-just-use-html.html</link>
+      <guid>https://julz.dev/posts/why-not-just-use-html.html</guid>
       <pubDate>Thu, 01 Oct 2026 10:51:15 -0300</pubDate>
       <description>Accordions Dropdowns Modals Slider menus Page transitions : Been waiting for this for a while (surprised noone is using it much yet tbh) And don’t get me started on simple Alpine.js &amp; HTMX…!…</description>
     </item>
     <item>
       <title>Til: I side with.</title>
-      <link>https://julzhk.fly.dev/posts/canadian-politics.html</link>
-      <guid>https://julzhk.fly.dev/posts/canadian-politics.html</guid>
+      <link>https://julz.dev/posts/canadian-politics.html</link>
+      <guid>https://julz.dev/posts/canadian-politics.html</guid>
       <pubDate>Thu, 01 Oct 2026 09:25:47 -0300</pubDate>
       <description>This site - I side with.com is super interesting. It tells me that there’s political parties out there that I didn’t know about, but agree with! That’s good to know..</description>
     </item>
     <item>
       <title>TIL How to make nicer AI posters</title>
-      <link>https://julzhk.fly.dev/posts/nicer-ai-posters.html</link>
-      <guid>https://julzhk.fly.dev/posts/nicer-ai-posters.html</guid>
+      <link>https://julz.dev/posts/nicer-ai-posters.html</link>
+      <guid>https://julz.dev/posts/nicer-ai-posters.html</guid>
       <pubDate>Wed, 30 Sep 2026 18:23:02 -0300</pubDate>
       <description>Turns out that if you ask nicely and go into detail on the exact era/style and feeling, that’s what you get. I just asked chatGPT to create an image: This comes out quite tastefully imho. Reference</description>
     </item>
     <item>
       <title>Glossary of ai</title>
-      <link>https://julzhk.fly.dev/posts/glossary-of-ai.html</link>
-      <guid>https://julzhk.fly.dev/posts/glossary-of-ai.html</guid>
+      <link>https://julz.dev/posts/glossary-of-ai.html</link>
+      <guid>https://julz.dev/posts/glossary-of-ai.html</guid>
       <pubDate>Wed, 30 Sep 2026 11:40:57 -0300</pubDate>
       <description>This new phase of Generative-AI calls for a new vocabulary of experiences. I’ll add the one’s I’ve found &amp; add the new experience that need a name. AI Slop : That’s Simon Willison’s coining. Amazing…</description>
     </item>
     <item>
       <title>TIL python auto documentation from classes</title>
-      <link>https://julzhk.fly.dev/posts/pdoc.html</link>
-      <guid>https://julzhk.fly.dev/posts/pdoc.html</guid>
+      <link>https://julz.dev/posts/pdoc.html</link>
+      <guid>https://julz.dev/posts/pdoc.html</guid>
       <pubDate>Wed, 30 Sep 2026 10:57:22 -0300</pubDate>
       <description>I feel a bit late to the party, but pdoc is amazing. Tl;dr : Take the code and provide internal API documentation.</description>
     </item>
     <item>
       <title>TIL: “Specification Pattern”</title>
-      <link>https://julzhk.fly.dev/posts/specification-pattern.html</link>
-      <guid>https://julzhk.fly.dev/posts/specification-pattern.html</guid>
+      <link>https://julz.dev/posts/specification-pattern.html</link>
+      <guid>https://julz.dev/posts/specification-pattern.html</guid>
       <pubDate>Wed, 30 Sep 2026 10:57:22 -0300</pubDate>
       <description>It’s good to get a name for a thing. This is a great example of this principle. In a nutshell, let’s create a DSL to capture the business logic. How it works is clever and functional too.…</description>
     </item>
     <item>
       <title>Jev</title>
-      <link>https://julzhk.fly.dev/posts/jev.html</link>
-      <guid>https://julzhk.fly.dev/posts/jev.html</guid>
+      <link>https://julz.dev/posts/jev.html</link>
+      <guid>https://julz.dev/posts/jev.html</guid>
       <pubDate>Thu, 17 Sep 2026 19:00:54 -0300</pubDate>
       <description>til: JEV New LLM AI dropped: JEV . This is a bit more specialist: * it’s cheaper and faster ($42 Per Billion input tokens!) * it does classification So for a particular type of question, it’ll be…</description>
     </item>
     <item>
       <title>TIL Wrapture</title>
-      <link>https://julzhk.fly.dev/posts/python-wrapture.html</link>
-      <guid>https://julzhk.fly.dev/posts/python-wrapture.html</guid>
+      <link>https://julz.dev/posts/python-wrapture.html</link>
+      <guid>https://julz.dev/posts/python-wrapture.html</guid>
       <pubDate>Tue, 15 Sep 2026 11:52:09 -0300</pubDate>
       <description>Today (via Simon Willison) learned about ‘ wrapture ‘ Looks like a new take on monkeypatching - which always gives me a pause figuring out paths! And in other news:Less TILs then usual as I got a…</description>
     </item>
     <item>
       <title>TIL: the history of the web</title>
-      <link>https://julzhk.fly.dev/posts/the-history-of-the-web.html</link>
-      <guid>https://julzhk.fly.dev/posts/the-history-of-the-web.html</guid>
+      <link>https://julz.dev/posts/the-history-of-the-web.html</link>
+      <guid>https://julz.dev/posts/the-history-of-the-web.html</guid>
       <pubDate>Tue, 15 Sep 2026 11:52:09 -0300</pubDate>
       <description>Just read this history article: https://www.artmann.co/articles/30-years-of-br-tags : super interesting. Obviously there’s going to be omissions and it’s a personal recollection, but curious to see…</description>
     </item>
     <item>
       <title>TIL Deeper look into type in Python</title>
-      <link>https://julzhk.fly.dev/posts/types-in-python.html</link>
-      <guid>https://julzhk.fly.dev/posts/types-in-python.html</guid>
+      <link>https://julz.dev/posts/types-in-python.html</link>
+      <guid>https://julz.dev/posts/types-in-python.html</guid>
       <pubDate>Fri, 28 Aug 2026 09:03:06 -0300</pubDate>
       <description>This blog post is great. . I’ve integrated a lot of the ideas in it; the idea of using newType frequently is especially powerful. Dataclasses are the best recent additions to Python! Data Transfer…</description>
     </item>
     <item>
       <title>Papercraft and more</title>
-      <link>https://julzhk.fly.dev/posts/papercraft-and-more.html</link>
-      <guid>https://julzhk.fly.dev/posts/papercraft-and-more.html</guid>
+      <link>https://julz.dev/posts/papercraft-and-more.html</link>
+      <guid>https://julz.dev/posts/papercraft-and-more.html</guid>
       <pubDate>Fri, 28 Aug 2026 09:01:03 -0300</pubDate>
       <description>TIL: There’s a hobby and a bunch of tools to make 3D paper sculptures! Unfolder discussion Pandafold Same but for fabric plushies: plushify * Blender plugins * Blender plugin 2 How fun!</description>
     </item>
     <item>
       <title>TIL: this consumer database</title>
-      <link>https://julzhk.fly.dev/posts/worse-on-purpose.html</link>
-      <guid>https://julzhk.fly.dev/posts/worse-on-purpose.html</guid>
+      <link>https://julz.dev/posts/worse-on-purpose.html</link>
+      <guid>https://julz.dev/posts/worse-on-purpose.html</guid>
       <pubDate>Fri, 28 Aug 2026 09:00:28 -0300</pubDate>
       <description>‘worse on purpose’ : Joins the dots between corporate buy-out; company gutting and coasting on the brand-name recognition. Looking at you Pyrex . (My glass pan exploded into a million shards and I’m…</description>
     </item>
     <item>
       <title>TIL About AI</title>
-      <link>https://julzhk.fly.dev/posts/about-ai.html</link>
-      <guid>https://julzhk.fly.dev/posts/about-ai.html</guid>
+      <link>https://julz.dev/posts/about-ai.html</link>
+      <guid>https://julz.dev/posts/about-ai.html</guid>
       <pubDate>Fri, 10 Jul 2026 12:44:34 -0300</pubDate>
       <description>This is a set of notes I’ve been chewing over for a while - so not a ‘today I learned!’ Anyhoo: onwards There’s a lot of hype and hidden motivations and forces behind the AI boom. The first is the…</description>
     </item>
     <item>
       <title>Organizational slimemould</title>
-      <link>https://julzhk.fly.dev/posts/organizational-slimemould.html</link>
-      <guid>https://julzhk.fly.dev/posts/organizational-slimemould.html</guid>
+      <link>https://julz.dev/posts/organizational-slimemould.html</link>
+      <guid>https://julz.dev/posts/organizational-slimemould.html</guid>
       <pubDate>Wed, 24 Jun 2026 16:02:46 -0300</pubDate>
       <description>TIL: Organizational Slimemould Like many of these ‘TIL’ I came across this some time ago. But today, I’ll say I found it useful - again.. This presentation is a great example of conveying a message.…</description>
     </item>
     <item>
       <title>TIL : new colour spaces</title>
-      <link>https://julzhk.fly.dev/posts/new-colourspaces.html</link>
-      <guid>https://julzhk.fly.dev/posts/new-colourspaces.html</guid>
+      <link>https://julz.dev/posts/new-colourspaces.html</link>
+      <guid>https://julz.dev/posts/new-colourspaces.html</guid>
       <pubDate>Tue, 02 Jun 2026 15:00:08 -0300</pubDate>
       <description>I’ve done enough CMYK printing (and been surprised often enough with how different it looks from what I see on my screen (if you know you know!)) to be interested in colour on the web.. Seems there’s…</description>
     </item>
     <item>
       <title>Brew postgres</title>
-      <link>https://julzhk.fly.dev/posts/brew-postgres.html</link>
-      <guid>https://julzhk.fly.dev/posts/brew-postgres.html</guid>
+      <link>https://julz.dev/posts/brew-postgres.html</link>
+      <guid>https://julz.dev/posts/brew-postgres.html</guid>
       <pubDate>Wed, 01 Apr 2026 17:54:44 -0300</pubDate>
       <description>TIL how to make sure my brew installed postgres is not running. It auto-restarts so we have to stop it properly! Hence killport 5432 doesn’t work. Use brew services list …to give the list of…</description>
     </item>
     <item>
       <title>TIL - Resiliency vs reliability engineering</title>
-      <link>https://julzhk.fly.dev/posts/resiliency-engineering.html</link>
-      <guid>https://julzhk.fly.dev/posts/resiliency-engineering.html</guid>
+      <link>https://julz.dev/posts/resiliency-engineering.html</link>
+      <guid>https://julz.dev/posts/resiliency-engineering.html</guid>
       <pubDate>Wed, 25 Mar 2026 10:12:11 -0300</pubDate>
       <description>This video is great : Velocity NY 2013: Richard Cook, “Resilience In Complex Adaptive Systems” &amp; this one too : Velocity 2012: Richard Cook, “How Complex Systems Fail” In a nutshell: ‘resiliency’…</description>
     </item>
     <item>
       <title>Killport</title>
-      <link>https://julzhk.fly.dev/posts/killport.html</link>
-      <guid>https://julzhk.fly.dev/posts/killport.html</guid>
+      <link>https://julz.dev/posts/killport.html</link>
+      <guid>https://julz.dev/posts/killport.html</guid>
       <pubDate>Fri, 20 Mar 2026 12:16:28 -0300</pubDate>
       <description>til: killport Containers and services running on a port but you don’t know which ones they are? kill them by port number! Github killport Install with brew brew install killport ta hacker news</description>
     </item>
