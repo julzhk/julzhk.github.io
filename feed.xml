@@ -5,6 +5,13 @@
     <link>https://julz.dev</link>
     <description>Software developer. I build things. and think about things. and maybe write about them.</description>
     <item>
+      <title>TIL Managing complex change</title>
+      <link>https://julz.dev/posts/managing-complex-change.html</link>
+      <guid>https://julz.dev/posts/managing-complex-change.html</guid>
+      <pubDate>Fri, 13 Nov 2026 13:25:26 -0400</pubDate>
+      <description>This is something that comes up frequently in leading a team or implementing a strategy. And this is a great framework for thinking about it :…</description>
+    </item>
+    <item>
       <title>TIL: Finding Datastar works nicely for a prototype</title>
       <link>https://julz.dev/posts/datastar.html</link>
       <guid>https://julz.dev/posts/datastar.html</guid>
@@ -206,13 +213,6 @@
       <guid>https://julz.dev/posts/brew-postgres.html</guid>
       <pubDate>Wed, 01 Apr 2026 17:54:44 -0300</pubDate>
       <description>TIL how to make sure my brew installed postgres is not running. It auto-restarts so we have to stop it properly! Hence killport 5432 doesn’t work. Use brew services list …to give the list of…</description>
-    </item>
-    <item>
-      <title>TIL - Resiliency vs reliability engineering</title>
-      <link>https://julz.dev/posts/resiliency-engineering.html</link>
-      <guid>https://julz.dev/posts/resiliency-engineering.html</guid>
-      <pubDate>Wed, 25 Mar 2026 10:12:11 -0300</pubDate>
-      <description>This video is great : Velocity NY 2013: Richard Cook, “Resilience In Complex Adaptive Systems” &amp; this one too : Velocity 2012: Richard Cook, “How Complex Systems Fail” In a nutshell: ‘resiliency’…</description>
     </item>
   </channel>
 </rss>

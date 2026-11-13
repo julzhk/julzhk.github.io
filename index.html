@@ -187,6 +187,12 @@
   </div>
   <ul class="divide-y divide-stone-200/70 dark:divide-stone-800/70">
     <li>
+      <a href="posts/managing-complex-change.html" class="group flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6 py-3">
+        <time datetime="2026-11-13" class="shrink-0 w-20 font-mono text-xs text-stone-400">2026-11-13</time>
+        <span class="text-stone-800 dark:text-stone-200 group-hover:text-accent transition-colors">TIL Managing complex change</span>
+      </a>
+    </li>
+    <li>
       <a href="posts/datastar.html" class="group flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6 py-3">
         <time datetime="2026-11-06" class="shrink-0 w-20 font-mono text-xs text-stone-400">2026-11-06</time>
         <span class="text-stone-800 dark:text-stone-200 group-hover:text-accent transition-colors">TIL: Finding Datastar works nicely for a prototype</span>
@@ -216,12 +222,6 @@
         <span class="text-stone-800 dark:text-stone-200 group-hover:text-accent transition-colors">Make design system via claude</span>
       </a>
     </li>
-    <li>
-      <a href="posts/spec-driven-development-and-ddd.html" class="group flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6 py-3">
-        <time datetime="2026-11-04" class="shrink-0 w-20 font-mono text-xs text-stone-400">2026-11-04</time>
-        <span class="text-stone-800 dark:text-stone-200 group-hover:text-accent transition-colors">TIL the cross-over between AI assisted development and DDD</span>
-      </a>
-    </li>
   </ul>
 </section>
 
@@ -231,23 +231,7 @@
     <a href="projects.html" class="text-sm text-stone-500 hover:text-accent transition-colors">All projects &rarr;</a>
   </div>
   <div class="mt-6"><div class="grid gap-4 sm:grid-cols-2">
-<a href="https://github.com/julzhk/til" class="group block overflow-hidden rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 hover:border-accent/60 transition-colors">
-    <div class="aspect-[16/9] overflow-hidden border-b border-stone-200 dark:border-stone-800 bg-stone-100 dark:bg-stone-800">
-      <img src="images/projects/til.jpg" alt="TIL" loading="lazy"
-           class="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105">
-    </div>
-    <div class="p-5">
-    <div class="flex items-baseline justify-between gap-3">
-      <h3 class="font-serif text-lg font-semibold text-stone-900 dark:text-stone-50 group-hover:text-accent transition-colors">TIL</h3>
-      <span class="font-mono text-xs text-stone-400">2025</span>
-    </div>
-    <p class="mt-2 text-sm leading-relaxed">This site: a Markdown notebook turned into a static site by Python.</p>
-    <div class="mt-4 flex gap-3">
-      <span class="font-mono text-[11px] text-stone-500 dark:text-stone-400">Python</span>
-      <span class="font-mono text-[11px] text-stone-500 dark:text-stone-400">Markdown</span>
-    </div>
-    </div>
-  </a><a href="https://github.com/julzhk/screendream#screendream" class="group block overflow-hidden rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 hover:border-accent/60 transition-colors">
+<a href="https://github.com/julzhk/screendream#screendream" class="group block overflow-hidden rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 hover:border-accent/60 transition-colors">
     <div class="aspect-[16/9] overflow-hidden border-b border-stone-200 dark:border-stone-800 bg-stone-100 dark:bg-stone-800">
       <img src="images/projects/screendream.jpg" alt="Screen Dream" loading="lazy"
            class="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105">
@@ -263,6 +247,22 @@
       <span class="font-mono text-[11px] text-stone-500 dark:text-stone-400">Rust</span>
     </div>
     </div>
+  </a><a href="https://github.com/julzhk/git-analysis#git-analysis" class="group block overflow-hidden rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 hover:border-accent/60 transition-colors">
+    <div class="aspect-[16/9] overflow-hidden border-b border-stone-200 dark:border-stone-800 bg-stone-100 dark:bg-stone-800">
+      <img src="images/projects/git-analysis.jpg" alt="Code Health Analysis" loading="lazy"
+           class="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105">
+    </div>
+    <div class="p-5">
+    <div class="flex items-baseline justify-between gap-3">
+      <h3 class="font-serif text-lg font-semibold text-stone-900 dark:text-stone-50 group-hover:text-accent transition-colors">Code Health Analysis</h3>
+      <span class="font-mono text-xs text-stone-400">2024</span>
+    </div>
+    <p class="mt-2 text-sm leading-relaxed">Uses git logs to measure code hotspots (eg:churn); changes in cyclometric complexity; maintainability</p>
+    <div class="mt-4 flex gap-3">
+      <span class="font-mono text-[11px] text-stone-500 dark:text-stone-400">Git</span>
+      <span class="font-mono text-[11px] text-stone-500 dark:text-stone-400">Python</span>
+    </div>
+    </div>
   </a>  </div></div>
 </section>
 </main>
@@ -272,7 +272,7 @@
         <div>
             <p class="font-serif text-lg font-semibold text-stone-900 dark:text-stone-50">Julian Harley</p>
             <p class="mt-2 text-stone-500 dark:text-stone-400 max-w-xs">Software developer. I build things. and think about things. and maybe write about them.</p>
-            <p id="quip" class="mt-4 italic text-stone-500 dark:text-stone-400">Best viewed with curiosity and a hot drink.</p>
+            <p id="quip" class="mt-4 italic text-stone-500 dark:text-stone-400">That&#39;s a good problem to have.</p>
         </div>
         <div>
     <h2 class="text-xs font-semibold uppercase tracking-widest text-stone-400">Elsewhere</h2>
@@ -296,7 +296,7 @@
     <div class="border-t border-stone-200 dark:border-stone-800">
         <div class="max-w-4xl mx-auto px-5 py-5 flex flex-col sm:flex-row gap-2 sm:justify-between text-xs font-mono text-stone-400">
             <p>&copy; 2026 Julian Harley &middot; made in somewhere with decent tea</p>
-            <p>57 posts &middot; built 2026-11-06 from <a class="hover:text-accent" href="https://github.com/julzhk/til/commit/cf09587">cf09587</a>
+            <p>58 posts &middot; built 2026-11-13 from <a class="hover:text-accent" href="https://github.com/julzhk/til/commit/a6c1a8c">a6c1a8c</a>
                 &middot; <a class="hover:text-accent" href="#top">back to top</a></p>
         </div>
     </div>
