@@ -5,6 +5,20 @@
     <link>https://julz.dev</link>
     <description>Software developer. I build things. and think about things. and maybe write about them.</description>
     <item>
+      <title>Under sea scene</title>
+      <link>https://julz.dev/posts/under-sea-scene.html</link>
+      <guid>https://julz.dev/posts/under-sea-scene.html</guid>
+      <pubDate>Wed, 18 Nov 2026 12:29:59 -0400</pubDate>
+      <description>TIL webGPU can be quite astonishing.. This demo is quite amazing. Dreamy even. https://noniv.github.io/abyssal-garden/ source : https://github.com/Noniv/abyssal-garden Is this edifying or…</description>
+    </item>
+    <item>
+      <title>TIL: The parallels between the phases of grief and the rate of change in the IT industry</title>
+      <link>https://julz.dev/posts/grief-genai.html</link>
+      <guid>https://julz.dev/posts/grief-genai.html</guid>
+      <pubDate>Fri, 13 Nov 2026 16:29:35 -0400</pubDate>
+      <description>I’m aware that Gen-AI is still in a relatively early stages of the ‘hype curve’, so we’re still at the over-reaction phase. If this is like all the other tech breakthroughs and bubbles, we’ll get a…</description>
+    </item>
+    <item>
       <title>TIL Managing complex change</title>
       <link>https://julz.dev/posts/managing-complex-change.html</link>
       <guid>https://julz.dev/posts/managing-complex-change.html</guid>
@@ -199,20 +213,6 @@
       <guid>https://julz.dev/posts/organizational-slimemould.html</guid>
       <pubDate>Wed, 24 Jun 2026 16:02:46 -0300</pubDate>
       <description>TIL: Organizational Slimemould Like many of these ‘TIL’ I came across this some time ago. But today, I’ll say I found it useful - again.. This presentation is a great example of conveying a message.…</description>
-    </item>
-    <item>
-      <title>TIL : new colour spaces</title>
-      <link>https://julz.dev/posts/new-colourspaces.html</link>
-      <guid>https://julz.dev/posts/new-colourspaces.html</guid>
-      <pubDate>Tue, 02 Jun 2026 15:00:08 -0300</pubDate>
-      <description>I’ve done enough CMYK printing (and been surprised often enough with how different it looks from what I see on my screen (if you know you know!)) to be interested in colour on the web.. Seems there’s…</description>
-    </item>
-    <item>
-      <title>Brew postgres</title>
-      <link>https://julz.dev/posts/brew-postgres.html</link>
-      <guid>https://julz.dev/posts/brew-postgres.html</guid>
-      <pubDate>Wed, 01 Apr 2026 17:54:44 -0300</pubDate>
-      <description>TIL how to make sure my brew installed postgres is not running. It auto-restarts so we have to stop it properly! Hence killport 5432 doesn’t work. Use brew services list …to give the list of…</description>
     </item>
   </channel>
 </rss>
