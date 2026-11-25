@@ -5,6 +5,13 @@
     <link>https://julz.dev</link>
     <description>Software developer. I build things. and think about things. and maybe write about them.</description>
     <item>
+      <title>Claude makes apps now</title>
+      <link>https://julz.dev/posts/claude-apps-artifacts.html</link>
+      <guid>https://julz.dev/posts/claude-apps-artifacts.html</guid>
+      <pubDate>Wed, 25 Nov 2026 12:08:30 -0400</pubDate>
+      <description>Every day something new in AI. Exhausting just trying to keep up. claude.com announcement It’s not the Reimann hypothesis, but conjuring up an app as an output channel in Claude is pretty clever. The…</description>
+    </item>
+    <item>
       <title>TIL About Architecture Decision Records</title>
       <link>https://julz.dev/posts/about-adr.html</link>
       <guid>https://julz.dev/posts/about-adr.html</guid>
@@ -206,13 +213,6 @@
       <guid>https://julz.dev/posts/worse-on-purpose.html</guid>
       <pubDate>Fri, 28 Aug 2026 09:00:28 -0300</pubDate>
       <description>‘worse on purpose’ : Joins the dots between corporate buy-out; company gutting and coasting on the brand-name recognition. Looking at you Pyrex . (My glass pan exploded into a million shards and I’m…</description>
-    </item>
-    <item>
-      <title>TIL About AI</title>
-      <link>https://julz.dev/posts/about-ai.html</link>
-      <guid>https://julz.dev/posts/about-ai.html</guid>
-      <pubDate>Fri, 10 Jul 2026 12:44:34 -0300</pubDate>
-      <description>This is a set of notes I’ve been chewing over for a while - so not a ‘today I learned!’ Anyhoo: onwards There’s a lot of hype and hidden motivations and forces behind the AI boom. The first is the…</description>
     </item>
   </channel>
 </rss>
