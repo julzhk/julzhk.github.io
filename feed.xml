@@ -5,6 +5,13 @@
     <link>https://julz.dev</link>
     <description>Software developer. I build things. and think about things. and maybe write about them.</description>
     <item>
+      <title>TIL About Architecture Decision Records</title>
+      <link>https://julz.dev/posts/about-adr.html</link>
+      <guid>https://julz.dev/posts/about-adr.html</guid>
+      <pubDate>Tue, 24 Nov 2026 23:55:23 -0400</pubDate>
+      <description>I hold a weekly mentoring session and this week the topic of ‘ADR’ came up. I’ve had experience with them of course but this gave me the opportunity to dive into them a bit more deeply; this is why I…</description>
+    </item>
+    <item>
       <title>TIL About two demos and a digression about LLMs and diagrams</title>
       <link>https://julz.dev/posts/under-sea-scene.html</link>
       <guid>https://julz.dev/posts/under-sea-scene.html</guid>
@@ -206,13 +213,6 @@
       <guid>https://julz.dev/posts/about-ai.html</guid>
       <pubDate>Fri, 10 Jul 2026 12:44:34 -0300</pubDate>
       <description>This is a set of notes I’ve been chewing over for a while - so not a ‘today I learned!’ Anyhoo: onwards There’s a lot of hype and hidden motivations and forces behind the AI boom. The first is the…</description>
-    </item>
-    <item>
-      <title>Organizational slimemould</title>
-      <link>https://julz.dev/posts/organizational-slimemould.html</link>
-      <guid>https://julz.dev/posts/organizational-slimemould.html</guid>
-      <pubDate>Wed, 24 Jun 2026 16:02:46 -0300</pubDate>
-      <description>TIL: Organizational Slimemould Like many of these ‘TIL’ I came across this some time ago. But today, I’ll say I found it useful - again.. This presentation is a great example of conveying a message.…</description>
     </item>
   </channel>
 </rss>
